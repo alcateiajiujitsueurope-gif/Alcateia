@@ -6,13 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alcateia Jiu Jitsu | Mönchaltorf, Schweiz</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--bl:#3da0d8;--bl2:#52b4ea;--dk:#0a0a0a;--dk2:#101010;--dk3:#161616;--wh:#fff;--mu:rgba(255,255,255,.52);--H:'Barlow Condensed',sans-serif;--B:'Barlow',sans-serif;--blue:#4a9fd4;--cream:#f0ede6;--cream-dim:rgba(240,237,230,0.62);--border:rgba(240,237,230,0.08);--border-m:rgba(240,237,230,0.14)}
 html{scroll-behavior:smooth}
 body{background:var(--dk);color:var(--wh);font-family:var(--B);overflow-x:hidden}
-img{display:block;max-width:100%}
+img{max-width:100%;display:block;object-fit:cover}
 a{text-decoration:none}
 
 /* UTILS */
@@ -27,7 +27,7 @@ a{text-decoration:none}
 .rev.in{opacity:1;transform:scale(1)}
 
 /* NAV */
-.navbar{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 3rem);max-width:1360px;background:rgba(10,10,10,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-m);border-radius:12px;transition:background .35s,border-color .35s}
+.navbar{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 3rem);max-width:1360px;background:rgba(10,10,10,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-m);border-radius:12px;transition:background .35s,border-color .35s;font-family:'Montserrat',sans-serif}
 .navbar.scrolled{background:rgba(10,10,10,0.96);border-color:rgba(240,237,230,0.18)}
 .nav-inner{padding:0 1.75rem;height:80px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .nav-logo img{height:78px;width:auto;filter:drop-shadow(0 0 12px rgba(74,159,212,.25)) brightness(1.1)}
