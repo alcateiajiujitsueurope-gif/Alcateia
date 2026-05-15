@@ -39,22 +39,23 @@ img{max-width:100%;display:block}
 .nav-inner{padding:0 1.75rem;height:80px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .nav-logo img{height:78px;width:auto;filter:drop-shadow(0 0 12px rgba(74,159,212,.25)) brightness(1.1)}
 .nav-center{display:flex;gap:1.4rem;list-style:none;flex:1;justify-content:center}
-.nav-center a{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-soft);position:relative;padding-bottom:4px;transition:color .2s}
-.nav-center a::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--blue);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.nav-center a{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,230,.75);position:relative;padding-bottom:3px;transition:color .2s}
+.nav-center a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--blue);transform:scaleX(0);transition:transform .25s;transform-origin:left}
 .nav-center a:hover,.nav-center a.active{color:var(--cream)}
 .nav-center a:hover::after,.nav-center a.active::after{transform:scaleX(1)}
 .nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
-.nav-lang{display:flex;align-items:center;gap:.3rem}
-.nav-lang button{background:none;border:none;color:var(--cream-soft);font-family:inherit;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;padding:.25rem .45rem;border-radius:3px;transition:color .2s,background .2s}
-.nav-lang button.active{color:var(--cream);background:var(--blue-light)}
-.nav-lang .sep{color:var(--line)}
-.nav-cta{padding:.68rem 1.45rem;background:var(--blue);color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;border-radius:5px;transition:background .2s,transform .15s;white-space:nowrap}
+.nav-lang{display:flex;align-items:center;gap:.35rem;font-size:.62rem;font-weight:700;letter-spacing:.08em;color:rgba(240,237,230,.5)}
+.nav-lang button{background:none;border:none;color:rgba(240,237,230,.5);font-family:inherit;font-size:inherit;font-weight:inherit;letter-spacing:inherit;cursor:pointer;padding:.25rem .4rem;border-radius:3px;transition:color .2s,background .2s}
+.nav-lang button.active{color:var(--cream);background:rgba(74,159,212,.12)}
+.nav-lang button:hover{color:var(--blue)}
+.nav-lang .sep{opacity:.3}
+.nav-cta{padding:.7rem 1.5rem;background:var(--blue);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:5px;transition:background .2s,transform .15s}
 .nav-cta:hover{background:#3a8fc4;transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:22px;height:1.5px;background:var(--cream)}
-.mobile-menu{display:none;flex-direction:column;background:rgba(10,10,10,.98);border-top:1px solid var(--line);padding:1.5rem 2rem;gap:.45rem;border-radius:0 0 10px 10px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--cream)}
+.mobile-menu{display:none;flex-direction:column;background:rgba(10,10,10,.98);border-top:1px solid var(--border);padding:1.5rem 2rem;gap:.5rem;border-radius:0 0 12px 12px}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-muted);padding:.6rem 0;border-bottom:1px solid var(--line);transition:color .2s}
+.mobile-menu a{font-size:.73rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);padding:.65rem 0;border-bottom:1px solid var(--border);transition:color .2s}
 .mobile-menu a:hover,.mobile-menu a.active{color:var(--blue)}
 .mobile-menu .mob-cta{background:var(--blue);color:#fff;text-align:center;padding:.78rem;margin-top:.5rem;border-radius:5px;border:none}
 
@@ -237,9 +238,9 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
   .private-grid{gap:1rem}
 }
 @media(max-width:480px){
-  .navbar{width:calc(100% - 1.25rem);top:.65rem}
-  .nav-inner{padding:0 1rem;height:66px}
-  .nav-logo img{height:52px}
+  .navbar{width:calc(100% - 1.5rem);top:.75rem}
+  .nav-inner{padding:0 1rem;height:68px}
+  .nav-logo img{height:54px}
 }
 </style>
 </head>
