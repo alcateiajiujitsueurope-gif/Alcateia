@@ -35,7 +35,7 @@ a{text-decoration:none;color:inherit}
 .nav-logo img{height:78px;width:auto;filter:drop-shadow(0 0 12px rgba(74,159,212,.25)) brightness(1.1)}
 .nav-center{display:flex;gap:1.4rem;list-style:none;flex:1;justify-content:center}
 .nav-center a{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,230,.75);position:relative;padding-bottom:3px;transition:color .2s}
-.nav-center a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--blue);transform:scaleX(0);transition:transform 0.25s;transform-origin:left}
+.nav-center a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--blue);transform:scaleX(0);transition:transform .25s;transform-origin:left}
 .nav-center a:hover,.nav-center a.active{color:var(--cream)}
 .nav-center a:hover::after,.nav-center a.active::after{transform:scaleX(1)}
 .nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
@@ -48,11 +48,11 @@ a{text-decoration:none;color:inherit}
 .nav-cta:hover{background:#3a8fc4;transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:24px;height:1.5px;background:var(--cream)}
-.mobile-menu{display:none;flex-direction:column;background:rgba(10,10,10,0.98);border-top:1px solid var(--border);padding:1.5rem 2rem;gap:0.5rem;border-radius:0 0 12px 12px}
+.mobile-menu{display:none;flex-direction:column;background:rgba(10,10,10,.98);border-top:1px solid var(--border);padding:1.5rem 2rem;gap:.5rem;border-radius:0 0 12px 12px}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-size:0.73rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream-dim);padding:0.65rem 0;border-bottom:1px solid var(--border);transition:color 0.2s}
+.mobile-menu a{font-size:.73rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);padding:.65rem 0;border-bottom:1px solid var(--border);transition:color .2s}
 .mobile-menu a:hover,.mobile-menu a.active{color:var(--blue)}
-.mobile-menu .mob-cta{background:var(--blue);color:#fff;text-align:center;padding:0.75rem;border:none;margin-top:0.5rem;border-radius:5px}
+.mobile-menu .mob-cta{background:var(--blue);color:#fff;text-align:center;padding:.75rem;margin-top:.5rem;border-radius:5px;border:none}
 
 /* ══ HERO ══ */
 .uu-hero{
@@ -263,7 +263,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 
 }
 @media (max-width:480px){
-  .navbar{width:calc(100% - 1.5rem);top:0.75rem}
+  .navbar{width:calc(100% - 1.5rem);top:.75rem}
   .nav-inner{padding:0 1rem;height:68px}
   .nav-logo img{height:54px}
 }
