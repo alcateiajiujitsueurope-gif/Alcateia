@@ -81,6 +81,8 @@ a{text-decoration:none;color:inherit}
 .bubble-icon{width:46px;height:46px;border:1px solid var(--border-m);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blue);transition:border-color .2s,background .2s,color .2s}
 .bubble:hover .bubble-icon{border-color:var(--blue);background:var(--blue);color:#fff}
 .bubble-wa:hover .bubble-icon{background:#25d366;border-color:#25d366}
+.bubble-ig:hover .bubble-icon{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);border-color:transparent;color:#fff}
+.bubble-email:hover .bubble-icon{background:#ea4335;border-color:#ea4335;color:#fff}
 .bubble-icon svg{width:20px;height:20px}
 .bubble-label{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
 .bubble-value{font-size:.72rem;font-weight:300;color:var(--cream-dim);line-height:1.4}
@@ -300,14 +302,14 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <span class="bubble-label">WhatsApp</span>
         <span class="bubble-value">+41 77 267 56 69</span>
       </a>
-      <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" class="bubble">
+      <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" class="bubble bubble-ig">
         <div class="bubble-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </div>
         <span class="bubble-label">Instagram</span>
         <span class="bubble-value">@alcateiajiujitsu</span>
       </a>
-      <a href="mailto:alcateiajiujitsu@protonmail.com" class="bubble">
+      <a href="mailto:alcateiajiujitsu@protonmail.com" class="bubble bubble-email">
         <div class="bubble-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
         </div>
