@@ -305,22 +305,20 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 .insta-section{
   background:var(--dark);
   border-top:1px solid var(--border);
-  padding:5rem 2rem;
+  padding-bottom:3rem;
 }
-.insta-inner{
-  max-width:1200px;margin:0 auto;
+.insta-header{
+  padding:3.5rem 2rem 1.5rem;
   text-align:center;
 }
-.insta-handle{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(2.2rem,5vw,4.5rem);
-  letter-spacing:.03em;line-height:.95;
-  color:var(--cream);
-  margin:1rem 0 2.5rem;
-  display:block;
+.insta-footer-link{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.65rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:rgba(240,237,230,.3);
   transition:color .3s;
 }
-.insta-handle:hover{color:var(--blue)}
+.insta-footer-link:hover{color:var(--blue)}
+.insta-footer-link svg{width:14px;height:14px;flex-shrink:0}
 
 
 </style>
@@ -454,12 +452,17 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 
 <!-- INSTAGRAM FEED -->
 <section class="insta-section">
-  <div class="insta-inner">
+  <div class="insta-header">
     <span class="section-tag">Folge dem Rudel</span>
-    <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="insta-handle">@alcateiajiujitsu</a>
-    <!-- Elfsight Instagram Feed | Alcateia Jiu Jitsu -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-80074810-d01f-4953-81bc-0dead628dc48" data-elfsight-app-lazy></div>
+  </div>
+  <!-- Elfsight Instagram Feed | Alcateia Jiu Jitsu -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-80074810-d01f-4953-81bc-0dead628dc48" data-elfsight-app-lazy></div>
+  <div style="text-align:center;padding-top:1.75rem">
+    <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="insta-footer-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      @alcateiajiujitsu
+    </a>
   </div>
 </section>
 
