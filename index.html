@@ -20,7 +20,8 @@ a{text-decoration:none}
 .hXXL{font-family:var(--H);font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:-.02em;font-size:clamp(58px,10vw,118px)}
 .hXL{font-family:var(--H);font-weight:900;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;font-size:clamp(44px,6.5vw,80px)}
 .hLG{font-family:var(--H);font-weight:900;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;font-size:clamp(38px,5vw,62px)}
-.bar{width:36px;height:2px;background:var(--bl);margin:18px 0 22px}
+.mTxt .lbl,.kHead .lbl{display:inline-flex;align-items:center;gap:.65rem}
+.mTxt .lbl::before,.kHead .lbl::before{content:'';width:24px;height:1px;background:var(--bl);flex-shrink:0}
 .lnk{font-family:var(--H);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bl);display:inline-flex;align-items:center;gap:8px;transition:gap .2s}
 .lnk:hover{gap:14px}
 .rev{opacity:0;transform:scale(.93);transition:opacity .9s ease,transform .9s ease}
@@ -260,7 +261,6 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
   <div class="mTxt rev">
     <span class="lbl">Unsere Mission</span>
     <h2 class="hLG">Mehr als<br>ein Dojo</h2>
-    <div class="bar"></div>
     <p>Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke zu vermitteln.</p>
     <p>Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen. Jeder hat dieselben Rechte — jeder hat einen Platz im Rudel.</p>
     <a href="uber-uns.html" class="lnk">Über uns →</a>
