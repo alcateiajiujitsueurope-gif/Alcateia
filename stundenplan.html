@@ -19,10 +19,7 @@ a{text-decoration:none;color:inherit}
 
 :root{
   --blue:#4a9fd4;
-  --blue-dark:#1e3a6e;
-  --blue-glow:rgba(74,159,212,0.15);
   --dark:#0a0a0a;
-  --dark-2:#111111;
   --dark-3:#181818;
   --dark-4:#1f1f1f;
   --cream:#f0ede6;
@@ -46,6 +43,7 @@ a{text-decoration:none;color:inherit}
 .navbar{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 3rem);max-width:1360px;background:rgba(10,10,10,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-m);border-radius:12px;transition:background .35s,border-color .35s}
 .navbar.scrolled{background:rgba(10,10,10,0.96);border-color:rgba(240,237,230,0.18)}
 .nav-inner{padding:0 1.75rem;height:80px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{flex-shrink:0}
 .nav-logo img{height:78px;width:auto;filter:drop-shadow(0 0 12px rgba(74,159,212,.25)) brightness(1.1)}
 .nav-center{display:flex;gap:1.4rem;list-style:none;flex:1;justify-content:center}
 .nav-center a{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,230,.75);position:relative;padding-bottom:3px;transition:color .2s}
@@ -127,23 +125,9 @@ a{text-decoration:none;color:inherit}
   letter-spacing:0.02em;
   color:var(--cream);
 }
-.page-title-h1 .accent{color:var(--blue)}
-
 /* ══ SHARED ══ */
 section{padding:4rem 2.5rem}
 .container{max-width:1280px;margin:0 auto}
-.section-tag{
-  display:inline-block;
-  font-size:0.6rem;font-weight:700;letter-spacing:0.3em;
-  text-transform:uppercase;color:var(--blue);
-  margin-bottom:0.85rem;
-}
-.section-title{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(2.6rem,4.5vw,4.2rem);
-  letter-spacing:0.03em;color:var(--cream);
-  line-height:0.98;margin-bottom:1rem;
-}
 .blue-line{width:48px;height:2px;background:var(--blue);margin:1.25rem 0}
 
 /* ══ STUNDENPLAN — connected, smaller ══ */
@@ -245,44 +229,6 @@ section{padding:4rem 2.5rem}
 .sdi-name small{display:block;font-size:0.56rem;font-weight:500;color:var(--cream-dim);letter-spacing:0.04em;margin-top:0.1rem;text-transform:uppercase}
 .sdi-info{font-family:'Bebas Neue',sans-serif;font-size:0.94rem;letter-spacing:0.04em;color:var(--blue);flex-shrink:0}
 
-/* ══ KLASSEN — EDITORIAL, no Kapitel ══ */
-
-
-
-.ke-header-right 
-
-
-.ed-block{
-  position:relative;
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  grid-template-rows:auto auto;
-  gap:0;
-  padding:3rem 0;
-  border-top:1px solid var(--border);
-}
-.ed-block:last-child{border-bottom:1px solid var(--border)}
-
-.ed-block:not(.ed-right) .ed-block.ed-right 
-.ed-block:not(.ed-right) 
-.ed-block.ed-right 
-
-
-.ed-format span{color:var(--cream-dim)}
-.ed-format em{font-style:normal;color:var(--blue);margin:0 0.5rem;opacity:0.5}
-
-
-
-.ed-block.ed-right 
-
-
-.ed-block:not(.ed-right) 
-.ed-block.ed-right 
-
-
-.ed-block:not(.ed-right) 
-.ed-block.ed-right 
-
 /* ══ CTA ══ */
 .contact-bar{background:var(--blue);padding:3.5rem 2.5rem;border-top:1px solid var(--border)}
 .contact-bar-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
@@ -310,10 +256,6 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 .footer-links a{font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream-faint);font-weight:500;transition:color 0.2s}
 .footer-links a:hover{color:var(--blue)}
 
-.back-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;border:none;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s,transform 0.2s;box-shadow:0 4px 16px rgba(74,159,212,0.35);z-index:900}
-.back-top.visible{opacity:1;pointer-events:auto}
-.back-top:hover{transform:translateY(-2px)}
-
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.85s ease,transform 0.85s cubic-bezier(0.25,0.46,0.45,0.94)}
 .reveal.in{opacity:1;transform:translateY(0)}
 
@@ -330,14 +272,6 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .sgrid-wrap{display:none}
   .smobile{display:block;position:relative;z-index:1}
   .schedule-head{flex-direction:column;align-items:flex-start;gap:1rem}
-  
-  
-  
-  .ed-block{display:block;padding:3.25rem 0}
-  .ed-block 
-  .ed-block 
-  
-  
   .contact-bar-inner{flex-direction:column;text-align:center;gap:1.5rem}.contact-bar-links{justify-content:center}
   .footer-top{grid-template-columns:1fr;gap:2rem}
   .footer-bottom{flex-direction:column;align-items:flex-start}
@@ -348,20 +282,6 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .nav-logo img{height:54px}
   .page-title-h1{font-size:3rem}
 }
-
-/* ══ ADVANCED + DRILL PAIR ══ */
-
-
-
-.ed-pair-col--right{}
-
-
-.ed-pair-col--right 
-@media(max-width:768px){
-  
-  
-}
-
 
 /* ══ CONTACT BAR ══ */
 .contact-bar{background:var(--blue);padding:3.5rem 2.5rem}
@@ -378,7 +298,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 
 
 .page-hero-inner .hero-sub{font-size:0.82rem;color:var(--cream-dim);margin-top:1rem;letter-spacing:0.04em}
-
+@media(max-width:380px){
+  .nav-cta{padding:.6rem .9rem;font-size:.58rem}
+  .nav-lang{gap:.2rem;font-size:.58rem}
+}
 </style>
 </head>
 <body>
