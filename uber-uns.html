@@ -32,13 +32,14 @@ a{text-decoration:none;color:inherit}
 .navbar{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 3rem);max-width:1360px;background:rgba(10,10,10,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-m);border-radius:12px;transition:background .35s,border-color .35s}
 .navbar.scrolled{background:rgba(10,10,10,0.96);border-color:rgba(240,237,230,0.18)}
 .nav-inner{padding:0 1.75rem;height:80px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.nav-logo img{height:78px;width:auto;filter:drop-shadow(0 0 12px rgba(74,159,212,.25)) brightness(1.1)}
+.nav-logo img{height:78px;width:78px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(74,159,212,.25)) brightness(1.1)}
 .nav-center{display:flex;gap:1.4rem;list-style:none;flex:1;justify-content:center}
 .nav-center a{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,230,.75);position:relative;padding-bottom:3px;transition:color .2s}
 .nav-center a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--blue);transform:scaleX(0);transition:transform .25s;transform-origin:left}
 .nav-center a:hover,.nav-center a.active{color:var(--cream)}
 .nav-center a:hover::after,.nav-center a.active::after{transform:scaleX(1)}
 .nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
+.nav-logo{flex-shrink:0}
 .nav-lang{display:flex;align-items:center;gap:.35rem;font-size:.62rem;font-weight:700;letter-spacing:.08em;color:rgba(240,237,230,.5)}
 .nav-lang button{background:none;border:none;color:rgba(240,237,230,.5);font-family:inherit;font-size:inherit;font-weight:inherit;letter-spacing:inherit;cursor:pointer;padding:.25rem .4rem;border-radius:3px;transition:color .2s,background .2s}
 .nav-lang button.active{color:var(--cream);background:rgba(74,159,212,.12)}
@@ -265,7 +266,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 @media(max-width:480px){
   .navbar{width:calc(100% - 1.5rem);top:.75rem}
   .nav-inner{padding:0 1rem;height:68px}
-  .nav-logo img{height:54px}
+  .nav-logo img{height:54px;width:54px}
 }
 
 /* ── BIO EXPAND ── */
