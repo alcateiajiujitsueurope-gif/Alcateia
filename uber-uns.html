@@ -305,41 +305,22 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 .insta-section{
   background:var(--dark);
   border-top:1px solid var(--border);
-  padding:6rem 2.5rem;
+  padding:5rem 2rem;
 }
 .insta-inner{
-  max-width:980px;margin:0 auto;
+  max-width:1200px;margin:0 auto;
   text-align:center;
 }
 .insta-handle{
   font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(3rem,8vw,7rem);
+  font-size:clamp(2.2rem,5vw,4.5rem);
   letter-spacing:.03em;line-height:.95;
   color:var(--cream);
-  margin:1.5rem 0 1rem;
+  margin:1rem 0 2.5rem;
+  display:block;
   transition:color .3s;
 }
 .insta-handle:hover{color:var(--blue)}
-.insta-sub{
-  font-size:.9rem;color:var(--cream-dim);
-  line-height:1.75;font-weight:300;
-  max-width:480px;margin:0 auto 2.5rem;
-}
-.btn-insta{
-  display:inline-flex;align-items:center;gap:.75rem;
-  padding:1rem 2.4rem;
-  border:1.5px solid rgba(74,159,212,.4);
-  background:rgba(74,159,212,.06);
-  color:var(--cream);
-  font-size:.66rem;font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;border-radius:6px;
-  transition:background .2s,border-color .2s,transform .15s;
-}
-.btn-insta:hover{
-  background:var(--blue);border-color:var(--blue);
-  transform:translateY(-2px);
-}
-.btn-insta svg{width:20px;height:20px;flex-shrink:0}
 
 
 </style>
@@ -471,25 +452,14 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   </div>
 </section>
 
-<!-- GALLERY MOSAIC -->
+<!-- INSTAGRAM FEED -->
 <section class="insta-section">
-  <div class="insta-inner reveal">
+  <div class="insta-inner">
     <span class="section-tag">Folge dem Rudel</span>
-    <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="insta-handle">
-      @alcateiajiujitsu
-    </a>
-    <p class="insta-sub">
-      Wettkämpfe, Training, Momente hinter den Kulissen —
-      folge uns auf Instagram und bleib Teil des Rudels.
-    </p>
-    <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="btn-insta">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-      </svg>
-      Auf Instagram folgen
-    </a>
+    <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="insta-handle">@alcateiajiujitsu</a>
+    <!-- Elfsight Instagram Feed | Alcateia Jiu Jitsu -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-80074810-d01f-4953-81bc-0dead628dc48" data-elfsight-app-lazy></div>
   </div>
 </section>
 
