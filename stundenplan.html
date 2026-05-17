@@ -178,7 +178,7 @@ section{padding:4rem 2.5rem}
 .sgrid-wrap{position:relative;z-index:1}
 .sgrid{
   display:grid;
-  grid-template-columns:64px repeat(7,1fr);
+  grid-template-columns:64px repeat(6,1fr);
   gap:4px;
   background:var(--dark-3);
   padding:4px;
@@ -254,14 +254,14 @@ section{padding:4rem 2.5rem}
 footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--border)}
 .footer-inner{max-width:1280px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:3rem;align-items:start;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
-.footer-ttl{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.26);margin-bottom:14px}
+.footer-ttl{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:16px}
 .footer-hours{list-style:none;display:flex;flex-direction:column;gap:14px}
 .footer-hours li{display:flex;flex-direction:column;gap:2px}
 .footer-hours li span:first-child{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .footer-hours li span:last-child{font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.3)}
 .footer-sch-link{display:inline-block;margin-top:12px;font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);transition:opacity .2s}
 .footer-sch-link:hover{opacity:.75}
-.footer-insta{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);transition:color .2s;margin-top:4px}
+.footer-insta{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);transition:color .2s;margin-top:4px}
 .footer-insta:hover{color:#fff}
 .footer-logo img{height:72px;width:auto;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(74,159,212,.18)) brightness(1.05)}
 .footer-desc{font-size:0.78rem;color:var(--cream-dim);line-height:1.85;letter-spacing:0.02em}
@@ -280,7 +280,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 @media(max-width:1024px){
   .nav-center{display:none}
   .hamburger{display:flex}
-  .sgrid{grid-template-columns:56px repeat(7,minmax(95px,1fr));overflow-x:auto}
+  .sgrid{grid-template-columns:56px repeat(6,minmax(95px,1fr));overflow-x:auto}
   .sgrid-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 }
 @media(max-width:768px){
@@ -356,25 +356,23 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     <div class="sgrid-wrap reveal">
       <div class="sgrid">
         <div class="sh sh-time">Zeit</div>
-        <div class="sh">Mo</div><div class="sh">Di</div><div class="sh">Mi</div><div class="sh">Do</div><div class="sh">Fr</div><div class="sh">Sa</div><div class="sh">So</div>
+        <div class="sh">Mo</div><div class="sh">Di</div><div class="sh">Mi</div><div class="sh">Do</div><div class="sh">Fr</div><div class="sh">Sa</div>
 
         <div class="st">06:30</div>
         <div class="sc" style="background:var(--c-all)"><span class="sn">All Levels</span><span class="sk">Gi</span><span class="ss">06:30 – 07:30</span></div>
         <div class="se"></div>
         <div class="sc" style="background:var(--c-all)"><span class="sn">All Levels</span><span class="sk">Gi</span><span class="ss">06:30 – 07:30</span></div>
-        <div class="se"></div><div class="se"></div><div class="se"></div><div class="se"></div>
+        <div class="se"></div><div class="se"></div><div class="se"></div>
 
 
 
         <div class="st">10:00</div>
         <div class="se"></div><div class="se"></div><div class="se"></div><div class="se"></div><div class="se"></div>
         <div class="sc" style="background:var(--c-kids1)"><span class="sn">Kids I + II</span><span class="sk">Gi</span><span class="ss">10:00 – 11:00</span></div>
-        <div class="se"></div>
 
         <div class="st">11:00</div>
         <div class="se"></div><div class="se"></div><div class="se"></div><div class="se"></div><div class="se"></div>
         <div class="sc sc-tall" style="background:var(--c-sparring)"><span class="sn">Sparring</span><span class="sk">Gi / NoGi</span><span class="ss">11:00 – 13:00</span></div>
-        <div class="se"></div>
 
         <div class="st">12:00</div>
         <div class="se"></div>
@@ -382,7 +380,6 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <div class="se"></div>
         <div class="sc" style="background:var(--c-all)"><span class="sn">All Levels</span><span class="sk">Gi</span><span class="ss">12:00 – 13:00</span></div>
         <div class="sc" style="background:var(--c-nogi)"><span class="sn">All Levels</span><span class="sk">NoGi</span><span class="ss">12:00 – 13:00</span></div>
-        <div class="se"></div>
 
 
 
@@ -390,7 +387,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <div class="sc" style="background:var(--c-kids1)"><span class="sn">Kids I</span><span class="sk">Gi</span><span class="ss">16:00 – 17:00</span></div>
         <div class="se"></div>
         <div class="sc" style="background:var(--c-kids1)"><span class="sn">Kids I</span><span class="sk">Gi</span><span class="ss">16:00 – 17:00</span></div>
-        <div class="se"></div><div class="se"></div><div class="se"></div><div class="se"></div>
+        <div class="se"></div><div class="se"></div><div class="se"></div>
 
         <div class="st">17:00</div>
         <div class="sc" style="background:var(--c-kids2)"><span class="sn">Kids II</span><span class="sk">Gi</span><span class="ss">17:00 – 18:00</span></div>
@@ -398,7 +395,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <div class="sc" style="background:var(--c-kids2)"><span class="sn">Kids II</span><span class="sk">Gi</span><span class="ss">17:00 – 18:00</span></div>
         <div class="sc" style="background:var(--c-kids2)"><span class="sn">Kids II</span><span class="sk">NoGi</span><span class="ss">17:00 – 18:00</span></div>
         <div class="sc" style="background:var(--c-women)"><span class="sn">Frauen Klasse</span><span class="sk">Gi</span><span class="ss">17:00 – 18:00</span></div>
-        <div class="se"></div><div class="se"></div>
+        <div class="se"></div>
 
         <div class="st">18:00</div>
         <div class="sc" style="background:var(--c-fund)"><span class="sn">Fundamentals</span><span class="sk">Gi</span><span class="ss">18:00 – 19:00</span></div>
@@ -406,7 +403,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <div class="sc" style="background:var(--c-women)"><span class="sn">Frauen Klasse</span><span class="sk">Gi</span><span class="ss">18:00 – 19:00</span></div>
         <div class="sc" style="background:var(--c-nogi)"><span class="sn">All Levels</span><span class="sk">NoGi</span><span class="ss">18:00 – 19:30</span></div>
         <div class="sc sc-light" style="background:var(--c-drills)"><span class="sn">Drills</span><span class="sk">Gi</span><span class="ss">18:00 – 19:00</span></div>
-        <div class="se"></div><div class="se"></div>
+        <div class="se"></div>
 
         <div class="st">19:00</div>
         <div class="sc" style="background:var(--c-adv)"><span class="sn">Advanced</span><span class="sk">Gi</span><span class="ss">19:00 – 20:30</span></div>
@@ -414,7 +411,6 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <div class="sc" style="background:var(--c-all)"><span class="sn">All Levels</span><span class="sk">Gi</span><span class="ss">19:00 – 20:30</span></div>
         <div class="se"></div>
         <div class="sc" style="background:var(--c-all)"><span class="sn">All Levels</span><span class="sk">Gi</span><span class="ss">19:00 – 20:30</span></div>
-        <div class="se"></div>
         <div class="se"></div>
       </div>
     </div>
@@ -471,10 +467,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
           <div class="sdi"><div class="sdi-dot" style="background:var(--c-sparring)"></div><div class="sdi-name">Sparring<small>Gi / NoGi</small></div><span class="sdi-info">11:00 – 13:00</span></div>
         </div>
       </div>
-      <div class="sday">
-        <div class="sday-h"><span>Sonntag</span><span class="sday-h-count">Ruhetag</span></div>
-        <div class="sday-body sday-empty">— kein Training —</div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -511,15 +504,13 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
           <li><span>Di / Do</span><span>12:00 – 19:30</span></li>
           <li><span>Freitag</span><span>12:00 – 20:30</span></li>
           <li><span>Samstag</span><span>10:00 – 13:00</span></li>
-          <li><span>Sonntag</span><span>Ruhetag</span></li>
         </ul>
         <a href="stundenplan.html" class="footer-sch-link">Stundenplan ansehen →</a>
       </div>
       <div>
         <p class="footer-ttl">Folge uns</p>
         <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="footer-insta">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          @alcateiajiujitsu
+@alcateiajiujitsu
         </a>
       </div>
     </div>
