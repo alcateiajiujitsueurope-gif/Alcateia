@@ -293,21 +293,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .nav-cta{padding:.5rem .75rem}
 }
 
-/* ══ CONTACT BAR ══ */
-.contact-bar{background:var(--blue);padding:3.5rem 2.5rem}
-.contact-bar-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.contact-bar h3{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:0.04em;color:#fff}
-.contact-bar p{font-size:0.83rem;color:rgba(255,255,255,0.8);margin-top:0.2rem}
-.contact-bar-links{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-wa{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 1.75rem;border:1.5px solid rgba(255,255,255,0.4);color:#fff;background:rgba(255,255,255,0.12);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;border-radius:6px;transition:background 0.2s,transform 0.15s;text-decoration:none}
-.btn-wa svg{width:18px;height:18px;flex-shrink:0}
-.btn-wa:hover{background:rgba(255,255,255,0.22);transform:translateY(-2px)}
-.btn-white{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;background:#fff;color:#1e3a6e;font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;border-radius:6px;transition:background 0.2s,transform 0.15s;text-decoration:none}
-.btn-white:hover{background:rgba(255,255,255,0.9);transform:translateY(-2px)}
-@media(max-width:768px){.contact-bar-inner{flex-direction:column;text-align:center;gap:1.5rem}.contact-bar-links{justify-content:center}}
-
-
-.page-hero-inner .hero-sub{font-size:0.82rem;color:var(--cream-dim);margin-top:1rem;letter-spacing:0.04em}
+/* ══ BACK TOP ══ */
+.fab-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;border:none;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .2s;z-index:900;display:flex;align-items:center;justify-content:center}
+.fab-top.visible{opacity:1;pointer-events:auto}
+.fab-top:hover{transform:translateY(-2px)}
 </style>
 </head>
 <body>
@@ -530,7 +519,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 
 <script>
 const navbar=document.getElementById('navbar');
-const backTop=document.getElementById('backTop');
+const backTop=document.getElementById('fabTop');
 window.addEventListener('scroll',()=>{
   const s=window.scrollY;
   navbar.classList.toggle('scrolled',s>80);
@@ -562,9 +551,6 @@ const io=new IntersectionObserver((entries)=>{
 },{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
