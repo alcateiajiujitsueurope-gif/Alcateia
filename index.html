@@ -165,10 +165,11 @@ a{text-decoration:none}
 /* FOOTER */
 footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:56px 40px 28px}
 .fGrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;margin-bottom:48px;align-items:start}
-.fHours{list-style:none;display:flex;flex-direction:column;gap:14px}
-.fHours li{display:flex;flex-direction:column;gap:2px}
-.fHours li span:first-child{font-family:var(--H);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
-.fHours li span:last-child{font-family:var(--H);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.fHours{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fHours li{display:flex;align-items:baseline;gap:0}
+.fHours li span:first-child{font-family:var(--H);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);white-space:nowrap}
+.fHours li span:first-child::after{content:" — ";color:rgba(255,255,255,.2);letter-spacing:0}
+.fHours li span:last-child{font-family:var(--H);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.3)}
 .fSchLink{display:inline-block;margin-top:12px;font-family:var(--H);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);transition:opacity .2s}
 .fSchLink:hover{opacity:.75}
 .fInsta{display:inline-flex;align-items:center;gap:10px;font-family:var(--H);font-size:18px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);transition:color .2s;margin-top:4px}
@@ -428,6 +429,7 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
     <div class="fBrand">
       <a href="/"><img src="images/index-21.png" alt="Alcateia Jiu Jitsu" loading="lazy"></a>
       <p>Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
+      <span class="fCopy" style="display:block;margin-top:10px">© 2025 Raw Life GmbH.</span>
     </div>
     <div>
       <p class="fNavTtl">Trainingszeiten</p>
@@ -449,7 +451,6 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
     </div>
   </div>
   <div class="fBtm">
-    <span class="fCopy">© 2025 Raw Life GmbH. Alle Rechte vorbehalten.</span>
     <div class="fLegal"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
   </div>
 </footer>
