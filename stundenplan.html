@@ -73,7 +73,7 @@ a{text-decoration:none;color:inherit}
   padding:9rem 2.5rem 3.5rem;
   background:var(--dark);
   overflow:hidden;
-  border-bottom:1px solid var(--border);
+  text-align:center;
 }
 .page-hero-inner{
   max-width:1280px;margin:0 auto;
@@ -121,11 +121,13 @@ a{text-decoration:none;color:inherit}
 }
 .page-title-h1{
   font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(3.6rem,8vw,7rem);
+  font-size:clamp(2rem,5vw,3.5rem);
   line-height:0.93;
-  letter-spacing:0.02em;
-  color:var(--cream);
+  letter-spacing:.28em;
+  color:var(--blue);
+  display:inline-flex;align-items:center;gap:.75rem;justify-content:center;
 }
+.page-title-h1::before{content:'';display:block;width:28px;height:1px;background:var(--blue);flex-shrink:0}
 /* ══ SHARED ══ */
 section{padding:4rem 2.5rem}
 .container{max-width:1280px;margin:0 auto}
@@ -340,30 +342,12 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner reveal">
-    <p class="page-tag">Alcateia Jiu Jitsu · Mönchaltorf</p>
     <h1 class="page-title-h1">Stundenplan</h1>
-    <p class="hero-sub">Montag bis Samstag — Zürich Oberland</p>
   </div>
 </div>
 
 <section class="stundenplan" id="stundenplan">
   <div class="container">
-    <div class="schedule-head reveal">
-      <p class="schedule-head-right">Kleiner Hinweis: Der Plan kann sich leicht ändern. Bei Fragen einfach melden.</p>
-    </div>
-
-    <div class="legend reveal">
-      <div class="leg"><div class="leg-dot" style="background:var(--c-all)"></div>All Levels</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-fund)"></div>Fundamentals</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-adv)"></div>Advanced</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-nogi)"></div>NoGi</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-women)"></div>Frauen Klasse</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-kids1)"></div>Kids I</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-kids2)"></div>Kids II</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-drills)"></div>Drills</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-sparring)"></div>Sparring</div>
-    </div>
-
     <div class="sgrid-wrap reveal">
       <div class="sgrid">
         <div class="sh sh-time">Zeit</div>
