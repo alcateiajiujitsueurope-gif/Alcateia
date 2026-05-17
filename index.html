@@ -164,7 +164,14 @@ a{text-decoration:none}
 
 /* FOOTER */
 footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:56px 40px 28px}
-.fGrid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-bottom:48px;align-items:start}
+.fGrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;margin-bottom:48px;align-items:start}
+.fHours{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fHours li{display:flex;justify-content:space-between;gap:1rem;font-family:var(--H);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.fHours li span:last-child{color:rgba(255,255,255,.5);white-space:nowrap}
+.fSchLink{display:inline-block;margin-top:12px;font-family:var(--H);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);transition:opacity .2s}
+.fSchLink:hover{opacity:.75}
+.fInsta{display:inline-flex;align-items:center;gap:10px;font-family:var(--H);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);transition:color .2s;margin-top:4px}
+.fInsta:hover{color:#fff}
 .fBrand img{height:46px;width:auto;margin-bottom:14px}
 .fBrand p{font-size:13px;line-height:1.75;color:rgba(255,255,255,.3)}
 .fNavTtl{font-family:var(--H);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.26);margin-bottom:16px}
@@ -422,14 +429,22 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
       <p>Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
     </div>
     <div>
-      <p class="fNavTtl">Navigation</p>
-      <ul class="fNav">
-        <li><a href="uber-uns.html">Über uns</a></li>
-        <li><a href="klassen.html">Klassen</a></li>
-        <li><a href="stundenplan.html">Stundenplan</a></li>
-        <li><a href="mitgliedschaften.html">Mitgliedschaften</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+      <p class="fNavTtl">Trainingszeiten</p>
+      <ul class="fHours">
+        <li><span>Mo / Mi</span><span>06:30 – 20:30</span></li>
+        <li><span>Di / Do</span><span>12:00 – 19:30</span></li>
+        <li><span>Freitag</span><span>12:00 – 20:30</span></li>
+        <li><span>Samstag</span><span>10:00 – 13:00</span></li>
+        <li><span>Sonntag</span><span>Ruhetag</span></li>
       </ul>
+      <a href="stundenplan.html" class="fSchLink">Stundenplan ansehen →</a>
+    </div>
+    <div>
+      <p class="fNavTtl">Folge uns</p>
+      <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="fInsta">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @alcateiajiujitsu
+      </a>
     </div>
   </div>
   <div class="fBtm">
