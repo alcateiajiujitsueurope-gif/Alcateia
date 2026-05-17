@@ -322,6 +322,51 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .nogi-photo-right{top:0}
   .footer-bottom{flex-direction:column;align-items:flex-start}
   .contact-bar{padding:3rem 1.25rem}
+
+  /* ── carrossel horizontal: kids ── */
+  .kids-photos{
+    height:auto;display:flex;overflow-x:auto;
+    gap:.65rem;scroll-snap-type:x mandatory;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .kids-photos::-webkit-scrollbar{display:none}
+  .kids-photo-wide,.kids-photo-p1,.kids-photo-p2{
+    position:relative;flex:0 0 72vw;height:220px;
+    top:auto;bottom:auto;left:auto;right:auto;
+    width:auto;box-shadow:none;scroll-snap-align:start;
+  }
+
+  /* ── carrossel horizontal: fundamentals ── */
+  .fund-gallery{
+    display:flex;overflow-x:auto;
+    gap:.65rem;scroll-snap-type:x mandatory;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+    grid-template-columns:unset;grid-template-rows:unset;
+  }
+  .fund-gallery::-webkit-scrollbar{display:none}
+  .fund-photo-a,.fund-photo-b,.fund-photo-c{
+    flex:0 0 72vw;height:220px;top:0;scroll-snap-align:start;
+  }
+  .fund-photo-c{display:block}
+
+  /* ── carrossel horizontal: frauen ── */
+  .frauen-photos{
+    height:auto;display:flex;overflow-x:auto;
+    gap:.65rem;scroll-snap-type:x mandatory;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .frauen-photos::-webkit-scrollbar{display:none}
+  .frauen-main-photo,.frauen-scout-photo{
+    position:relative;flex:0 0 72vw;height:220px;
+    top:auto;bottom:auto;left:auto;right:auto;
+    width:auto;border:none;box-shadow:none;scroll-snap-align:start;
+  }
+}
+@media(hover:none){
+  .kids-photo-wide img,.kids-photo-p1 img,.kids-photo-p2 img,
+  .fund-photo-a img,.fund-photo-b img,.fund-photo-c img,
+  .nogi-photo img,.frauen-main-photo img,.frauen-scout-photo img,
+  .adv-photo img{filter:grayscale(0)}
 }
 @media(max-width:480px){
   .navbar{width:calc(100% - 1.5rem);top:.75rem}

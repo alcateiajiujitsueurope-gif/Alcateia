@@ -273,6 +273,9 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .nav-right{gap:.75rem}
   .nav-cta{padding:.5rem .75rem}
 }
+@media(hover:none){
+  .team-photo img{filter:grayscale(0)}
+}
 
 /* ── BIO EXPAND ── */
 .bio-expand-btn{
@@ -518,6 +521,11 @@ window.addEventListener('scroll',()=>{
 },{passive:true});
 
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobileMenu');
+  if(!m.classList.contains('open'))return;
+  if(!e.target.closest('#navbar'))m.classList.remove('open');
+});
 
 const io=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
