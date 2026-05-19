@@ -111,12 +111,16 @@ a{text-decoration:none}
 
 /* DOJO */
 #dojo{background:var(--dk);padding:96px 0 80px}
-.dHead{padding:0 40px 48px}
-#dojo .lbl{font-size:clamp(28px,4vw,52px);letter-spacing:.06em;font-weight:900}
-.gOuter{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch;padding-left:40px}
+.dHead{padding:0 40px 48px}#dojo .lbl{font-size:clamp(28px,4vw,52px);letter-spacing:.06em;font-weight:900}
+.gWrap{position:relative}
+.gOuter{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch}
 .gOuter::-webkit-scrollbar{display:none}
 .gOuter.dragging{cursor:grabbing}
-.gInner{display:flex;flex-direction:row;gap:4px;width:max-content;padding-right:40px}
+.gInner{display:flex;flex-direction:row;gap:0;width:max-content}
+/* arrows */
+.gArrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(10,10,10,.65);color:rgba(255,255,255,.8);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s,color .2s;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.gArrow:hover{background:rgba(10,10,10,.92);border-color:rgba(255,255,255,.65);color:#fff}
+.gArrowL{left:14px}.gArrowR{right:14px}
 /* 360 slot */
 .g360Slot{width:clamp(280px,26vw,380px);height:580px;flex-shrink:0;position:relative;cursor:pointer;overflow:hidden}
 .g360Bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.38) grayscale(25%);transition:filter .5s,transform .7s;transform:scale(1.04)}
@@ -127,13 +131,27 @@ a{text-decoration:none}
 @keyframes g360p{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.15);opacity:.85}}
 .g360Lbl{font-family:var(--H);font-size:15px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85)}
 .g360Sub{font-family:var(--H);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28)}
-/* panels — editorial: portrait left / banner top-right / 2 normals bottom-right */
-.gPanel{display:grid;grid-template-columns:38% 31% 31%;grid-template-rows:322px 254px;gap:4px;width:clamp(820px,78vw,1120px);flex-shrink:0}
+/* panel A: portrait left + banner top-right + 2 normals bottom-right */
+.gPanel{display:grid;grid-template-columns:38% 31% 31%;grid-template-rows:322px 254px;gap:0;width:clamp(820px,78vw,1120px);flex-shrink:0}
 .gPortrait{grid-column:1;grid-row:1/3;overflow:hidden}
 .gBanner{grid-column:2/4;grid-row:1;overflow:hidden}
 .gNorm{overflow:hidden}
-.gPortrait img,.gBanner img,.gNorm img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
-.gPortrait:hover img,.gBanner:hover img,.gNorm:hover img{transform:scale(1.05)}
+/* panel B: full-width top + 3 equal squares */
+.gPanelB{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:340px 236px;gap:0;width:clamp(820px,78vw,1120px);flex-shrink:0}
+.gBTop{grid-column:1/4;grid-row:1;overflow:hidden}
+.gBSq{overflow:hidden}
+/* panel C: tall portrait 55% left + 2 stacked right */
+.gPanelC{display:grid;grid-template-columns:55% 45%;grid-template-rows:290px 286px;gap:0;width:clamp(820px,78vw,1120px);flex-shrink:0}
+.gCPort{grid-column:1;grid-row:1/3;overflow:hidden}
+.gCSm{overflow:hidden}
+/* panel D: single cinematic photo */
+.gPanelD{width:clamp(380px,36vw,520px);height:576px;flex-shrink:0;overflow:hidden}
+/* shared img */
+.gPortrait img,.gBanner img,.gNorm img,.gBTop img,.gBSq img,.gCPort img,.gCSm img,.gPanelD img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.gPortrait:hover img,.gBanner:hover img,.gNorm:hover img,.gBTop:hover img,.gBSq:hover img,.gCPort:hover img,.gCSm:hover img,.gPanelD:hover img{transform:scale(1.05)}
+/* scroll reveal */
+.gReveal{opacity:0;transform:translateY(28px);transition:opacity 1.1s ease,transform 1.25s cubic-bezier(0.25,0.46,0.45,0.94)}
+.gReveal.in{opacity:1;transform:translateY(0)}
 /* 360 modal */
 .g360Modal{position:fixed;inset:0;background:rgba(8,8,8,.97);z-index:2000;opacity:0;pointer-events:none;transition:opacity .35s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px}
 .g360Modal.open{opacity:1;pointer-events:all}
@@ -217,8 +235,13 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
   .kHead{padding:64px 24px 44px}
   #warum{padding:64px 24px}.wGrid{grid-template-columns:1fr}
   #dojo{padding:64px 0 56px}.dHead{padding:0 24px 36px}
-  .gPanel{grid-template-rows:240px 188px;width:clamp(600px,88vw,820px)}
-  .g360Slot{height:428px;width:clamp(220px,56vw,320px)}
+  .gPanel,.gPanelB,.gPanelC{width:clamp(600px,92vw,820px)}
+  .gPanel{grid-template-rows:220px 172px}
+  .gPanelB{grid-template-rows:230px 160px}
+  .gPanelC{grid-template-rows:196px 192px}
+  .gPanelD{width:clamp(260px,68vw,380px);height:388px}
+  .g360Slot{height:388px;width:clamp(200px,52vw,300px)}
+  .gArrow{display:none}
   #community{padding:64px 24px}
       .card{width:85vw}
   #komm{padding:52px 24px;flex-direction:column;align-items:flex-start}
@@ -350,52 +373,58 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
     <span class="lbl">Unser Zuhause</span>
     <h2 class="hXL">Der Raum, in dem<br>das Rudel entsteht</h2>
   </div>
-  <div class="gOuter" id="gOuter">
-    <div class="gInner">
+  <div class="gWrap">
+    <div class="gOuter gReveal" id="gOuter">
+      <div class="gInner">
 
-      <!-- 360° SLOT -->
-      <div class="g360Slot" onclick="open360()" role="button" aria-label="360° Tour öffnen">
-        <div class="g360Bg" style="background-image:url('images/index-13.webp')"></div>
-        <div class="g360Over">
-          <div class="g360Badge">360°</div>
-          <span class="g360Lbl">Tour pela Academia</span>
-          <span class="g360Sub">Clique para explorar</span>
+        <!-- 360° SLOT -->
+        <div class="g360Slot" onclick="open360()" role="button" aria-label="360° Tour öffnen">
+          <div class="g360Bg" style="background-image:url('images/index-05.webp')"></div>
+          <div class="g360Over">
+            <div class="g360Badge">360°</div>
+            <span class="g360Lbl">Tour pela Academia</span>
+            <span class="g360Sub">Clique para explorar</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Panel 1 -->
-      <div class="gPanel">
-        <div class="gPortrait"><img src="images/index-05.webp" alt="Dojo" loading="lazy"></div>
-        <div class="gBanner"><img src="images/index-06.webp" alt="Empfang" loading="lazy"></div>
-        <div class="gNorm"><img src="images/index-07.webp" alt="Logo" loading="lazy"></div>
-        <div class="gNorm"><img src="images/index-08.webp" alt="Tatami" loading="lazy"></div>
-      </div>
+        <!-- Panel A: portrait + banner + 2 normals -->
+        <div class="gPanel">
+          <div class="gPortrait"><img src="images/index-06.webp" alt="Dojo" loading="lazy"></div>
+          <div class="gBanner"><img src="images/index-05.webp" alt="Tatami" loading="lazy"></div>
+          <div class="gNorm"><img src="images/index-07.webp" alt="Logo" loading="lazy"></div>
+          <div class="gNorm"><img src="images/index-08.webp" alt="Empfang" loading="lazy"></div>
+        </div>
 
-      <!-- Panel 2 -->
-      <div class="gPanel">
-        <div class="gPortrait"><img src="images/index-13.webp" alt="Training" loading="lazy"></div>
-        <div class="gBanner"><img src="images/index-14.webp" alt="Lucas und Scout" loading="lazy" style="object-position:center top"></div>
-        <div class="gNorm"><img src="images/index-15.webp" alt="Dojo" loading="lazy"></div>
-        <div class="gNorm"><img src="images/index-16.webp" alt="Wolf" loading="lazy"></div>
-      </div>
+        <!-- Panel B: full-width top + 3 squares -->
+        <div class="gPanelB">
+          <div class="gBTop"><img src="images/index-13.webp" alt="Training" loading="lazy"></div>
+          <div class="gBSq"><img src="images/index-14.webp" alt="Lucas und Scout" loading="lazy" style="object-position:center top"></div>
+          <div class="gBSq"><img src="images/index-15.webp" alt="Dojo" loading="lazy"></div>
+          <div class="gBSq"><img src="images/index-16.webp" alt="Wolf" loading="lazy"></div>
+        </div>
 
-      <!-- Panel 3 -->
-      <div class="gPanel">
-        <div class="gPortrait"><img src="images/index-09.webp" alt="Gürtel" loading="lazy" style="object-position:center 20%"></div>
-        <div class="gBanner"><img src="images/index-10.webp" alt="Wolf" loading="lazy"></div>
-        <div class="gNorm"><img src="images/index-11.webp" alt="Gear" loading="lazy"></div>
-        <div class="gNorm"><img src="images/index-12.webp" alt="Kids" loading="lazy"></div>
-      </div>
+        <!-- Panel C: tall portrait left + 2 stacked right -->
+        <div class="gPanelC">
+          <div class="gCPort"><img src="images/index-09.webp" alt="Gürtel" loading="lazy" style="object-position:center 20%"></div>
+          <div class="gCSm"><img src="images/index-10.webp" alt="Wolf" loading="lazy"></div>
+          <div class="gCSm"><img src="images/index-11.webp" alt="Gear" loading="lazy"></div>
+        </div>
 
-      <!-- Panel 4 -->
-      <div class="gPanel">
-        <div class="gPortrait"><img src="images/index-17.webp" alt="Kids" loading="lazy"></div>
-        <div class="gBanner"><img src="images/index-18.webp" alt="Empfang" loading="lazy"></div>
-        <div class="gNorm"><img src="images/index-19.webp" alt="Gear" loading="lazy"></div>
-        <div class="gNorm"><img src="images/index-20.webp" alt="Gürtel" loading="lazy" style="object-position:center 20%"></div>
-      </div>
+        <!-- Panel D: single cinematic -->
+        <div class="gPanelD"><img src="images/index-17.webp" alt="Kids" loading="lazy"></div>
 
+        <!-- Panel A2: portrait + banner + 2 normals -->
+        <div class="gPanel">
+          <div class="gPortrait"><img src="images/index-18.webp" alt="Dojo" loading="lazy"></div>
+          <div class="gBanner"><img src="images/index-12.webp" alt="Kids" loading="lazy"></div>
+          <div class="gNorm"><img src="images/index-19.webp" alt="Gear" loading="lazy"></div>
+          <div class="gNorm"><img src="images/index-20.webp" alt="Gürtel" loading="lazy" style="object-position:center 20%"></div>
+        </div>
+
+      </div>
     </div>
+    <button class="gArrow gArrowL" onclick="scrollGallery(-1)" aria-label="Zurück">←</button>
+    <button class="gArrow gArrowR" onclick="scrollGallery(1)" aria-label="Weiter">→</button>
   </div>
 </section>
 
@@ -543,6 +572,8 @@ function setLang(lang){
 try{const s=localStorage.getItem('alcateia_lang')||'de';if(s!=='de')setLang(s)}catch(e){}
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+const gio=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');gio.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.gReveal').forEach(el=>gio.observe(el));
 // Cards scroll
 const cw=document.getElementById('cWrap');
 if(cw){let cdn=false,csx=0,csl=0;
@@ -558,6 +589,7 @@ window.addEventListener('mousemove',e=>{if(!dn)return;e.preventDefault();go.scro
 function open360(){const m=document.getElementById('g360Modal');m.classList.add('open');document.body.style.overflow='hidden'}
 function close360(){document.getElementById('g360Modal').classList.remove('open');document.body.style.overflow=''}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close360()});
+function scrollGallery(dir){const go=document.getElementById('gOuter');const el=go.querySelector('.g360Slot,.gPanel,.gPanelB,.gPanelC,.gPanelD');if(el)go.scrollBy({left:dir*el.offsetWidth,behavior:'smooth'})}
 </script>
 </body>
 </html>
