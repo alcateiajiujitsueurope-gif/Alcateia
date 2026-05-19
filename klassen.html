@@ -593,6 +593,8 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="↑">↑</button>
 
 <script>
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+window.scrollTo(0,0);
 const navbar=document.getElementById('navbar');
 const backTop=document.getElementById('backTop');
 window.addEventListener('scroll',()=>{
