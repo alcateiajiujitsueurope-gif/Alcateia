@@ -148,6 +148,8 @@ a{text-decoration:none;color:inherit}
 }
 .mission-text p:last-child{margin-bottom:0}
 .mission-text strong{color:var(--cream);font-weight:500}
+.mission-photo-break{margin:3.5rem -2.5rem 0;width:calc(100% + 5rem);height:60vh;min-height:360px;overflow:hidden}
+.mission-photo-break img{width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:grayscale(10%) brightness(.72)}
 
 /* ══ TEAM (Lucas + Scout) — clean, no role tags, no meta ══ */
 .team-section{
@@ -163,7 +165,7 @@ a{text-decoration:none;color:inherit}
 .team-photo{
   position:relative;
   aspect-ratio:4/5;
-  border-radius:6px;overflow:hidden;
+  border-radius:14px;overflow:hidden;
   margin-bottom:1.75rem;
   border:1px solid var(--border);
 }
@@ -272,6 +274,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.85s ease,transform 0.85s cubic-bezier(0.25,0.46,0.45,0.94)}
 .reveal.in{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-18px);transition:opacity .7s ease,transform .7s cubic-bezier(0.25,0.46,0.45,0.94)}
+.reveal-left.in{opacity:1;transform:translateX(0)}
+.reveal-strong{opacity:0;transform:translateY(44px);transition:opacity 1s ease,transform 1s cubic-bezier(0.22,0.61,0.36,1)}
+.reveal-strong.in{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -285,6 +291,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .uu-hero-content{padding:0 1.25rem 3rem}
   .mission-section,.team-section,.origin-section{padding:4rem 1.25rem}
   .mission-text p,.origin-text p{font-size:0.95rem;line-height:1.75}
+  .mission-photo-break{margin:2.5rem -1.25rem 0;width:calc(100% + 2.5rem);min-height:260px;height:42vh}
   .contact-bar-inner{flex-direction:column;text-align:center;gap:1.5rem}
   .contact-bar-links{justify-content:center}
   .footer-top{grid-template-columns:1fr;gap:2rem}
@@ -421,14 +428,19 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <!-- MISSION -->
 <section class="mission-section">
   <div class="mission-inner">
-    <span class="section-tag">Unsere Mission</span>
-    <h2 class="mission-title">Was uns antreibt</h2>
+    <span class="section-tag reveal-left">Unsere Mission</span>
+    <h2 class="mission-title reveal-strong">Was uns antreibt</h2>
     <div class="mission-text">
-      <p>Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu <strong>Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke</strong> zu vermitteln. Wir möchten unseren Schülern helfen, im Leben nicht stehen zu bleiben, sich weiterzuentwickeln und Träume wahr werden zu lassen — sei es auf der Tatami oder ausserhalb.</p>
-
-      <p>Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen — und nicht auf andere Dinge wie sozialen Status, Beruf oder Herkunft reduziert. <strong>Bei uns hat jeder dieselben Rechte und jeder hat einen Platz.</strong></p>
-
-      <p>Unser Dojo ist aber nicht einfach nur ein Kampfsportzentrum. Wir sind eine Community aller Altersgruppen, die über das Trainieren von Jiu Jitsu hinausgeht. Bei uns versammeln sich Leute, um zusammen zu trainieren, voneinander zu lernen — und vor allem eines: <strong>zusammenzuhalten.</strong></p>
+      <p class="reveal">Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu <strong>Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke</strong> zu vermitteln. Wir möchten unseren Schülern helfen, im Leben nicht stehen zu bleiben, sich weiterzuentwickeln und Träume wahr werden zu lassen — sei es auf der Tatami oder ausserhalb.</p>
+      <p class="reveal" style="transition-delay:.14s">Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen — und nicht auf andere Dinge wie sozialen Status, Beruf oder Herkunft reduziert. <strong>Bei uns hat jeder dieselben Rechte und jeder hat einen Platz.</strong></p>
+    </div>
+  </div>
+  <div class="mission-photo-break reveal">
+    <img src="images/team/kids-mission.jpg" alt="Kinder im Training | Alcateia Jiu Jitsu" loading="lazy">
+  </div>
+  <div class="mission-inner" style="padding-top:3.5rem">
+    <div class="mission-text">
+      <p class="reveal">Unser Dojo ist aber nicht einfach nur ein Kampfsportzentrum. Wir sind eine Community aller Altersgruppen, die über das Trainieren von Jiu Jitsu hinausgeht. Bei uns versammeln sich Leute, um zusammen zu trainieren, voneinander zu lernen — und vor allem eines: <strong>zusammenzuhalten.</strong></p>
     </div>
   </div>
 </section>
@@ -438,7 +450,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   <div class="team-grid">
 
     <article class="team-card reveal">
-      <div class="team-photo"><img src="images/uber-uns-02.jpg" alt="Lucas Feitosa" loading="lazy"></div>
+      <div class="team-photo"><img src="images/team/lucas-card.jpg" alt="Lucas Feitosa" loading="lazy"></div>
       <h3 class="team-name">Lucas Feitosa</h3>
       <div class="team-bio">
         <p>Geboren und aufgewachsen in <strong>Brasilien</strong>, fand Lucas früh seinen Weg auf die Tatami. Seine Reise im Jiu Jitsu führte ihn unter die <strong>Carlson Gracie Linie</strong> — eine der angesehensten Schulen im brasilianischen Jiu Jitsu weltweit.</p>
@@ -459,7 +471,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     </article>
 
     <article class="team-card reveal">
-      <div class="team-photo"><img src="images/uber-uns-03.jpg" alt="Scout Feitosa" loading="lazy"></div>
+      <div class="team-photo"><img src="images/team/scout-card.jpg" alt="Scout Feitosa" loading="lazy"></div>
       <h3 class="team-name">Scout Feitosa</h3>
       <div class="team-bio">
         <p>Scout ist <strong>aktive Athletin auf europäischem und internationalem Niveau</strong>. Mehrfache Medaillengewinnerin auf IBJJF-Turnieren — ihre Mentalität auf der Tatami spricht für sich: ruhig, präzise, kompromisslos.</p>
@@ -485,14 +497,12 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <!-- ALCATEIA NAME ORIGIN -->
 <section class="origin-section">
   <div class="origin-inner">
-    <span class="section-tag">Der Name</span>
-    <h2 class="origin-title">Warum <em>Alcateia</em>?</h2>
+    <span class="section-tag reveal-left">Der Name</span>
+    <h2 class="origin-title reveal-strong">Warum <em>Alcateia</em>?</h2>
     <div class="origin-text">
-      <p>Der Findungsprozess für unseren Teamnamen führte uns zu den Wölfen — Tiere, die uns seit unserer Jugend faszinieren. <em>Kleiner Insider:</em> Wir tragen beide ein Wolfstattoo am Arm, völlig unabhängig voneinander gewählt.</p>
-
-      <p><strong>Alcateia bedeutet auf Portugiesisch Wolfsrudel.</strong> In der Natur ist ein Wolfsrudel sehr ähnlich aufgebaut wie eine menschliche Familie. Wölfe sind geheimnisvolle, schöne, innerhalb des Rudels liebevolle — gegen aussen aber starke und gefährliche Tiere.</p>
-
-      <p>Die Farbe Blau und ihre verschiedenen Töne stehen für <strong>Objektivität, Neutralität und Klarheit</strong> — sie schaffen Vertrauen und vermitteln ein Gefühl von Sicherheit. Genau diese Ansätze und Merkmale möchten wir in unserem Alcateia Jiu Jitsu Team verkörpern.</p>
+      <p class="reveal">Der Findungsprozess für unseren Teamnamen führte uns zu den Wölfen — Tiere, die uns seit unserer Jugend faszinieren. <em>Kleiner Insider:</em> Wir tragen beide ein Wolfstattoo am Arm, völlig unabhängig voneinander gewählt.</p>
+      <p class="reveal" style="transition-delay:.12s"><strong>Alcateia bedeutet auf Portugiesisch Wolfsrudel.</strong> In der Natur ist ein Wolfsrudel sehr ähnlich aufgebaut wie eine menschliche Familie. Wölfe sind geheimnisvolle, schöne, innerhalb des Rudels liebevolle — gegen aussen aber starke und gefährliche Tiere.</p>
+      <p class="reveal" style="transition-delay:.24s">Die Farbe Blau und ihre verschiedenen Töne stehen für <strong>Objektivität, Neutralität und Klarheit</strong> — sie schaffen Vertrauen und vermitteln ein Gefühl von Sicherheit. Genau diese Ansätze und Merkmale möchten wir in unserem Alcateia Jiu Jitsu Team verkörpern.</p>
     </div>
   </div>
 </section>
@@ -586,7 +596,7 @@ const io=new IntersectionObserver((entries)=>{
     if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
   });
 },{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.reveal,.reveal-left,.reveal-strong').forEach(el=>io.observe(el));
 
 // Language toggle (DE/EN)
 const translations={
