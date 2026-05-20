@@ -61,6 +61,19 @@ img{max-width:100%;display:block;object-fit:cover}
 .mobile-menu a{font-size:.73rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);padding:.65rem 0;border-bottom:1px solid var(--border);transition:color .2s}
 .mobile-menu a:hover,.mobile-menu a.active{color:var(--blue)}
 .mobile-menu .mob-cta{background:var(--blue);color:#fff;text-align:center;padding:.75rem;margin-top:.5rem;border-radius:5px;border:none}
+/* ─── KLASSEN DROPDOWN ─── */
+.nav-has-drop{position:relative}
+.nav-drop-toggle{display:inline-flex!important;align-items:center;gap:.3rem}
+.nav-caret{flex-shrink:0;transition:transform .22s}
+.nav-has-drop:hover .nav-caret{transform:rotate(180deg)}
+.nav-drop{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-4px);min-width:190px;list-style:none;background:rgba(10,10,10,.97);border:1px solid rgba(240,237,230,.13);border-radius:9px;padding:.5rem 0;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:10}
+.nav-has-drop:hover .nav-drop{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nav-drop a{display:block;padding:.55rem 1.25rem;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,230,.6)!important;transition:color .18s,background .18s;white-space:nowrap;position:static!important}
+.nav-drop a::after{content:none!important}
+.nav-drop a:hover{color:var(--blue)!important;background:rgba(74,159,212,.07)}
+.mob-programs{display:flex;flex-direction:column;padding-left:1rem;margin-bottom:.25rem}
+.mob-programs a{font-size:.65rem!important;letter-spacing:.1em!important;color:rgba(240,237,230,.38)!important;padding:.38rem 0!important;border-bottom:none!important}
+.mob-programs a:hover{color:var(--blue)!important}
 
 /* ─── HERO BLOCK ─── */
 .hero-block{background:#0a0a0a;border-bottom:1px solid var(--line);overflow:hidden;max-width:100vw}
@@ -289,7 +302,17 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
     <ul class="nav-center">
       <li><a href="/" data-i18n="start">Start</a></li>
       <li><a href="uber-uns.html" data-i18n="about">Über uns</a></li>
-      <li><a href="klassen.html" data-i18n="classes">Klassen</a></li>
+      <li class="nav-has-drop">
+        <a href="klassen.html" class="nav-drop-toggle"><span data-i18n="classes">Klassen</span> <svg class="nav-caret" viewBox="0 0 10 6" width="8" height="5" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <ul class="nav-drop">
+          <li><a href="klassen.html#kids">Kids</a></li>
+          <li><a href="klassen.html#adults">Fundamentals</a></li>
+          <li><a href="klassen.html#adults">All Levels</a></li>
+          <li><a href="klassen.html#nogi">NoGi</a></li>
+          <li><a href="klassen.html#frauen-s">Frauen</a></li>
+          <li><a href="klassen.html#adv-s">Advanced</a></li>
+        </ul>
+      </li>
       <li><a href="stundenplan.html" data-i18n="schedule">Stundenplan</a></li>
       <li><a href="mitgliedschaften.html" class="active" data-i18n="memberships">Mitgliedschaften</a></li>
       <li><a href="kontakt.html" data-i18n="contact">Kontakt</a></li>
@@ -308,6 +331,14 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
     <a href="/" onclick="toggleMenu()">Start</a>
     <a href="uber-uns.html" onclick="toggleMenu()">Über uns</a>
     <a href="klassen.html" onclick="toggleMenu()">Klassen</a>
+    <div class="mob-programs">
+      <a href="klassen.html#kids" onclick="toggleMenu()">Kids</a>
+      <a href="klassen.html#adults" onclick="toggleMenu()">Fundamentals</a>
+      <a href="klassen.html#adults" onclick="toggleMenu()">All Levels</a>
+      <a href="klassen.html#nogi" onclick="toggleMenu()">NoGi</a>
+      <a href="klassen.html#frauen-s" onclick="toggleMenu()">Frauen</a>
+      <a href="klassen.html#adv-s" onclick="toggleMenu()">Advanced</a>
+    </div>
     <a href="stundenplan.html" onclick="toggleMenu()">Stundenplan</a>
     <a href="mitgliedschaften.html" class="active" onclick="toggleMenu()">Mitgliedschaften</a>
     <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
