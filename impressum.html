@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum | Alcateia Jiu Jitsu</title>
+<meta name="description" content="Impressum — Alcateia Jiu Jitsu, Raw Life GmbH, Mönchaltorf, Zürich Oberland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:#0a0a0a;color:#f0ede6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+:root{
+  --blue:#4a9fd4;
+  --dark:#0a0a0a;
+  --dark-2:#111111;
+  --cream:#f0ede6;
+  --cream-dim:rgba(240,237,230,0.62);
+  --cream-faint:rgba(240,237,230,0.28);
+  --border:rgba(240,237,230,0.08);
+  --border-m:rgba(240,237,230,0.14);
+}
+
+/* NAVBAR */
+.navbar{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 3rem);max-width:1360px;background:rgba(10,10,10,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-m);border-radius:12px;transition:background .35s,border-color .35s}
+.navbar.scrolled{background:rgba(10,10,10,0.96);border-color:rgba(240,237,230,0.18)}
+.nav-inner{padding:0 1.75rem;height:80px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo img{height:78px;width:78px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(74,159,212,.25)) brightness(1.1)}
+.nav-center{display:flex;gap:1.4rem;list-style:none;flex:1;justify-content:center}
+.nav-center a{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,230,.75);position:relative;padding-bottom:3px;transition:color .2s}
+.nav-center a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--blue);transform:scaleX(0);transition:transform .25s;transform-origin:left}
+.nav-center a:hover{color:var(--cream)}
+.nav-center a:hover::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
+.nav-logo{flex-shrink:0}
+.nav-lang{display:flex;align-items:center;gap:.35rem;font-size:.62rem;font-weight:700;letter-spacing:.08em;color:rgba(240,237,230,.5)}
+.nav-lang button{background:none;border:none;color:rgba(240,237,230,.5);font-family:inherit;font-size:inherit;font-weight:inherit;letter-spacing:inherit;cursor:pointer;padding:.25rem .4rem;border-radius:3px;transition:color .2s,background .2s}
+.nav-lang button.active{color:var(--cream);background:rgba(74,159,212,.12)}
+.nav-lang button:hover{color:var(--blue)}
+.nav-lang .sep{opacity:.3}
+.nav-cta{padding:.7rem 1.5rem;background:var(--blue);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:5px;transition:background .2s,transform .15s}
+.nav-cta:hover{background:#3a8fc4;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--cream)}
+.mobile-menu{display:none;flex-direction:column;background:rgba(10,10,10,.98);border-top:1px solid var(--border);padding:1.5rem 2rem;gap:.5rem;border-radius:0 0 12px 12px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:.73rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);padding:.65rem 0;border-bottom:1px solid var(--border);transition:color .2s}
+.mobile-menu a:hover{color:var(--blue)}
+.mobile-menu .mob-cta{background:var(--blue);color:#fff;text-align:center;padding:.75rem;margin-top:.5rem;border-radius:5px;border:none}
+
+/* PAGE */
+.legal-page{padding:9rem 2.5rem 6rem;max-width:760px;margin:0 auto}
+.legal-eyebrow{font-size:.6rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
+.legal-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--blue)}
+.legal-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,4.5rem);letter-spacing:.02em;line-height:.95;color:var(--cream);margin-bottom:3rem}
+.legal-section{margin-bottom:2.5rem}
+.legal-section h2{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.06em;color:var(--cream);margin-bottom:.85rem}
+.legal-section p{font-size:.88rem;line-height:1.8;color:var(--cream-dim);margin-bottom:.75rem;font-weight:300}
+.legal-section a{color:var(--blue);transition:opacity .2s}
+.legal-section a:hover{opacity:.75}
+.legal-divider{width:40px;height:1px;background:var(--border-m);margin:2.5rem 0}
+
+/* FOOTER */
+footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--border)}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:3rem;align-items:start;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
+.footer-ttl{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:16px}
+.footer-hours{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-hours li{display:flex;align-items:baseline;gap:0}
+.footer-hours li span:first-child{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);white-space:nowrap}
+.footer-hours li span:first-child::after{content:" — ";color:rgba(255,255,255,.2);letter-spacing:0}
+.footer-hours li span:last-child{font-size:.68rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.footer-sch-link{display:inline-block;margin-top:12px;font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);transition:opacity .2s}
+.footer-sch-link:hover{opacity:.75}
+.footer-insta{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);transition:color .2s;margin-top:4px}
+.footer-insta:hover{color:#fff}
+.footer-logo img{height:72px;width:auto;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(74,159,212,.18)) brightness(1.05)}
+.footer-desc{font-size:.78rem;color:var(--cream-dim);line-height:1.85}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:2rem}
+.footer-copy{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-faint)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-faint);transition:color .2s}
+.footer-links a:hover{color:var(--blue)}
+
+@media(max-width:1024px){
+  .nav-center{display:none}
+  .hamburger{display:flex}
+  .footer-top{grid-template-columns:1fr;gap:2rem}
+}
+@media(max-width:768px){
+  .legal-page{padding:8rem 1.25rem 4rem}
+}
+@media(max-width:480px){
+  .navbar{width:calc(100% - 1.5rem);top:.75rem}
+  .nav-inner{padding:0 1rem;height:68px}
+  .nav-logo img{height:54px;width:54px}
+  .nav-right{gap:.75rem}
+  .nav-cta{padding:.5rem .75rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="images/uber-uns-01.png" alt="Alcateia Jiu Jitsu"></a>
+    <ul class="nav-center">
+      <li><a href="/">Start</a></li>
+      <li><a href="uber-uns.html">Über uns</a></li>
+      <li><a href="klassen.html">Klassen</a></li>
+      <li><a href="stundenplan.html">Stundenplan</a></li>
+      <li><a href="mitgliedschaften.html">Mitgliedschaften</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="kontakt.html" class="nav-cta">Probetraining</a>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menü"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/" onclick="toggleMenu()">Start</a>
+    <a href="uber-uns.html" onclick="toggleMenu()">Über uns</a>
+    <a href="klassen.html" onclick="toggleMenu()">Klassen</a>
+    <a href="stundenplan.html" onclick="toggleMenu()">Stundenplan</a>
+    <a href="mitgliedschaften.html" onclick="toggleMenu()">Mitgliedschaften</a>
+    <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
+    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()">Probetraining</a>
+  </div>
+</nav>
+
+<main class="legal-page">
+  <p class="legal-eyebrow">Rechtliches</p>
+  <h1 class="legal-h1">Impressum</h1>
+
+  <div class="legal-section">
+    <h2>Herausgeber</h2>
+    <p>Raw Life GmbH<br>
+    Mettlenbachstrasse 29<br>
+    8617 Mönchaltorf<br>
+    Zürich Oberland, Schweiz</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>Geschäftsführung</h2>
+    <p>Scout Feitosa Pereira<br>Lucas Feitosa Pereira Bosshard</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>Handelsregistereintrag</h2>
+    <p>Firmenname: Raw Life GmbH<br>
+    UID-Nummer: CHE-178.664.818<br>
+    Handelsregister des Kantons Zürich</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>Kontakt</h2>
+    <p>E-Mail: <a href="mailto:alcateiajiujitsu@protonmail.com">alcateiajiujitsu@protonmail.com</a><br>
+    WhatsApp: <a href="https://wa.me/41772675669">+41 77 267 56 69</a></p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>Haftungsausschluss</h2>
+    <p>Der Herausgeber übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen auf dieser Website.</p>
+    <p>Haftungsansprüche gegen den Herausgeber wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>Haftung für externe Links</h2>
+    <p>Verweise und Links auf Websites Dritter liegen ausserhalb unseres Verantwortungsbereichs. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des Nutzers.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>Urheberrecht</h2>
+    <p>Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website gehören ausschliesslich der Raw Life GmbH oder den namentlich genannten Rechteinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des Urheberrechtsträgers im Voraus einzuholen.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="footer-logo"><img src="images/uber-uns-01.png" alt="Alcateia Jiu Jitsu" loading="lazy"></a>
+        <p class="footer-desc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
+        <span class="footer-copy" style="display:block;margin-top:10px">© 2025 Raw Life GmbH.</span>
+      </div>
+      <div>
+        <p class="footer-ttl">Trainingszeiten</p>
+        <ul class="footer-hours">
+          <li><span>Mo / Mi</span><span>06:30 – 20:30</span></li>
+          <li><span>Di / Do</span><span>12:00 – 19:30</span></li>
+          <li><span>Freitag</span><span>12:00 – 20:30</span></li>
+          <li><span>Samstag</span><span>10:00 – 13:00</span></li>
+        </ul>
+        <a href="stundenplan.html" class="footer-sch-link">Stundenplan ansehen →</a>
+      </div>
+      <div>
+        <p class="footer-ttl">Folge uns</p>
+        <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="footer-insta"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>80)},{passive:true});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+</script>
+</body>
+</html>
