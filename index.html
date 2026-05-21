@@ -310,10 +310,10 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/" class="active" onclick="toggleMenu()">Start</a>
-    <a href="uber-uns.html" onclick="toggleMenu()">Über uns</a>
+    <a href="/" class="active" onclick="toggleMenu()" data-i18n="start">Start</a>
+    <a href="uber-uns.html" onclick="toggleMenu()" data-i18n="about">Über uns</a>
     <div class="mob-drop-row">
-      <a href="klassen.html" onclick="toggleMenu()">Klassen</a>
+      <a href="klassen.html" onclick="toggleMenu()" data-i18n="classes">Klassen</a>
       <button class="mob-drop-btn" onclick="toggleMobPrograms(this)" aria-label="Programme"><svg viewBox="0 0 10 6" width="10" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
     <div class="mob-programs">
@@ -321,13 +321,13 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
       <a href="klassen.html#adults" onclick="toggleMenu()">Fundamentals</a>
       <a href="klassen.html#adults" onclick="toggleMenu()">All Levels</a>
       <a href="klassen.html#nogi" onclick="toggleMenu()">NoGi</a>
-      <a href="klassen.html#frauen-s" onclick="toggleMenu()">Frauen</a>
+      <a href="klassen.html#frauen-s" onclick="toggleMenu()" data-i18n="navFrauen">Frauen</a>
       <a href="klassen.html#adv-s" onclick="toggleMenu()">Advanced</a>
     </div>
-    <a href="stundenplan.html" onclick="toggleMenu()">Stundenplan</a>
-    <a href="mitgliedschaften.html" onclick="toggleMenu()">Mitgliedschaften</a>
-    <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
-    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()">Probetraining</a>
+    <a href="stundenplan.html" onclick="toggleMenu()" data-i18n="schedule">Stundenplan</a>
+    <a href="mitgliedschaften.html" onclick="toggleMenu()" data-i18n="memberships">Mitgliedschaften</a>
+    <a href="kontakt.html" onclick="toggleMenu()" data-i18n="contact">Kontakt</a>
+    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()" data-i18n="probetraining">Probetraining</a>
   </div>
 </nav>
 <!-- HERO -->
@@ -335,50 +335,50 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
   <div class="hBg"></div>
   <div class="hGrad"></div>
   <div class="hInner">
-    <div class="hTag">Alcateia Jiu Jitsu · Zürich Oberland</div>
-    <h1 class="hXXL">Werde Teil<br>Unseres Rudels</h1>
+    <div class="hTag" data-i18n="heroTag">Alcateia Jiu Jitsu · Zürich Oberland</div>
+    <h1 class="hXXL" data-i18n="heroH1">Werde Teil<br>Unseres Rudels</h1>
     <div class="hBtns">
-      <a href="mitgliedschaften.html" class="bSolid">Probetraining buchen</a>
-      <a href="#mission" class="bGhost">Mehr erfahren</a>
+      <a href="mitgliedschaften.html" class="bSolid" data-i18n="heroBtn1">Probetraining buchen</a>
+      <a href="#mission" class="bGhost" data-i18n="heroBtn2">Mehr erfahren</a>
     </div>
   </div>
-  <div class="hScroll"><span>Scroll</span><i></i></div>
+  <div class="hScroll"><span data-i18n="heroScroll">Scroll</span><i></i></div>
 </section>
 
 <!-- MISSION -->
 <section id="mission">
   <div class="mImg"><img src="images/index-02.webp" alt="Lucas und Scout" loading="lazy"></div>
   <div class="mTxt rev">
-    <span class="lbl">Unsere Mission</span>
-    <h2 class="hLG">Mehr als<br>ein Dojo</h2>
-    <p>Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke zu vermitteln.</p>
-    <p>Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen. Jeder hat dieselben Rechte — jeder hat einen Platz im Rudel.</p>
-    <a href="uber-uns.html" class="lnk">Über uns →</a>
+    <span class="lbl" data-i18n="missionLabel">Unsere Mission</span>
+    <h2 class="hLG" data-i18n="missionH2">Mehr als<br>ein Dojo</h2>
+    <p data-i18n="missionP1">Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke zu vermitteln.</p>
+    <p data-i18n="missionP2">Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen. Jeder hat dieselben Rechte — jeder hat einen Platz im Rudel.</p>
+    <a href="uber-uns.html" class="lnk" data-i18n="missionLink">Über uns →</a>
   </div>
 </section>
 
 <!-- KLASSEN -->
 <section id="klassen">
   <div class="kHead rev">
-    <span class="lbl">Trainingsangebot</span>
-    <h2 class="hXL">Unsere Klassen</h2>
+    <span class="lbl" data-i18n="classesLabel">Trainingsangebot</span>
+    <h2 class="hXL" data-i18n="classesH2">Unsere Klassen</h2>
   </div>
   <div class="prog">
     <div class="pImg"><img src="images/index-03.webp" alt="Adult Program" loading="lazy"></div>
     <div class="pTxt rev">
-      <h3 class="hLG">Adult Program</h3>
-      <p>Von der allerersten Rolle bis zur Wettkampfvorbereitung — Fundamentals, All Levels und fortgeschrittene Techniken in einem strukturierten Curriculum.</p>
-      <p>Lucas bringt sein Weltklasse-Wissen direkt auf die Matte. Jeder Gurt findet hier seinen Platz.</p>
-      <a href="klassen.html#adults" class="lnk">Klassen entdecken →</a>
+      <h3 class="hLG" data-i18n="adultTitle">Adult Program</h3>
+      <p data-i18n="adultP1">Von der allerersten Rolle bis zur Wettkampfvorbereitung — Fundamentals, All Levels und fortgeschrittene Techniken in einem strukturierten Curriculum.</p>
+      <p data-i18n="adultP2">Lucas bringt sein Weltklasse-Wissen direkt auf die Matte. Jeder Gurt findet hier seinen Platz.</p>
+      <a href="klassen.html#adults" class="lnk" data-i18n="classesLink">Klassen entdecken →</a>
     </div>
   </div>
   <div class="prog flip">
     <div class="pImg"><img src="images/index-04.webp" alt="Kids Program" loading="lazy"></div>
     <div class="pTxt rev">
-      <h3 class="hLG">Kids</h3>
-      <p>Kids I (3–6 J.) entdecken Bewegung spielerisch. Kids II (7–14 J.) entwickeln Disziplin, Selbstvertrauen und erste Technik.</p>
-      <p>Der erste Schritt im Wolfsrudel — mit Herz, Struktur und echtem pädagogischen Konzept.</p>
-      <a href="klassen.html#kids" class="lnk">Klassen entdecken →</a>
+      <h3 class="hLG" data-i18n="kidsTitle">Kids</h3>
+      <p data-i18n="kidsP1">Kids I (3–6 J.) entdecken Bewegung spielerisch. Kids II (7–14 J.) entwickeln Disziplin, Selbstvertrauen und erste Technik.</p>
+      <p data-i18n="kidsP2">Der erste Schritt im Wolfsrudel — mit Herz, Struktur und echtem pädagogischen Konzept.</p>
+      <a href="klassen.html#kids" class="lnk" data-i18n="classesLink">Klassen entdecken →</a>
     </div>
   </div>
 </section>
@@ -386,31 +386,31 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
 <!-- WARUM ALCATEIA -->
 <section id="warum">
   <div class="rev">
-    <span class="lbl">Warum Alcateia</span>
-    <h2 class="hXL">Was uns ausmacht</h2>
+    <span class="lbl" data-i18n="warumLabel">Warum Alcateia</span>
+    <h2 class="hXL" data-i18n="warumH2">Was uns ausmacht</h2>
   </div>
   <div class="wGrid">
     <div class="wCard rev">
-      <h3 class="wTitle">Weltklasse Trainer</h3>
-      <p class="wTxt">Lucas und Scout sind nicht nur Schwarzgurte — sie sind Wettkampfchampions, die ihr Wissen direkt auf die Matte bringen. Was du hier lernst, hat auf höchstem Niveau funktioniert.</p>
+      <h3 class="wTitle" data-i18n="whyCard1Title">Weltklasse Trainer</h3>
+      <p class="wTxt" data-i18n="whyCard1Text">Lucas und Scout sind nicht nur Schwarzgurte — sie sind Wettkampfchampions, die ihr Wissen direkt auf die Matte bringen. Was du hier lernst, hat auf höchstem Niveau funktioniert.</p>
     </div>
     <div class="wCard rev">
-      <h3 class="wTitle">Echte Gemeinschaft</h3>
-      <p class="wTxt">Kein anonymes Gym. Bei Alcateia kennst du jeden Namen auf der Matte. Wir trainieren zusammen, wachsen zusammen — ein Rudel, das füreinander einsteht.</p>
+      <h3 class="wTitle" data-i18n="whyCard2Title">Echte Gemeinschaft</h3>
+      <p class="wTxt" data-i18n="whyCard2Text">Kein anonymes Gym. Bei Alcateia kennst du jeden Namen auf der Matte. Wir trainieren zusammen, wachsen zusammen — ein Rudel, das füreinander einsteht.</p>
     </div>
     <div class="wCard rev">
-      <h3 class="wTitle">Für alle Levels</h3>
-      <p class="wTxt">Ob erstes Training oder jahrelange Erfahrung — unser strukturiertes Curriculum gibt jedem Gurt den richtigen Weg. Kein Gurt wird zurückgelassen.</p>
+      <h3 class="wTitle" data-i18n="whyCard3Title">Für alle Levels</h3>
+      <p class="wTxt" data-i18n="whyCard3Text">Ob erstes Training oder jahrelange Erfahrung — unser strukturiertes Curriculum gibt jedem Gurt den richtigen Weg. Kein Gurt wird zurückgelassen.</p>
     </div>
   </div>
-  <div class="wCta"><a href="uber-uns.html" class="lnk">Unsere Geschichte kennenlernen →</a></div>
+  <div class="wCta"><a href="uber-uns.html" class="lnk" data-i18n="warumCTA">Unsere Geschichte kennenlernen →</a></div>
 </section>
 
 <!-- UNSER ZUHAUSE -->
 <section id="dojo">
   <div class="dHead rev">
-    <span class="lbl">Unser Zuhause</span>
-    <h2 class="hXL">Der Raum, in dem<br>das Rudel entsteht</h2>
+    <span class="lbl" data-i18n="dojoLabel">Unser Zuhause</span>
+    <h2 class="hXL" data-i18n="dojoH2">Der Raum, in dem<br>das Rudel entsteht</h2>
   </div>
   <div class="gWrap">
     <div class="gOuter gReveal" id="gOuter">
@@ -421,8 +421,8 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
           <div class="g360Bg" style="background-image:url('images/index-05.webp')"></div>
           <div class="g360Over">
             <div class="g360Badge">360°</div>
-            <span class="g360Lbl">Tour pela Academia</span>
-            <span class="g360Sub">Clique para explorar</span>
+            <span class="g360Lbl" data-i18n="tourLabel">Tour durch die Akademie</span>
+            <span class="g360Sub" data-i18n="tourSub">Öffnen und erkunden</span>
           </div>
         </div>
 
@@ -474,16 +474,16 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
     <button class="g360Close" onclick="close360()">✕</button>
     <div class="g360MContent">
       <div class="g360MNum">360°</div>
-      <p class="g360MTxt">Tour interactivo em breve</p>
-      <p class="g360MSub">O vídeo 360° da academia será adicionado aqui</p>
+      <p class="g360MTxt" data-i18n="tourModalTitle">Interaktive Tour · Bald verfügbar</p>
+      <p class="g360MSub" data-i18n="tourModalSub">Das 360°-Video der Akademie folgt in Kürze</p>
       <div class="g360MNav">
         <span>
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          Arrastar para explorar
+          <span data-i18n="tourDrag">Zum Erkunden ziehen</span>
         </span>
         <span>
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
-          ESC para fechar
+          <span data-i18n="tourClose">ESC zum Schliessen</span>
         </span>
       </div>
     </div>
@@ -493,10 +493,10 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
 <!-- COMMUNITY<!-- COMMUNITY -->
 <section id="community">
   <div class="cTop rev">
-    <span class="lbl">Was unsere Community sagt</span>
+    <span class="lbl" data-i18n="communityLabel">Was unsere Community sagt</span>
     <div class="rating">
       <span class="rNum">5.0</span>
-      <div><span class="rStars">★★★★★</span><span class="rSrc">Auf Google</span></div>
+      <div><span class="rStars">★★★★★</span><span class="rSrc" data-i18n="communityRatingSrc">Auf Google</span></div>
     </div>
   </div>
   <div class="cardsWrap" id="cWrap">
@@ -504,50 +504,50 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
     <div class="card rev">
       <div class="cStars">★★★★★</div>
       <p class="cTxt">"Training at Alcateia in Mönchaltorf has been a really great experience. The coaches are incredibly skilled and passionate — you feel that every single class."</p>
-      <div class="cAuth"><div class="cAv">G</div><div><span class="cName">Gonçalo Castro</span><span class="cWhen">Google Bewertung</span></div></div>
+      <div class="cAuth"><div class="cAv">G</div><div><span class="cName">Gonçalo Castro</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
     <div class="card rev">
       <div class="cStars">★★★★★</div>
       <p class="cTxt">"Excelente academia, ótimos professores, didática muito aprofundada. Scout e Lucas ensinam com uma atenção aos detalhes que raramente se encontra."</p>
-      <div class="cAuth"><div class="cAv">V</div><div><span class="cName">Vinícius Reis</span><span class="cWhen">Google Bewertung</span></div></div>
+      <div class="cAuth"><div class="cAv">V</div><div><span class="cName">Vinícius Reis</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
     <div class="card rev">
       <div class="cStars">★★★★★</div>
       <p class="cTxt">"Both Scout and Lucas never looked at my age as a limit. They have always trained me as any other student, and that gave me so much confidence and motivated me to improve no matter what."</p>
-      <div class="cAuth"><div class="cAv">E</div><div><span class="cName">Elisabetta</span><span class="cWhen">Google Bewertung</span></div></div>
+      <div class="cAuth"><div class="cAv">E</div><div><span class="cName">Elisabetta</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
     <div class="card rev">
       <div class="cStars">★★★★★</div>
       <p class="cTxt">"Lucas vereint auf einzigartige Weise Professionalität und eine freundliche, angenehme Art. Er schafft eine positive und einladende Atmosphäre im Training, sodass jede Stunde nicht nur lehrreich, sondern auch sehr angenehm ist."</p>
-      <div class="cAuth"><div class="cAv">A</div><div><span class="cName">Avraam</span><span class="cWhen">Google Bewertung</span></div></div>
+      <div class="cAuth"><div class="cAv">A</div><div><span class="cName">Avraam</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
     <div class="card rev">
       <div class="cStars">★★★★★</div>
       <p class="cTxt">"Lucas is like the drum beat that keeps us all marching forward. I always went home feeling like I am that little bit better than I was the day before. He does it with care and compassion."</p>
-      <div class="cAuth"><div class="cAv">R</div><div><span class="cName">Radu</span><span class="cWhen">Google Bewertung</span></div></div>
+      <div class="cAuth"><div class="cAv">R</div><div><span class="cName">Radu</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
     <div class="card rev">
       <div class="cStars">★★★★★</div>
       <p class="cTxt">"Ich bin aufgeregt nun endlich ein Teil eines offiziellen BJJ-Teams zu sein, und zwar des besten Teams überhaupt: ALCATEIA JIU JITSU!"</p>
-      <div class="cAuth"><div class="cAv">D</div><div><span class="cName">Dakota</span><span class="cWhen">Google Bewertung</span></div></div>
+      <div class="cAuth"><div class="cAv">D</div><div><span class="cName">Dakota</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
   </div>
   </div>
-  <div class="cMore"><a href="https://www.google.com/maps/search/Alcateia+Jiu+Jitsu+Mönchaltorf" target="_blank">Alle Bewertungen ansehen →</a></div>
+  <div class="cMore"><a href="https://www.google.com/maps/search/Alcateia+Jiu+Jitsu+Mönchaltorf" target="_blank" data-i18n="communityMore">Alle Bewertungen ansehen →</a></div>
 </section>
 
 <!-- KOMM INS RUDEL -->
 <section id="komm">
   <div>
-    <h2 class="kTitle">Komm ins Rudel</h2>
-    <p class="kSub">Probetraining jederzeit möglich — melde dich einfach.</p>
+    <h2 class="kTitle" data-i18n="ctaTitle">Komm ins Rudel</h2>
+    <p class="kSub" data-i18n="ctaSub">Probetraining jederzeit möglich — melde dich einfach.</p>
   </div>
   <div class="kBtns">
     <a href="https://wa.me/41772675669" target="_blank" class="bKomm">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp
+      <span data-i18n="ctaWA">WhatsApp</span>
     </a>
-    <a href="mailto:alcateiajiujitsu@protonmail.com" class="bKomm">E-Mail schreiben</a>
+    <a href="mailto:alcateiajiujitsu@protonmail.com" class="bKomm" data-i18n="ctaEmail">E-Mail schreiben</a>
   </div>
 </section>
 
@@ -556,28 +556,28 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
   <div class="fGrid">
     <div class="fBrand">
       <a href="/"><img src="images/index-21.png" alt="Alcateia Jiu Jitsu" loading="lazy"></a>
-      <p>Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
+      <p data-i18n="footerDesc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
       <span class="fCopy" style="display:block;margin-top:10px">© 2025 Raw Life GmbH.</span>
     </div>
     <div>
-      <p class="fNavTtl">Trainingszeiten</p>
+      <p class="fNavTtl" data-i18n="footerHoursTitle">Trainingszeiten</p>
       <ul class="fHours">
         <li><span>Mo / Mi</span><span>06:30 – 20:30</span></li>
         <li><span>Di / Do</span><span>12:00 – 19:30</span></li>
         <li><span>Freitag</span><span>12:00 – 20:30</span></li>
         <li><span>Samstag</span><span>10:00 – 13:00</span></li>
       </ul>
-      <a href="stundenplan.html" class="fSchLink">Stundenplan ansehen →</a>
+      <a href="stundenplan.html" class="fSchLink" data-i18n="footerScheduleLink">Stundenplan ansehen →</a>
     </div>
     <div>
-      <p class="fNavTtl">Folge uns</p>
+      <p class="fNavTtl" data-i18n="footerFollowTitle">Folge uns</p>
       <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="fInsta">
         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
     </div>
   </div>
   <div class="fBtm">
-    <div class="fLegal"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+    <div class="fLegal"><a href="#" data-i18n="footerImpressum">Impressum</a><a href="#" data-i18n="footerDatenschutz">Datenschutz</a></div>
   </div>
 </footer>
 
@@ -602,14 +602,91 @@ document.addEventListener('click',e=>{
   if(m.classList.contains('open')&&!n.contains(e.target))m.classList.remove('open');
 });
 const translations={
-  de:{start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining'},
-  en:{start:'Home',about:'About us',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class'}
+  de:{
+    start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining',navFrauen:'Frauen',
+    heroTag:'Alcateia Jiu Jitsu · Zürich Oberland',
+    heroH1:'Werde Teil<br>Unseres Rudels',
+    heroBtn1:'Probetraining buchen',heroBtn2:'Mehr erfahren',heroScroll:'Scroll',
+    missionLabel:'Unsere Mission',
+    missionH2:'Mehr als<br>ein Dojo',
+    missionP1:'Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke zu vermitteln.',
+    missionP2:'Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen. Jeder hat dieselben Rechte — jeder hat einen Platz im Rudel.',
+    missionLink:'Über uns →',
+    classesLabel:'Trainingsangebot',classesH2:'Unsere Klassen',
+    adultTitle:'Adult Program',
+    adultP1:'Von der allerersten Rolle bis zur Wettkampfvorbereitung — Fundamentals, All Levels und fortgeschrittene Techniken in einem strukturierten Curriculum.',
+    adultP2:'Lucas bringt sein Weltklasse-Wissen direkt auf die Matte. Jeder Gurt findet hier seinen Platz.',
+    classesLink:'Klassen entdecken →',
+    kidsTitle:'Kids',
+    kidsP1:'Kids I (3–6 J.) entdecken Bewegung spielerisch. Kids II (7–14 J.) entwickeln Disziplin, Selbstvertrauen und erste Technik.',
+    kidsP2:'Der erste Schritt im Wolfsrudel — mit Herz, Struktur und echtem pädagogischen Konzept.',
+    warumLabel:'Warum Alcateia',warumH2:'Was uns ausmacht',
+    whyCard1Title:'Weltklasse Trainer',
+    whyCard1Text:'Lucas und Scout sind nicht nur Schwarzgurte — sie sind Wettkampfchampions, die ihr Wissen direkt auf die Matte bringen. Was du hier lernst, hat auf höchstem Niveau funktioniert.',
+    whyCard2Title:'Echte Gemeinschaft',
+    whyCard2Text:'Kein anonymes Gym. Bei Alcateia kennst du jeden Namen auf der Matte. Wir trainieren zusammen, wachsen zusammen — ein Rudel, das füreinander einsteht.',
+    whyCard3Title:'Für alle Levels',
+    whyCard3Text:'Ob erstes Training oder jahrelange Erfahrung — unser strukturiertes Curriculum gibt jedem Gurt den richtigen Weg. Kein Gurt wird zurückgelassen.',
+    warumCTA:'Unsere Geschichte kennenlernen →',
+    dojoLabel:'Unser Zuhause',dojoH2:'Der Raum, in dem<br>das Rudel entsteht',
+    tourLabel:'Tour durch die Akademie',tourSub:'Öffnen und erkunden',
+    tourModalTitle:'Interaktive Tour · Bald verfügbar',tourModalSub:'Das 360°-Video der Akademie folgt in Kürze',
+    tourDrag:'Zum Erkunden ziehen',tourClose:'ESC zum Schliessen',
+    communityLabel:'Was unsere Community sagt',communityRatingSrc:'Auf Google',
+    commReviewSrc:'Google Bewertung',communityMore:'Alle Bewertungen ansehen →',
+    ctaTitle:'Komm ins Rudel',ctaSub:'Probetraining jederzeit möglich — melde dich einfach.',
+    ctaWA:'WhatsApp',ctaEmail:'E-Mail schreiben',
+    footerDesc:'Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz',
+    footerHoursTitle:'Trainingszeiten',footerScheduleLink:'Stundenplan ansehen →',
+    footerFollowTitle:'Folge uns',
+    footerImpressum:'Impressum',footerDatenschutz:'Datenschutz'
+  },
+  en:{
+    start:'Home',about:'About',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class',navFrauen:"Women's",
+    heroTag:'Alcateia Jiu Jitsu · Zürich Oberland',
+    heroH1:'Become Part<br>of Our Pack',
+    heroBtn1:'Book a Trial Class',heroBtn2:'Learn More',heroScroll:'Scroll',
+    missionLabel:'Our Mission',
+    missionH2:'More Than<br>a Dojo',
+    missionP1:'Our mission is to give people confidence, resilience, discipline, joy, belonging and strength through Brazilian Jiu Jitsu.',
+    missionP2:'On our Tatami, barefoot in the Kimono, everyone is seen as a person — not reduced to their status, job or background. Everyone has the same rights. Everyone has a place in the pack.',
+    missionLink:'About us →',
+    classesLabel:'Training Programs',classesH2:'Our Classes',
+    adultTitle:'Adult Program',
+    adultP1:'From your very first roll to competition prep — Fundamentals, All Levels, and advanced techniques in a structured curriculum.',
+    adultP2:'Lucas brings world-class knowledge directly to the mat. Every belt level finds its place here.',
+    classesLink:'Explore Classes →',
+    kidsTitle:'Kids',
+    kidsP1:'Kids I (ages 3–6) explore movement through play. Kids II (ages 7–14) build discipline, confidence, and foundational technique.',
+    kidsP2:'The first step in the wolf pack — led with heart, structure, and a real pedagogical approach.',
+    warumLabel:'Why Alcateia',warumH2:'What sets us apart',
+    whyCard1Title:'World-Class Coaches',
+    whyCard1Text:'Lucas and Scout are not just black belts — they are competition champions who bring their knowledge directly to the mat. What you learn here has been proven at the highest level.',
+    whyCard2Title:'Real Community',
+    whyCard2Text:"No anonymous gym. At Alcateia, you know everyone on the mat by name. We train together, grow together — a pack that has each other's backs.",
+    whyCard3Title:'For All Levels',
+    whyCard3Text:"Whether it's your first class or years of experience — our structured curriculum gives every belt the right path forward. No belt gets left behind.",
+    warumCTA:'Our Story →',
+    dojoLabel:'Our Home',dojoH2:'The Space Where<br>the Pack Was Born',
+    tourLabel:'Tour the Academy',tourSub:'Open and explore',
+    tourModalTitle:'Interactive Tour · Coming Soon',tourModalSub:'The 360° video of the academy is on its way',
+    tourDrag:'Drag to explore',tourClose:'ESC to close',
+    communityLabel:'What our community says',communityRatingSrc:'On Google',
+    commReviewSrc:'Google Review',communityMore:'See all reviews →',
+    ctaTitle:'Join the Pack',ctaSub:'Trial class available anytime — just reach out.',
+    ctaWA:'WhatsApp',ctaEmail:'Send Email',
+    footerDesc:'Brazilian Jiu Jitsu<br>Zürich Oberland, Switzerland',
+    footerHoursTitle:'Training Hours',footerScheduleLink:'View Schedule →',
+    footerFollowTitle:'Follow us',
+    footerImpressum:'Legal Notice',footerDatenschutz:'Privacy Policy'
+  }
 };
 function setLang(lang){
   document.documentElement.lang=lang;
   try{localStorage.setItem('alcateia_lang',lang)}catch(e){}
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
-  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(translations[lang]&&translations[lang][k])el.textContent=translations[lang][k];});
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(translations[lang]&&translations[lang][k])el.innerHTML=translations[lang][k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(translations[lang]&&translations[lang][k])el.placeholder=translations[lang][k];});
 }
 try{const s=localStorage.getItem('alcateia_lang')||'de';if(s!=='de')setLang(s)}catch(e){}
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});

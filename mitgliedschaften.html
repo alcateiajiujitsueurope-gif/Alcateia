@@ -333,10 +333,10 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/" onclick="toggleMenu()">Start</a>
-    <a href="uber-uns.html" onclick="toggleMenu()">Über uns</a>
+    <a href="/" onclick="toggleMenu()" data-i18n="start">Start</a>
+    <a href="uber-uns.html" onclick="toggleMenu()" data-i18n="about">Über uns</a>
     <div class="mob-drop-row">
-      <a href="klassen.html" onclick="toggleMenu()">Klassen</a>
+      <a href="klassen.html" onclick="toggleMenu()" data-i18n="classes">Klassen</a>
       <button class="mob-drop-btn" onclick="toggleMobPrograms(this)" aria-label="Programme"><svg viewBox="0 0 10 6" width="10" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
     <div class="mob-programs">
@@ -344,13 +344,13 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
       <a href="klassen.html#adults" onclick="toggleMenu()">Fundamentals</a>
       <a href="klassen.html#adults" onclick="toggleMenu()">All Levels</a>
       <a href="klassen.html#nogi" onclick="toggleMenu()">NoGi</a>
-      <a href="klassen.html#frauen-s" onclick="toggleMenu()">Frauen</a>
+      <a href="klassen.html#frauen-s" onclick="toggleMenu()" data-i18n="navFrauen">Frauen</a>
       <a href="klassen.html#adv-s" onclick="toggleMenu()">Advanced</a>
     </div>
-    <a href="stundenplan.html" onclick="toggleMenu()">Stundenplan</a>
-    <a href="mitgliedschaften.html" class="active" onclick="toggleMenu()">Mitgliedschaften</a>
-    <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
-    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()">Probetraining</a>
+    <a href="stundenplan.html" onclick="toggleMenu()" data-i18n="schedule">Stundenplan</a>
+    <a href="mitgliedschaften.html" class="active" onclick="toggleMenu()" data-i18n="memberships">Mitgliedschaften</a>
+    <a href="kontakt.html" onclick="toggleMenu()" data-i18n="contact">Kontakt</a>
+    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()" data-i18n="probetraining">Probetraining</a>
   </div>
 </nav>
 
@@ -358,78 +358,78 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
 
 <section class="plans-section">
   <div class="plans-head reveal">
-    <p class="plans-eyebrow"><span></span>Mitgliedschaften</p>
-    <h2 class="plans-title">Gruppentraining</h2>
-    <span class="plans-sub">Alle Preise inkl. MwSt.</span>
+    <p class="plans-eyebrow"><span></span><span data-i18n="mitgEyebrow">Mitgliedschaften</span></p>
+    <h2 class="plans-title" data-i18n="mitgTitle">Gruppentraining</h2>
+    <span class="plans-sub" data-i18n="mitgSub">Alle Preise inkl. MwSt.</span>
   </div>
   <div class="plans-grid">
 
     <div class="plan-card reveal">
-      <p class="plan-age">Alle Personen ab 18 Jahren</p>
+      <p class="plan-age" data-i18n="wolfAge">Alle Personen ab 18 Jahren</p>
       <h2 class="plan-name">Wolf</h2>
-      <p class="plan-desc">Training für jedes Level, Mo&ndash;Sa. Aktive Athleten als Trainer, Familienambiente und Stärkung des Selbstvertrauens — für alle, die Jiu Jitsu wirklich leben wollen.</p>
+      <p class="plan-desc" data-i18n="wolfDesc">Montag bis Samstag, für jedes Level. Trainiert von aktiven Athleten, die wissen, was auf der Tatami zählt — nicht nur Technik, sondern Haltung.</p>
       <div class="plan-prices">
         <div class="price-row" data-period="6">
-          <span class="p-label">6 Monate</span>
+          <span class="p-label" data-i18n="period6">6 Monate</span>
           <span class="p-val"><span class="p-cur">CHF</span>1'100</span>
         </div>
         <div class="price-row selected" data-period="12">
-          <span class="p-label">12 Monate</span>
+          <span class="p-label" data-i18n="period12">12 Monate</span>
           <span class="p-val"><span class="p-cur">CHF</span>1'650</span>
         </div>
       </div>
-      <a href="kontakt.html" class="plan-btn">Anmelden &rarr;</a>
+      <a href="kontakt.html" class="plan-btn" data-i18n="planBtn">Anmelden →</a>
     </div>
 
     <div class="plan-card reveal">
-      <p class="plan-age">14 bis 17 Jahre</p>
+      <p class="plan-age" data-i18n="jährlingAge">14 bis 17 Jahre</p>
       <h2 class="plan-name">Jährling</h2>
-      <p class="plan-desc">Lerne den Umgang mit Erfolg &amp; Misserfolg. Spielerisches Training, Förderung der Koordination — mit aktiven Athleten als Trainer.</p>
+      <p class="plan-desc" data-i18n="jährlingDesc">Lerne den Umgang mit Erfolg &amp; Misserfolg. Spielerisches Training, Förderung der Koordination — mit aktiven Athleten als Trainer.</p>
       <div class="plan-prices">
         <div class="price-row" data-period="6">
-          <span class="p-label">6 Monate</span>
+          <span class="p-label" data-i18n="period6">6 Monate</span>
           <span class="p-val"><span class="p-cur">CHF</span>770</span>
         </div>
         <div class="price-row selected" data-period="12">
-          <span class="p-label">12 Monate</span>
+          <span class="p-label" data-i18n="period12">12 Monate</span>
           <span class="p-val"><span class="p-cur">CHF</span>1'150</span>
         </div>
       </div>
-      <a href="kontakt.html" class="plan-btn">Anmelden &rarr;</a>
+      <a href="kontakt.html" class="plan-btn" data-i18n="planBtn">Anmelden →</a>
     </div>
 
     <div class="plan-card reveal">
-      <p class="plan-age">Ab 18 Jahren &middot; mit gültigem Ausweis</p>
-      <h2 class="plan-name">Lehrling &amp; Student</h2>
-      <p class="plan-desc">Dieselben Klassen wie Wolf — günstigerer Preis. Gültiger Lehrlings- oder Studierendenausweis erforderlich.</p>
+      <p class="plan-age" data-i18n="lehrlingStuAge">Ab 18 Jahren · mit gültigem Ausweis</p>
+      <h2 class="plan-name" data-i18n="lehrlingStuName">Lehrling &amp; Student</h2>
+      <p class="plan-desc" data-i18n="lehrlingStuDesc">Dieselben Klassen wie Wolf — günstigerer Preis. Gültiger Lehrlings- oder Studierendenausweis erforderlich.</p>
       <div class="plan-prices">
         <div class="price-row" data-period="6">
-          <span class="p-label">6 Monate</span>
+          <span class="p-label" data-i18n="period6">6 Monate</span>
           <span class="p-val"><span class="p-cur">CHF</span>770</span>
         </div>
         <div class="price-row selected" data-period="12">
-          <span class="p-label">12 Monate</span>
+          <span class="p-label" data-i18n="period12">12 Monate</span>
           <span class="p-val"><span class="p-cur">CHF</span>1'150</span>
         </div>
       </div>
-      <a href="kontakt.html" class="plan-btn">Anmelden &rarr;</a>
+      <a href="kontakt.html" class="plan-btn" data-i18n="planBtn">Anmelden →</a>
     </div>
 
     <div class="plan-card reveal">
-      <p class="plan-age">Bis und mit 13 Jahre</p>
+      <p class="plan-age" data-i18n="welpeAge">Bis und mit 13 Jahre</p>
       <h2 class="plan-name">Welpe</h2>
-      <p class="plan-desc">Spielerisch, altersgerecht, herzlich. Die ersten Schritte im Rudel — mit erfahrenen und einfühlsamen Trainern.</p>
+      <p class="plan-desc" data-i18n="welpeDesc">Spielerisch, altersgerecht, herzlich. Die ersten Schritte im Rudel — mit erfahrenen und einfühlsamen Trainern.</p>
       <div class="plan-prices">
         <div class="price-row" data-period="6">
-          <span class="p-label">6 Monate</span>
+          <span class="p-label" data-i18n="period6">6 Monate</span>
           <span class="p-val"><span class="p-cur">CHF</span>550</span>
         </div>
         <div class="price-row selected" data-period="12">
-          <span class="p-label">12 Monate</span>
+          <span class="p-label" data-i18n="period12">12 Monate</span>
           <span class="p-val"><span class="p-cur">CHF</span>820</span>
         </div>
       </div>
-      <a href="kontakt.html" class="plan-btn">Anmelden &rarr;</a>
+      <a href="kontakt.html" class="plan-btn" data-i18n="planBtn">Anmelden →</a>
     </div>
 
   </div>
@@ -439,40 +439,40 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
   <div class="manifesto-bg"><img src="images/mitgliedschaften-02.jpg" alt="" aria-hidden="true" loading="lazy"></div>
   <div class="manifesto-overlay"></div>
   <div class="manifesto-inner reveal">
-    <p class="manifesto-quote">Jiu Jitsu ist <em>mehr als Sport</em> — es ist <strong>Familie</strong>, Disziplin und die tägliche Entscheidung, besser zu werden.</p>
+    <p class="manifesto-quote" data-i18n="manifestoQuote">Jiu Jitsu ist <em>mehr als Sport</em> — es ist <strong>Familie</strong>, Disziplin und die tägliche Entscheidung, besser zu werden.</p>
     <div>
-      <p>Alle Mitgliedschaften beinhalten unbegrenzten Zugang zu den Klassen gemäss Stundenplan. Ein unverbindliches Probetraining ist jederzeit möglich.</p>
-      <a href="kontakt.html" class="btn-outline">Probetraining anfragen &rarr;</a>
+      <p data-i18n="manifestoDesc">Alle Mitgliedschaften beinhalten unbegrenzten Zugang zu den Klassen gemäss Stundenplan. Ein unverbindliches Probetraining ist jederzeit möglich.</p>
+      <a href="kontakt.html" class="btn-outline" data-i18n="manifestoBtn">Probetraining anfragen →</a>
     </div>
   </div>
 </div>
 
 <section class="private-section">
   <div class="private-head reveal">
-    <p class="section-eyebrow">Individuell</p>
-    <h2 class="plans-title">Privatklassen</h2>
+    <p class="section-eyebrow" data-i18n="privateEyebrow">Individuell</p>
+    <h2 class="plans-title" data-i18n="privateTitle">Privatklassen</h2>
   </div>
   <div class="private-grid">
     <article class="private-card reveal">
       <h3 class="private-name">Solo</h3>
-      <p class="private-sub">1 Person &middot; 60 Min.</p>
-      <p class="private-desc">Volle Aufmerksamkeit auf dich. Eigene Themen, Technik, Wettkampfvorbereitung — alles auf dein Spiel zugeschnitten.</p>
-      <p class="private-price">Preis auf Anfrage</p>
-      <a href="https://wa.me/41772675669" target="_blank" class="private-cta">Termin anfragen &rarr;</a>
+      <p class="private-sub" data-i18n="soloSub">1 Person · 60 Min.</p>
+      <p class="private-desc" data-i18n="soloDesc">Volle Aufmerksamkeit auf dich. Eigene Themen, Technik, Wettkampfvorbereitung — alles auf dein Spiel zugeschnitten.</p>
+      <p class="private-price" data-i18n="soloPrice">Preis auf Anfrage</p>
+      <a href="https://wa.me/41772675669" target="_blank" class="private-cta" data-i18n="soloBtn">Termin anfragen →</a>
     </article>
     <article class="private-card reveal">
       <h3 class="private-name">Duo</h3>
-      <p class="private-sub">2 Personen &middot; 60 Min.</p>
-      <p class="private-desc">Mit deinem Trainingspartner. Kosten teilen, gemeinsam wachsen — für Sparringspartner oder Freunde.</p>
-      <p class="private-price">Preis auf Anfrage</p>
-      <a href="https://wa.me/41772675669" target="_blank" class="private-cta">Termin anfragen &rarr;</a>
+      <p class="private-sub" data-i18n="duoSub">2 Personen · 60 Min.</p>
+      <p class="private-desc" data-i18n="duoDesc">Mit deinem Trainingspartner. Kosten teilen, gemeinsam wachsen — für Sparringspartner oder Freunde.</p>
+      <p class="private-price" data-i18n="duoPrice">Preis auf Anfrage</p>
+      <a href="https://wa.me/41772675669" target="_blank" class="private-cta" data-i18n="duoBtn">Termin anfragen →</a>
     </article>
     <article class="private-card reveal">
       <h3 class="private-name">Gruppe</h3>
-      <p class="private-sub">Bis 4 Personen &middot; 60 Min.</p>
-      <p class="private-desc">Eure Gruppe, euer Programm. Familie, Team oder Trainingskollegen — geringste Kosten pro Person.</p>
-      <p class="private-price">Preis auf Anfrage</p>
-      <a href="https://wa.me/41772675669" target="_blank" class="private-cta">Termin anfragen &rarr;</a>
+      <p class="private-sub" data-i18n="gruppeSub">Bis 4 Personen · 60 Min.</p>
+      <p class="private-desc" data-i18n="gruppeDesc">Eure Gruppe, euer Programm. Familie, Team oder Trainingskollegen — geringste Kosten pro Person.</p>
+      <p class="private-price" data-i18n="gruppePrice">Preis auf Anfrage</p>
+      <a href="https://wa.me/41772675669" target="_blank" class="private-cta" data-i18n="gruppeBtn">Termin anfragen →</a>
     </article>
   </div>
 </section>
@@ -480,15 +480,15 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
 <div class="contact-bar">
   <div class="contact-bar-inner">
     <div>
-      <h3>Werde Teil des Rudels</h3>
-      <p>Probetraining jederzeit möglich — melde dich einfach.</p>
+      <h3 data-i18n="ctaTitle">Werde Teil des Rudels</h3>
+      <p data-i18n="ctaSub">Probetraining jederzeit möglich — melde dich einfach.</p>
     </div>
     <div class="contact-bar-btns">
       <a href="https://wa.me/41772675669" target="_blank" class="btn-wa">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.833L0 24l6.335-1.663A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.575-.498-5.065-1.367l-.363-.214-3.76.986.999-3.659-.236-.374A9.96 9.96 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-        WhatsApp
+        <span data-i18n="ctaWA">WhatsApp</span>
       </a>
-      <a href="mailto:alcateiajiujitsu@protonmail.com" class="btn-white">E-Mail schreiben</a>
+      <a href="mailto:alcateiajiujitsu@protonmail.com" class="btn-white" data-i18n="ctaEmail">E-Mail schreiben</a>
     </div>
   </div>
 </div>
@@ -498,26 +498,26 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
     <div class="footer-top">
       <div>
         <a href="/" class="footer-logo"><img src="images/mitgliedschaften-03.png" alt="Alcateia Jiu Jitsu" loading="lazy"></a>
-        <p class="footer-desc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
+        <p class="footer-desc" data-i18n="footerDesc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
         <span class="footer-copy" style="display:block;margin-top:10px">© 2025 Raw Life GmbH.</span>
       </div>
       <div>
-        <p class="footer-ttl">Trainingszeiten</p>
+        <p class="footer-ttl" data-i18n="footerHoursTitle">Trainingszeiten</p>
         <ul class="footer-hours">
           <li><span>Mo / Mi</span><span>06:30 – 20:30</span></li>
           <li><span>Di / Do</span><span>12:00 – 19:30</span></li>
           <li><span>Freitag</span><span>12:00 – 20:30</span></li>
           <li><span>Samstag</span><span>10:00 – 13:00</span></li>
         </ul>
-        <a href="stundenplan.html" class="footer-sch-link">Stundenplan ansehen →</a>
+        <a href="stundenplan.html" class="footer-sch-link" data-i18n="footerScheduleLink">Stundenplan ansehen →</a>
       </div>
       <div>
-        <p class="footer-ttl">Folge uns</p>
+        <p class="footer-ttl" data-i18n="footerFollowTitle">Folge uns</p>
         <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="footer-insta"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-links"></div>
+      <div class="footer-links"><a href="#" data-i18n="footerImpressum">Impressum</a><a href="#" data-i18n="footerDatenschutz">Datenschutz</a></div>
     </div>
   </div>
 </footer>
@@ -542,14 +542,63 @@ document.addEventListener('click',e=>{
   if(m.classList.contains('open')&&!n.contains(e.target))m.classList.remove('open');
 });
 const translations={
-  de:{start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining'},
-  en:{start:'Home',about:'About us',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class'}
+  de:{
+    start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining',navFrauen:'Frauen',
+    mitgEyebrow:'Mitgliedschaften',mitgTitle:'Gruppentraining',mitgSub:'Alle Preise inkl. MwSt.',
+    wolfAge:'Alle Personen ab 18 Jahren',wolfDesc:'Montag bis Samstag, für jedes Level. Trainiert von aktiven Athleten, die wissen, was auf der Tatami zählt — nicht nur Technik, sondern Haltung.',
+    jährlingAge:'14 bis 17 Jahre',jährlingDesc:'Lerne den Umgang mit Erfolg &amp; Misserfolg. Spielerisches Training, Förderung der Koordination — mit aktiven Athleten als Trainer.',
+    lehrlingStuAge:'Ab 18 Jahren · mit gültigem Ausweis',lehrlingStuName:'Lehrling &amp; Student',lehrlingStuDesc:'Dieselben Klassen wie Wolf — günstigerer Preis. Gültiger Lehrlings- oder Studierendenausweis erforderlich.',
+    welpeAge:'Bis und mit 13 Jahre',welpeDesc:'Spielerisch, altersgerecht, herzlich. Die ersten Schritte im Rudel — mit erfahrenen und einfühlsamen Trainern.',
+    planBtn:'Anmelden →',period6:'6 Monate',period12:'12 Monate',
+    manifestoQuote:'Jiu Jitsu ist <em>mehr als Sport</em> — es ist <strong>Familie</strong>, Disziplin und die tägliche Entscheidung, besser zu werden.',
+    manifestoDesc:'Alle Mitgliedschaften beinhalten unbegrenzten Zugang zu den Klassen gemäss Stundenplan. Ein unverbindliches Probetraining ist jederzeit möglich.',
+    manifestoBtn:'Probetraining anfragen →',
+    privateEyebrow:'Individuell',privateTitle:'Privatklassen',
+    soloSub:'1 Person · 60 Min.',soloDesc:'Volle Aufmerksamkeit auf dich. Eigene Themen, Technik, Wettkampfvorbereitung — alles auf dein Spiel zugeschnitten.',
+    soloPrice:'Preis auf Anfrage',soloBtn:'Termin anfragen →',
+    duoSub:'2 Personen · 60 Min.',duoDesc:'Mit deinem Trainingspartner. Kosten teilen, gemeinsam wachsen — für Sparringspartner oder Freunde.',
+    duoPrice:'Preis auf Anfrage',duoBtn:'Termin anfragen →',
+    gruppeSub:'Bis 4 Personen · 60 Min.',gruppeDesc:'Eure Gruppe, euer Programm. Familie, Team oder Trainingskollegen — geringste Kosten pro Person.',
+    gruppePrice:'Preis auf Anfrage',gruppeBtn:'Termin anfragen →',
+    ctaTitle:'Werde Teil des Rudels',ctaSub:'Probetraining jederzeit möglich — melde dich einfach.',
+    ctaWA:'WhatsApp',ctaEmail:'E-Mail schreiben',
+    footerDesc:'Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz',
+    footerHoursTitle:'Trainingszeiten',footerScheduleLink:'Stundenplan ansehen →',
+    footerFollowTitle:'Folge uns',
+    footerImpressum:'Impressum',footerDatenschutz:'Datenschutz'
+  },
+  en:{
+    start:'Home',about:'About',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class',navFrauen:"Women's",
+    mitgEyebrow:'Memberships',mitgTitle:'Group Training',mitgSub:'All prices incl. VAT.',
+    wolfAge:'Adults 18+',wolfDesc:'Monday to Saturday, for every level. Coached by active athletes who know what counts on the Tatami — not just technique, but attitude.',
+    jährlingAge:'Ages 14–17',jährlingDesc:'Learn to handle success and setbacks. Playful training, coordination development — coached by active athletes.',
+    lehrlingStuAge:'Adults 18+ · with valid ID',lehrlingStuName:'Apprentice &amp; Student',lehrlingStuDesc:'Same classes as Wolf — lower price. Valid apprentice or student ID required.',
+    welpeAge:'Up to age 13',welpeDesc:'Playful, age-appropriate, and warm. The first steps in the pack — with experienced and caring coaches.',
+    planBtn:'Join →',period6:'6 months',period12:'12 months',
+    manifestoQuote:'Jiu Jitsu is <em>more than a sport</em> — it is <strong>family</strong>, discipline and the daily decision to be better.',
+    manifestoDesc:'All memberships include unlimited access to classes as per the schedule. A no-obligation trial class is available at any time.',
+    manifestoBtn:'Request a trial class →',
+    privateEyebrow:'Private',privateTitle:'Private Lessons',
+    soloSub:'1 person · 60 min.',soloDesc:'Full attention on you. Your topics, technique, competition prep — tailored entirely to your game.',
+    soloPrice:'Price on request',soloBtn:'Book a session →',
+    duoSub:'2 people · 60 min.',duoDesc:'With your training partner. Share the cost, grow together — for sparring partners or friends.',
+    duoPrice:'Price on request',duoBtn:'Book a session →',
+    gruppeSub:'Up to 4 people · 60 min.',gruppeDesc:'Your group, your program. Family, team or training friends — lowest cost per person.',
+    gruppePrice:'Price on request',gruppeBtn:'Book a session →',
+    ctaTitle:'Join the Pack',ctaSub:'Trial class available anytime — just reach out.',
+    ctaWA:'WhatsApp',ctaEmail:'Send Email',
+    footerDesc:'Brazilian Jiu Jitsu<br>Zürich Oberland, Switzerland',
+    footerHoursTitle:'Training Hours',footerScheduleLink:'View Schedule →',
+    footerFollowTitle:'Follow us',
+    footerImpressum:'Legal Notice',footerDatenschutz:'Privacy Policy'
+  }
 };
 function setLang(lang){
   document.documentElement.lang=lang;
   try{localStorage.setItem('alcateia_lang',lang)}catch(e){}
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
-  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(translations[lang]&&translations[lang][k])el.textContent=translations[lang][k];});
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(translations[lang]&&translations[lang][k])el.innerHTML=translations[lang][k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(translations[lang]&&translations[lang][k])el.placeholder=translations[lang][k];});
 }
 try{const s=localStorage.getItem('alcateia_lang')||'de';if(s!=='de')setLang(s)}catch(e){}
 document.addEventListener("click",e=>{

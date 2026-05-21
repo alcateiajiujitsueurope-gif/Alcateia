@@ -407,10 +407,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/" onclick="toggleMenu()">Start</a>
-    <a href="uber-uns.html" onclick="toggleMenu()">Über uns</a>
+    <a href="/" onclick="toggleMenu()" data-i18n="start">Start</a>
+    <a href="uber-uns.html" onclick="toggleMenu()" data-i18n="about">Über uns</a>
     <div class="mob-drop-row">
-      <a href="klassen.html" class="active" onclick="toggleMenu()">Klassen</a>
+      <a href="klassen.html" class="active" onclick="toggleMenu()" data-i18n="classes">Klassen</a>
       <button class="mob-drop-btn" onclick="toggleMobPrograms(this)" aria-label="Programme"><svg viewBox="0 0 10 6" width="10" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
     <div class="mob-programs">
@@ -418,13 +418,13 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
       <a href="#adults" onclick="toggleMenu()">Fundamentals</a>
       <a href="#adults" onclick="toggleMenu()">All Levels</a>
       <a href="#nogi" onclick="toggleMenu()">NoGi</a>
-      <a href="#frauen-s" onclick="toggleMenu()">Frauen</a>
+      <a href="#frauen-s" onclick="toggleMenu()" data-i18n="navFrauen">Frauen</a>
       <a href="#adv-s" onclick="toggleMenu()">Advanced</a>
     </div>
-    <a href="stundenplan.html" onclick="toggleMenu()">Stundenplan</a>
-    <a href="mitgliedschaften.html" onclick="toggleMenu()">Mitgliedschaften</a>
-    <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
-    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()">Probetraining</a>
+    <a href="stundenplan.html" onclick="toggleMenu()" data-i18n="schedule">Stundenplan</a>
+    <a href="mitgliedschaften.html" onclick="toggleMenu()" data-i18n="memberships">Mitgliedschaften</a>
+    <a href="kontakt.html" onclick="toggleMenu()" data-i18n="contact">Kontakt</a>
+    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()" data-i18n="probetraining">Probetraining</a>
   </div>
 </nav>
 
@@ -432,7 +432,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <section class="kl-hero">
   <div class="kl-hero-bg"></div>
   <div class="kl-hero-content">
-    <h1 class="kl-hero-title">Unsere<br><span class="accent">Klassen</span></h1>
+    <h1 class="kl-hero-title" data-i18n="heroH1">Unsere<br><span class="accent">Klassen</span></h1>
   </div>
 </section>
 
@@ -443,16 +443,16 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     <div class="kids-text reveal">
       <div class="kids-text-both">
         <div class="kids-block" id="kids-i">
-          <span class="section-tag">3 – 6 Jahre · Gi</span>
-          <h2 class="kl-title">Kids I</h2>
-          <p class="kl-body">
+          <span class="section-tag" data-i18n="kidsITag">3 – 6 Jahre · Gi</span>
+          <h2 class="kl-title" data-i18n="kidsITitle">Kids I</h2>
+          <p class="kl-body" data-i18n="kidsIDesc">
             Spielerische Bewegung, koordinative Grundlagen, erster Kontakt mit der Tatami. Das Kids I Training ist altersgerecht gestaltet — mit viel Herz, ohne Druck. Kinder lernen Jiu Jitsu wie sie laufen lernen: durch Spiel, Wiederholung und das Gefühl, in einem Rudel willkommen zu sein.
           </p>
         </div>
         <div class="kids-block" id="kids-ii">
-          <span class="section-tag">7 – 14 Jahre · Gi / NoGi</span>
-          <h2 class="kl-title">Kids II</h2>
-          <p class="kl-body">
+          <span class="section-tag" data-i18n="kidsIITag">7 – 14 Jahre · Gi / NoGi</span>
+          <h2 class="kl-title" data-i18n="kidsIITitle">Kids II</h2>
+          <p class="kl-body" data-i18n="kidsIIDesc">
             Hier beginnt das echte Jiu Jitsu — mit Fokus, Respekt und dem Aufbau von Selbstvertrauen. Kinder lernen strukturiert echte Technik, Disziplin und den richtigen Umgang mit Erfolg und Misserfolg. In diesem Alter formt sich Charakter. Jiu Jitsu gibt ihnen ein Werkzeug, das weit über die Tatami hinaus wirkt.
           </p>
         </div>
@@ -477,17 +477,17 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   <div class="fund-inner">
     <div class="fund-text-row">
       <div class="reveal" id="fundamentals">
-        <span class="section-tag">Anfänger · Gi</span>
-        <h2 class="kl-title">Fundamentals</h2>
-        <p class="kl-body">
+        <span class="section-tag" data-i18n="fundaTag">Anfänger · Gi</span>
+        <h2 class="kl-title" data-i18n="fundaTitle">Fundamentals</h2>
+        <p class="kl-body" data-i18n="fundaDesc">
           Position, Bewegung, erste Submissions und Escapes — das technische Vokabular, mit dem du Jiu Jitsu sprechen wirst, dein Leben lang. Für Einsteiger unverzichtbar. Wer hier sauber arbeitet, baut auf Stein statt auf Sand.
         </p>
       </div>
       <div class="reveal" id="all-levels">
-        <span class="section-tag">Alle Gurtfarben · Gi</span>
-        <h2 class="kl-title">All Levels Gi</h2>
-        <p class="kl-body">
-          Weisse Gurte neben Schwarzgurten — auf derselben Tatami, im selben Drill, im selben Sparring. Diese Mischung beschleunigt den Lernprozess wie nichts anderes. Anfänger sehen, wie Fortgeschrittene rollen. Fortgeschrittene erinnern sich, woher sie kamen.
+        <span class="section-tag" data-i18n="allLevTag">Alle Gurtfarben · Gi</span>
+        <h2 class="kl-title" data-i18n="allLevTitle">All Levels Gi</h2>
+        <p class="kl-body" data-i18n="allLevDesc">
+          Weisse Gurte neben Schwarzgurten — auf derselben Tatami, im selben Drill, im selben Sparring. Anfänger sehen direkt, wie Fortgeschrittene rollen. Fortgeschrittene erinnern sich, woher sie kamen. So lernt man schnell.
         </p>
       </div>
     </div>
@@ -509,9 +509,9 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <section class="nogi-section" id="nogi">
   <div class="nogi-inner">
     <div class="nogi-text reveal" id="no-gi">
-      <span class="section-tag">Alle Level · NoGi</span>
-      <h2 class="kl-title">NoGi</h2>
-      <p class="kl-body">
+      <span class="section-tag" data-i18n="nogiTag">Alle Level · NoGi</span>
+      <h2 class="kl-title" data-i18n="nogiTitle">NoGi</h2>
+      <p class="kl-body" data-i18n="nogiDesc">
         Rashguard und Shorts. Kein Kimono — nur Technik, Athletik und Timing. Schneller, direkter, athletischer. Das Format, das den Sport in eine neue Ära geführt hat. Lucas trainiert und kämpft aktiv auf Weltklasse-Niveau im NoGi — was hier vermittelt wird, funktioniert.
       </p>
     </div>
@@ -538,12 +538,12 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
       </div>
     </div>
     <div class="reveal" id="frauen">
-      <span class="section-tag">Frauen &amp; Mädchen · Gi</span>
-      <h2 class="kl-title">Frauen Klasse</h2>
-      <p class="kl-body">
+      <span class="section-tag" data-i18n="frauenTag">Frauen &amp; Mädchen · Gi</span>
+      <h2 class="kl-title" data-i18n="frauenTitle">Frauen Klasse</h2>
+      <p class="kl-body" data-i18n="frauenDesc1">
         Ein eigener Raum, geleitet von Scout Feitosa — aktive Athletin auf europäischem und internationalem Niveau. Ausschliesslich für Frauen und Mädchen, mit eigener Dynamik, eigenem Tempo, eigener Energie.
       </p>
-      <p class="kl-body" style="margin-top:1rem">
+      <p class="kl-body" style="margin-top:1rem" data-i18n="frauenDesc2">
         Eine Klasse, in der das Lernen ohne Filter stattfindet. Stärke, Vertrauen und echte Gemeinschaft — geführt von jemandem, die genau weiss, wie sich dieser Weg anfühlt, weil sie ihn selbst geht.
       </p>
     </div>
@@ -555,23 +555,23 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   <div class="adv-inner">
     <div class="adv-text-row">
       <div class="reveal" id="advanced">
-        <span class="section-tag">Blau – Schwarz · Gi</span>
-        <h2 class="kl-title">Advanced</h2>
-        <p class="kl-body">
+        <span class="section-tag" data-i18n="advTag">Blau – Schwarz · Gi</span>
+        <h2 class="kl-title" data-i18n="advTitle">Advanced</h2>
+        <p class="kl-body" data-i18n="advDesc">
           Komplexe Sequenzen, modernes Spiel, hohe Intensität. Direkte Verbindung zu Lucas' aktivem Wettkampftraining. Was im modernen Wettkampf funktioniert, wird hier vermittelt — sauber, ohne Abkürzungen.
         </p>
       </div>
       <div class="reveal" id="drills">
-        <span class="section-tag">Alle Level · Gi</span>
-        <h2 class="kl-title">Drills</h2>
-        <p class="kl-body">
+        <span class="section-tag" data-i18n="drillsTag">Alle Level · Gi</span>
+        <h2 class="kl-title" data-i18n="drillsTitle">Drills</h2>
+        <p class="kl-body" data-i18n="drillsDesc">
           Reine Bewegungswiederholung. Techniken so oft durchlaufen, bis sie automatisch werden — abrufbar unter Druck, ohne Nachdenken. Was im Drill langweilig wirkt, entscheidet im Sparring.
         </p>
       </div>
       <div class="reveal" id="sparring">
-        <span class="section-tag">Alle Level · Gi / NoGi</span>
-        <h2 class="kl-title">Sparring</h2>
-        <p class="kl-body">
+        <span class="section-tag" data-i18n="sparringTag">Alle Level · Gi / NoGi</span>
+        <h2 class="kl-title" data-i18n="sparringTitle">Sparring</h2>
+        <p class="kl-body" data-i18n="sparringDesc">
           Freie Rolle. Der Moment, in dem alles zusammenkommt — Technik, Timing, Atem, Strategie. Gegen einen widerstrebenden Trainingspartner, nicht gegen die Luft. Auf der Tatami lügt nichts.
         </p>
       </div>
@@ -591,15 +591,15 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <div class="contact-bar" id="contact-bar">
   <div class="contact-bar-inner">
     <div>
-      <h3>Komm ins Rudel</h3>
-      <p>Probetraining jederzeit möglich — melde dich einfach.</p>
+      <h3 data-i18n="ctaTitle">Komm ins Rudel</h3>
+      <p data-i18n="ctaSub">Probetraining jederzeit möglich — melde dich einfach.</p>
     </div>
     <div class="contact-bar-links">
       <a href="https://wa.me/41772675669" target="_blank" class="btn-wa">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.833L0 24l6.335-1.663A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.575-.498-5.065-1.367l-.363-.214-3.76.986.999-3.659-.236-.374A9.96 9.96 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-        WhatsApp
+        <span data-i18n="ctaWA">WhatsApp</span>
       </a>
-      <a href="mailto:alcateiajiujitsu@protonmail.com" class="btn-white">E-Mail schreiben</a>
+      <a href="mailto:alcateiajiujitsu@protonmail.com" class="btn-white" data-i18n="ctaEmail">E-Mail schreiben</a>
     </div>
   </div>
 </div>
@@ -610,26 +610,26 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     <div class="footer-top">
       <div>
         <a href="/" class="footer-logo"><img src="images/klassen-14.png" alt="Alcateia Jiu Jitsu" loading="lazy"></a>
-        <p class="footer-desc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
+        <p class="footer-desc" data-i18n="footerDesc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
         <span class="footer-copy" style="display:block;margin-top:10px">© 2025 Raw Life GmbH.</span>
       </div>
       <div>
-        <p class="footer-ttl">Trainingszeiten</p>
+        <p class="footer-ttl" data-i18n="footerHoursTitle">Trainingszeiten</p>
         <ul class="footer-hours">
           <li><span>Mo / Mi</span><span>06:30 – 20:30</span></li>
           <li><span>Di / Do</span><span>12:00 – 19:30</span></li>
           <li><span>Freitag</span><span>12:00 – 20:30</span></li>
           <li><span>Samstag</span><span>10:00 – 13:00</span></li>
         </ul>
-        <a href="stundenplan.html" class="footer-sch-link">Stundenplan ansehen →</a>
+        <a href="stundenplan.html" class="footer-sch-link" data-i18n="footerScheduleLink">Stundenplan ansehen →</a>
       </div>
       <div>
-        <p class="footer-ttl">Folge uns</p>
+        <p class="footer-ttl" data-i18n="footerFollowTitle">Folge uns</p>
         <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="footer-insta"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+      <div class="footer-links"><a href="#" data-i18n="footerImpressum">Impressum</a><a href="#" data-i18n="footerDatenschutz">Datenschutz</a></div>
     </div>
   </div>
 </footer>
@@ -659,19 +659,72 @@ const io=new IntersectionObserver(entries=>entries.forEach(e=>{
 }),{threshold:.12,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-// Language toggle
 const translations={
-  de:{start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining'},
-  en:{start:'Home',about:'About us',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class'}
+  de:{
+    start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining',navFrauen:'Frauen',
+    heroH1:'Unsere<br><span class="accent">Klassen</span>',
+    kidsITag:'3 – 6 Jahre · Gi',kidsITitle:'Kids I',
+    kidsIDesc:'Spielerische Bewegung, koordinative Grundlagen, erster Kontakt mit der Tatami. Das Kids I Training ist altersgerecht gestaltet — mit viel Herz, ohne Druck. Kinder lernen Jiu Jitsu wie sie laufen lernen: durch Spiel, Wiederholung und das Gefühl, in einem Rudel willkommen zu sein.',
+    kidsIITag:'7 – 14 Jahre · Gi / NoGi',kidsIITitle:'Kids II',
+    kidsIIDesc:'Hier beginnt das echte Jiu Jitsu — mit Fokus, Respekt und dem Aufbau von Selbstvertrauen. Kinder lernen strukturiert echte Technik, Disziplin und den richtigen Umgang mit Erfolg und Misserfolg. In diesem Alter formt sich Charakter. Jiu Jitsu gibt ihnen ein Werkzeug, das weit über die Tatami hinaus wirkt.',
+    fundaTag:'Anfänger · Gi',fundaTitle:'Fundamentals',
+    fundaDesc:'Position, Bewegung, erste Submissions und Escapes — das technische Vokabular, mit dem du Jiu Jitsu sprechen wirst, dein Leben lang. Für Einsteiger unverzichtbar. Wer hier sauber arbeitet, baut auf Stein statt auf Sand.',
+    allLevTag:'Alle Gurtfarben · Gi',allLevTitle:'All Levels Gi',
+    allLevDesc:'Weisse Gurte neben Schwarzgurten — auf derselben Tatami, im selben Drill, im selben Sparring. Anfänger sehen direkt, wie Fortgeschrittene rollen. Fortgeschrittene erinnern sich, woher sie kamen. So lernt man schnell.',
+    nogiTag:'Alle Level · NoGi',nogiTitle:'NoGi',
+    nogiDesc:'Rashguard und Shorts. Kein Kimono — nur Technik, Athletik und Timing. Schneller, direkter, athletischer. Das Format, das den Sport in eine neue Ära geführt hat. Lucas trainiert und kämpft aktiv auf Weltklasse-Niveau im NoGi — was hier vermittelt wird, funktioniert.',
+    frauenTag:'Frauen &amp; Mädchen · Gi',frauenTitle:'Frauen Klasse',
+    frauenDesc1:'Ein eigener Raum, geleitet von Scout Feitosa — aktive Athletin auf europäischem und internationalem Niveau. Ausschliesslich für Frauen und Mädchen, mit eigener Dynamik, eigenem Tempo, eigener Energie.',
+    frauenDesc2:'Eine Klasse, in der das Lernen ohne Filter stattfindet. Stärke, Vertrauen und echte Gemeinschaft — geführt von jemandem, die genau weiss, wie sich dieser Weg anfühlt, weil sie ihn selbst geht.',
+    advTag:'Blau – Schwarz · Gi',advTitle:'Advanced',
+    advDesc:"Komplexe Sequenzen, modernes Spiel, hohe Intensität. Direkte Verbindung zu Lucas' aktivem Wettkampftraining. Was im modernen Wettkampf funktioniert, wird hier vermittelt — sauber, ohne Abkürzungen.",
+    drillsTag:'Alle Level · Gi',drillsTitle:'Drills',
+    drillsDesc:'Reine Bewegungswiederholung. Techniken so oft durchlaufen, bis sie automatisch werden — abrufbar unter Druck, ohne Nachdenken. Was im Drill langweilig wirkt, entscheidet im Sparring.',
+    sparringTag:'Alle Level · Gi / NoGi',sparringTitle:'Sparring',
+    sparringDesc:'Freie Rolle. Der Moment, in dem alles zusammenkommt — Technik, Timing, Atem, Strategie. Gegen einen widerstrebenden Trainingspartner, nicht gegen die Luft. Auf der Tatami lügt nichts.',
+    ctaTitle:'Komm ins Rudel',ctaSub:'Probetraining jederzeit möglich — melde dich einfach.',
+    ctaWA:'WhatsApp',ctaEmail:'E-Mail schreiben',
+    footerDesc:'Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz',
+    footerHoursTitle:'Trainingszeiten',footerScheduleLink:'Stundenplan ansehen →',
+    footerFollowTitle:'Folge uns',
+    footerImpressum:'Impressum',footerDatenschutz:'Datenschutz'
+  },
+  en:{
+    start:'Home',about:'About',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class',navFrauen:"Women's",
+    heroH1:'Our<br><span class="accent">Classes</span>',
+    kidsITag:'Ages 3–6 · Gi',kidsITitle:'Kids I',
+    kidsIDesc:'Playful movement, coordination fundamentals, first contact with the Tatami. Kids I training is age-appropriate — built with heart, without pressure. Children learn Jiu Jitsu the way they learn to walk: through play, repetition, and the feeling of being welcome in a pack.',
+    kidsIITag:'Ages 7–14 · Gi / NoGi',kidsIITitle:'Kids II',
+    kidsIIDesc:'This is where real Jiu Jitsu begins — with focus, respect, and building confidence. Kids learn real technique, discipline, and how to handle both success and setbacks. Character takes shape at this age. Jiu Jitsu gives them a tool that reaches far beyond the Tatami.',
+    fundaTag:'Beginners · Gi',fundaTitle:'Fundamentals',
+    fundaDesc:"Position, movement, first submissions and escapes — the technical vocabulary you'll speak in Jiu Jitsu for life. Essential for beginners. Build it clean here, and you build on stone, not sand.",
+    allLevTag:'All Belts · Gi',allLevTitle:'All Levels Gi',
+    allLevDesc:"White belts next to black belts — on the same Tatami, in the same drill, in the same sparring. Beginners see firsthand how advanced students roll. Advanced students remember where they came from. That's how you learn fast.",
+    nogiTag:'All Levels · NoGi',nogiTitle:'NoGi',
+    nogiDesc:'Rashguard and shorts. No Kimono — just technique, athleticism and timing. Faster, more direct, more athletic. The format that has taken the sport into a new era. Lucas actively trains and competes at world-class NoGi level — what gets taught here, works.',
+    frauenTag:'Women &amp; Girls · Gi',frauenTitle:"Women's Class",
+    frauenDesc1:'A dedicated space, led by Scout Feitosa — active competitor at the European and international level. Exclusively for women and girls, with their own dynamic, pace, and energy.',
+    frauenDesc2:"A class where learning happens without filters. Strength, confidence and real community — led by someone who knows exactly how this path feels, because she's still on it.",
+    advTag:'Blue – Black · Gi',advTitle:'Advanced',
+    advDesc:"Complex sequences, modern game, high intensity. Directly connected to Lucas's active competition training. What works in modern competition is what gets taught here — clean, no shortcuts.",
+    drillsTag:'All Levels · Gi',drillsTitle:'Drills',
+    drillsDesc:'Pure movement repetition. Run techniques until they become automatic — accessible under pressure, without thinking. What feels boring in the drill decides the outcome in sparring.',
+    sparringTag:'All Levels · Gi / NoGi',sparringTitle:'Sparring',
+    sparringDesc:'Live rolling. The moment when everything comes together — technique, timing, breathing, strategy. Against a resisting training partner, not the air. On the Tatami, nothing lies.',
+    ctaTitle:'Join the Pack',ctaSub:'Trial class available anytime — just reach out.',
+    ctaWA:'WhatsApp',ctaEmail:'Send Email',
+    footerDesc:'Brazilian Jiu Jitsu<br>Zürich Oberland, Switzerland',
+    footerHoursTitle:'Training Hours',footerScheduleLink:'View Schedule →',
+    footerFollowTitle:'Follow us',
+    footerImpressum:'Legal Notice',footerDatenschutz:'Privacy Policy'
+  }
 };
 function setLang(lang){
   document.documentElement.lang=lang;
   try{localStorage.setItem('alcateia_lang',lang)}catch(e){}
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const k=el.dataset.i18n;
-    if(translations[lang][k])el.textContent=translations[lang][k];
-  });
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(translations[lang]&&translations[lang][k])el.innerHTML=translations[lang][k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(translations[lang]&&translations[lang][k])el.placeholder=translations[lang][k];});
 }
 try{const s=localStorage.getItem('alcateia_lang')||'de';if(s!=='de')setLang(s)}catch(e){}
 
