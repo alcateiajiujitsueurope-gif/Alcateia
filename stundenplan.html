@@ -361,10 +361,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/" onclick="toggleMenu()">Start</a>
-    <a href="uber-uns.html" onclick="toggleMenu()">Über uns</a>
+    <a href="/" onclick="toggleMenu()" data-i18n="start">Start</a>
+    <a href="uber-uns.html" onclick="toggleMenu()" data-i18n="about">Über uns</a>
     <div class="mob-drop-row">
-      <a href="klassen.html" onclick="toggleMenu()">Klassen</a>
+      <a href="klassen.html" onclick="toggleMenu()" data-i18n="classes">Klassen</a>
       <button class="mob-drop-btn" onclick="toggleMobPrograms(this)" aria-label="Programme"><svg viewBox="0 0 10 6" width="10" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
     <div class="mob-programs">
@@ -372,22 +372,22 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
       <a href="klassen.html#adults" onclick="toggleMenu()">Fundamentals</a>
       <a href="klassen.html#adults" onclick="toggleMenu()">All Levels</a>
       <a href="klassen.html#nogi" onclick="toggleMenu()">NoGi</a>
-      <a href="klassen.html#frauen-s" onclick="toggleMenu()">Frauen</a>
+      <a href="klassen.html#frauen-s" onclick="toggleMenu()" data-i18n="navFrauen">Frauen</a>
       <a href="klassen.html#adv-s" onclick="toggleMenu()">Advanced</a>
     </div>
-    <a href="stundenplan.html" class="active" onclick="toggleMenu()">Stundenplan</a>
-    <a href="mitgliedschaften.html" onclick="toggleMenu()">Mitgliedschaften</a>
-    <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
-    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()">Probetraining</a>
+    <a href="stundenplan.html" class="active" onclick="toggleMenu()" data-i18n="schedule">Stundenplan</a>
+    <a href="mitgliedschaften.html" onclick="toggleMenu()" data-i18n="memberships">Mitgliedschaften</a>
+    <a href="kontakt.html" onclick="toggleMenu()" data-i18n="contact">Kontakt</a>
+    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()" data-i18n="probetraining">Probetraining</a>
   </div>
 </nav>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner reveal">
-    <h1 class="page-title-h1">Stundenplan</h1>
-    <p class="page-main-title">Alle Klassen<br>im Überblick</p>
-    <p class="page-hero-sub">Bereit für deinen ersten Schritt? Buche dein kostenloses Probetraining bei Alcateia.</p>
+    <h1 class="page-title-h1" data-i18n="stundenEyebrow">Stundenplan</h1>
+    <p class="page-main-title" data-i18n="stundenTitle">Alle Klassen<br>im Überblick</p>
+    <p class="page-hero-sub" data-i18n="stundenSub">Alle Klassen auf einen Blick. Komm einfach vorbei — oder buch dein erstes Training direkt.</p>
   </div>
 </div>
 
@@ -395,7 +395,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   <div class="container">
     <div class="sgrid-wrap reveal">
       <div class="sgrid">
-        <div class="sh sh-time">Zeit</div>
+        <div class="sh sh-time" data-i18n="schTimeHeader">Zeit</div>
         <div class="sh">Mo</div><div class="sh">Di</div><div class="sh">Mi</div><div class="sh">Do</div><div class="sh">Fr</div><div class="sh">Sa</div>
 
         <div class="st">06:30</div>
@@ -434,13 +434,13 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <div class="se"></div>
         <div class="sc" style="background:var(--c-kids2)"><span class="sn">Kids II</span><span class="sk">Gi</span><span class="ss">17:00 – 18:00</span></div>
         <div class="sc" style="background:var(--c-kids2)"><span class="sn">Kids II</span><span class="sk">NoGi</span><span class="ss">17:00 – 18:00</span></div>
-        <div class="sc" style="background:var(--c-women)"><span class="sn">Frauen Klasse</span><span class="sk">Gi</span><span class="ss">17:00 – 18:00</span></div>
+        <div class="sc" style="background:var(--c-women)"><span class="sn" data-i18n="schFrauenClass">Frauen Klasse</span><span class="sk">Gi</span><span class="ss">17:00 – 18:00</span></div>
         <div class="se"></div>
 
         <div class="st">18:00</div>
         <div class="sc" style="background:var(--c-fund)"><span class="sn">Fundamentals</span><span class="sk">Gi</span><span class="ss">18:00 – 19:00</span></div>
         <div class="sc" style="background:var(--c-nogi)"><span class="sn">All Levels</span><span class="sk">NoGi</span><span class="ss">18:00 – 19:30</span></div>
-        <div class="sc" style="background:var(--c-women)"><span class="sn">Frauen Klasse</span><span class="sk">Gi</span><span class="ss">18:00 – 19:00</span></div>
+        <div class="sc" style="background:var(--c-women)"><span class="sn" data-i18n="schFrauenClass">Frauen Klasse</span><span class="sk">Gi</span><span class="ss">18:00 – 19:00</span></div>
         <div class="sc" style="background:var(--c-nogi)"><span class="sn">All Levels</span><span class="sk">NoGi</span><span class="ss">18:00 – 19:30</span></div>
         <div class="sc sc-light" style="background:var(--c-drills)"><span class="sn">Drills</span><span class="sk">Gi</span><span class="ss">18:00 – 19:00</span></div>
         <div class="se"></div>
@@ -516,15 +516,15 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <div class="contact-bar" id="contact-bar">
   <div class="contact-bar-inner">
     <div>
-      <h3>Komm ins Rudel</h3>
-      <p>Probetraining jederzeit möglich — melde dich einfach.</p>
+      <h3 data-i18n="ctaTitle">Komm ins Rudel</h3>
+      <p data-i18n="ctaSub">Probetraining jederzeit möglich — melde dich einfach.</p>
     </div>
     <div class="contact-bar-links">
       <a href="https://wa.me/41772675669" target="_blank" class="btn-wa">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.833L0 24l6.335-1.663A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.575-.498-5.065-1.367l-.363-.214-3.76.986.999-3.659-.236-.374A9.96 9.96 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-        WhatsApp
+        <span data-i18n="ctaWA">WhatsApp</span>
       </a>
-      <a href="mailto:alcateiajiujitsu@protonmail.com" class="btn-white">E-Mail schreiben</a>
+      <a href="mailto:alcateiajiujitsu@protonmail.com" class="btn-white" data-i18n="ctaEmail">E-Mail schreiben</a>
     </div>
   </div>
 </div>
@@ -535,26 +535,26 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     <div class="footer-top">
       <div>
         <a href="/" class="footer-logo"><img src="images/stundenplan-02.png" alt="Alcateia Jiu Jitsu" loading="lazy"></a>
-        <p class="footer-desc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
+        <p class="footer-desc" data-i18n="footerDesc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
         <span class="footer-copy" style="display:block;margin-top:10px">© 2025 Raw Life GmbH.</span>
       </div>
       <div>
-        <p class="footer-ttl">Trainingszeiten</p>
+        <p class="footer-ttl" data-i18n="footerHoursTitle">Trainingszeiten</p>
         <ul class="footer-hours">
           <li><span>Mo / Mi</span><span>06:30 – 20:30</span></li>
           <li><span>Di / Do</span><span>12:00 – 19:30</span></li>
           <li><span>Freitag</span><span>12:00 – 20:30</span></li>
           <li><span>Samstag</span><span>10:00 – 13:00</span></li>
         </ul>
-        <a href="stundenplan.html" class="footer-sch-link">Stundenplan ansehen →</a>
+        <a href="stundenplan.html" class="footer-sch-link" data-i18n="footerScheduleLink">Stundenplan ansehen →</a>
       </div>
       <div>
-        <p class="footer-ttl">Folge uns</p>
+        <p class="footer-ttl" data-i18n="footerFollowTitle">Folge uns</p>
         <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="footer-insta"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+      <div class="footer-links"><a href="#" data-i18n="footerImpressum">Impressum</a><a href="#" data-i18n="footerDatenschutz">Datenschutz</a></div>
     </div>
   </div>
 </footer>
@@ -582,14 +582,39 @@ document.addEventListener('click',e=>{
   if(m.classList.contains('open')&&!n.contains(e.target))m.classList.remove('open');
 });
 const translations={
-  de:{start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining'},
-  en:{start:'Home',about:'About us',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class'}
+  de:{
+    start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining',navFrauen:'Frauen',
+    stundenEyebrow:'Stundenplan',stundenTitle:'Alle Klassen<br>im Überblick',
+    stundenSub:'Alle Klassen auf einen Blick. Komm einfach vorbei — oder buch dein erstes Training direkt.',
+    schTimeHeader:'Zeit',
+    schFrauenClass:'Frauen Klasse',
+    ctaTitle:'Komm ins Rudel',ctaSub:'Probetraining jederzeit möglich — melde dich einfach.',
+    ctaWA:'WhatsApp',ctaEmail:'E-Mail schreiben',
+    footerDesc:'Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz',
+    footerHoursTitle:'Trainingszeiten',footerScheduleLink:'Stundenplan ansehen →',
+    footerFollowTitle:'Folge uns',
+    footerImpressum:'Impressum',footerDatenschutz:'Datenschutz'
+  },
+  en:{
+    start:'Home',about:'About',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class',navFrauen:"Women's",
+    stundenEyebrow:'Schedule',stundenTitle:"All Classes<br>at a Glance",
+    stundenSub:'Every class in one view. Just drop by — or book your first session right now.',
+    schTimeHeader:'Time',
+    schFrauenClass:"Women's Class",
+    ctaTitle:'Join the Pack',ctaSub:'Trial class available anytime — just reach out.',
+    ctaWA:'WhatsApp',ctaEmail:'Send Email',
+    footerDesc:'Brazilian Jiu Jitsu<br>Zürich Oberland, Switzerland',
+    footerHoursTitle:'Training Hours',footerScheduleLink:'View Schedule →',
+    footerFollowTitle:'Follow us',
+    footerImpressum:'Legal Notice',footerDatenschutz:'Privacy Policy'
+  }
 };
 function setLang(lang){
   document.documentElement.lang=lang;
   try{localStorage.setItem('alcateia_lang',lang)}catch(e){}
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
-  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(translations[lang]&&translations[lang][k])el.textContent=translations[lang][k];});
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(translations[lang]&&translations[lang][k])el.innerHTML=translations[lang][k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(translations[lang]&&translations[lang][k])el.placeholder=translations[lang][k];});
 }
 try{const s=localStorage.getItem('alcateia_lang')||'de';if(s!=='de')setLang(s)}catch(e){}
 

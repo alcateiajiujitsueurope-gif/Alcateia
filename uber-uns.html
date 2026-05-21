@@ -406,10 +406,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/" onclick="toggleMenu()">Start</a>
-    <a href="uber-uns.html" class="active" onclick="toggleMenu()">Über uns</a>
+    <a href="/" onclick="toggleMenu()" data-i18n="start">Start</a>
+    <a href="uber-uns.html" class="active" onclick="toggleMenu()" data-i18n="about">Über uns</a>
     <div class="mob-drop-row">
-      <a href="klassen.html" onclick="toggleMenu()">Klassen</a>
+      <a href="klassen.html" onclick="toggleMenu()" data-i18n="classes">Klassen</a>
       <button class="mob-drop-btn" onclick="toggleMobPrograms(this)" aria-label="Programme"><svg viewBox="0 0 10 6" width="10" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
     <div class="mob-programs">
@@ -417,13 +417,13 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
       <a href="klassen.html#adults" onclick="toggleMenu()">Fundamentals</a>
       <a href="klassen.html#adults" onclick="toggleMenu()">All Levels</a>
       <a href="klassen.html#nogi" onclick="toggleMenu()">NoGi</a>
-      <a href="klassen.html#frauen-s" onclick="toggleMenu()">Frauen</a>
+      <a href="klassen.html#frauen-s" onclick="toggleMenu()" data-i18n="navFrauen">Frauen</a>
       <a href="klassen.html#adv-s" onclick="toggleMenu()">Advanced</a>
     </div>
-    <a href="stundenplan.html" onclick="toggleMenu()">Stundenplan</a>
-    <a href="mitgliedschaften.html" onclick="toggleMenu()">Mitgliedschaften</a>
-    <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
-    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()">Probetraining</a>
+    <a href="stundenplan.html" onclick="toggleMenu()" data-i18n="schedule">Stundenplan</a>
+    <a href="mitgliedschaften.html" onclick="toggleMenu()" data-i18n="memberships">Mitgliedschaften</a>
+    <a href="kontakt.html" onclick="toggleMenu()" data-i18n="contact">Kontakt</a>
+    <a href="kontakt.html" class="mob-cta" onclick="toggleMenu()" data-i18n="probetraining">Probetraining</a>
   </div>
 </nav>
 
@@ -431,19 +431,19 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <section class="uu-hero">
   <div class="uu-hero-bg"></div>
   <div class="uu-hero-content">
-<h1 class="uu-title">Mehr als<br>ein <span class="accent">Dojo</span>.</h1>
+<h1 class="uu-title" data-i18n="heroH1">Mehr als<br>ein <span class="accent">Dojo</span>.</h1>
   </div>
 </section>
 
 <!-- MISSION -->
 <section class="mission-section">
   <div class="mission-inner">
-    <span class="section-tag reveal-left">Unsere Mission</span>
-    <h2 class="mission-title reveal-strong">Was uns antreibt</h2>
+    <span class="section-tag reveal-left" data-i18n="missionTag">Unsere Mission</span>
+    <h2 class="mission-title reveal-strong" data-i18n="missionTitle">Was uns antreibt</h2>
     <div class="mission-text">
-      <p class="reveal">Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu <strong>Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke</strong> zu vermitteln. Wir möchten unseren Schülern helfen, im Leben nicht stehen zu bleiben, sich weiterzuentwickeln und Träume wahr werden zu lassen — sei es auf der Tatami oder ausserhalb.</p>
-      <p class="reveal" style="transition-delay:.14s">Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen — und nicht auf andere Dinge wie sozialen Status, Beruf oder Herkunft reduziert. <strong>Bei uns hat jeder dieselben Rechte und jeder hat einen Platz.</strong></p>
-      <p class="reveal" style="transition-delay:.26s">Unser Dojo ist aber nicht einfach nur ein Kampfsportzentrum. Wir sind eine Community aller Altersgruppen, die über das Trainieren von Jiu Jitsu hinausgeht. Bei uns versammeln sich Leute, um zusammen zu trainieren, voneinander zu lernen — und vor allem eines: <strong>zusammenzuhalten.</strong></p>
+      <p class="reveal" data-i18n="missionP1">Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu <strong>Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke</strong> zu vermitteln. Wir möchten unseren Schülern helfen, im Leben nicht stehen zu bleiben, sich weiterzuentwickeln und Träume wahr werden zu lassen — sei es auf der Tatami oder ausserhalb.</p>
+      <p class="reveal" style="transition-delay:.14s" data-i18n="missionP2">Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen — und nicht auf andere Dinge wie sozialen Status, Beruf oder Herkunft reduziert. <strong>Bei uns hat jeder dieselben Rechte und jeder hat einen Platz.</strong></p>
+      <p class="reveal" style="transition-delay:.26s" data-i18n="missionP3">Unser Dojo ist aber nicht einfach nur ein Kampfsportzentrum. Wir sind eine Community aller Altersgruppen, die über das Trainieren von Jiu Jitsu hinausgeht. Bei uns versammeln sich Leute, um zusammen zu trainieren, voneinander zu lernen — und vor allem eines: <strong>zusammenzuhalten.</strong></p>
     </div>
   </div>
 </section>
@@ -456,8 +456,8 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
       <div class="team-photo"><img src="images/team/lucas-card.jpg" alt="Lucas Feitosa" loading="lazy"></div>
       <h3 class="team-name">Lucas Feitosa</h3>
       <div class="team-bio">
-        <p>Geboren und aufgewachsen in <strong>Brasilien</strong>, fand Lucas früh seinen Weg auf die Tatami. Seine Reise im Jiu Jitsu führte ihn unter die <strong>Carlson Gracie Linie</strong> — eine der angesehensten Schulen im brasilianischen Jiu Jitsu weltweit.</p>
-        <p>Heute lebt Lucas in der Schweiz und tritt aktiv auf <strong>internationaler Wettkampfebene</strong> an.</p>
+        <p data-i18n="lucasP1">Geboren und aufgewachsen in <strong>Brasilien</strong>, fand Lucas früh seinen Weg auf die Tatami. Seine Reise im Jiu Jitsu führte ihn unter die <strong>Carlson Gracie Linie</strong> — eine der angesehensten Schulen im brasilianischen Jiu Jitsu weltweit.</p>
+        <p data-i18n="lucasP2">Heute lebt Lucas in der Schweiz und tritt aktiv auf <strong>internationaler Wettkampfebene</strong> an.</p>
 
         <button class="bio-expand-btn" onclick="toggleBio('lucas-bio', this)" aria-expanded="false">
           Mehr erfahren
@@ -465,10 +465,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         </button>
 
         <div class="bio-extended" id="lucas-bio">
-          <p>Lucas begann mit dem Brasilianischen Jiu Jitsu in seiner Heimat Brasilien — einer der Geburtsstätten dieser Kampfkunst. Unter der <strong>Carlson Gracie Linie</strong> erlernte er nicht nur Technik, sondern eine Philosophie: Jiu Jitsu als Weg, nicht als Ziel.</p>
-          <p>Die Entscheidung, in die <strong>Schweiz zu ziehen</strong>, war mutig. Weit weg von der vertrauten Kultur, in einem neuen Land — aber mit einer klaren Vision: eine Akademie aufzubauen, die echtes brasilianisches Jiu Jitsu nach Zürich Oberland bringt.</p>
-          <p>Als aktiver Schwarzgurt-Athlet versteht Lucas, was es bedeutet, unter Druck zu performen. Dieses Wissen fliesst direkt in den Unterricht ein — praxisnah, ehrlich und ohne Umwege. <strong>Was auf der Wettkampfmatte funktioniert, wird hier gelehrt.</strong></p>
-          <p>Alcateia ist sein Lebensprojekt. Nicht nur eine Akademie, sondern eine Gemeinschaft — ein Rudel — das er gemeinsam mit Scout aufgebaut hat. Schritt für Schritt, Training für Training.</p>
+          <p data-i18n="lucasEP1">Lucas begann mit dem Brasilianischen Jiu Jitsu in seiner Heimat Brasilien — einer der Geburtsstätten dieser Kampfkunst. Unter der <strong>Carlson Gracie Linie</strong> erlernte er nicht nur Technik, sondern eine Philosophie: Jiu Jitsu als Weg, nicht als Ziel.</p>
+          <p data-i18n="lucasEP2">Die Entscheidung, in die <strong>Schweiz zu ziehen</strong>, war mutig. Weit weg von der vertrauten Kultur, in einem neuen Land — aber mit einer klaren Vision: eine Akademie aufzubauen, die echtes brasilianisches Jiu Jitsu nach Zürich Oberland bringt.</p>
+          <p data-i18n="lucasEP3">Als aktiver Schwarzgurt-Athlet versteht Lucas, was es bedeutet, unter Druck zu performen. Dieses Wissen fliesst direkt in den Unterricht ein — praxisnah, ehrlich und ohne Umwege. <strong>Was auf der Wettkampfmatte funktioniert, wird hier gelehrt.</strong></p>
+          <p data-i18n="lucasEP4">Alcateia ist sein Lebensprojekt. Nicht nur eine Akademie, sondern eine Gemeinschaft — ein Rudel — das er gemeinsam mit Scout aufgebaut hat. Schritt für Schritt, Training für Training.</p>
         </div>
       </div>
     </article>
@@ -477,8 +477,8 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
       <div class="team-photo"><img src="images/team/scout-card.jpg" alt="Scout Feitosa" loading="lazy"></div>
       <h3 class="team-name">Scout Feitosa</h3>
       <div class="team-bio">
-        <p>Scout ist <strong>aktive Athletin auf europäischem und internationalem Niveau</strong>. Mehrfache Medaillengewinnerin auf IBJJF-Turnieren — ihre Mentalität auf der Tatami spricht für sich: ruhig, präzise, kompromisslos.</p>
-        <p>Bei Alcateia leitet sie die <strong>Frauen Klasse</strong> — einen geschützten Raum für Frauen und Mädchen.</p>
+        <p data-i18n="scoutP1">Scout ist <strong>aktive Athletin auf europäischem und internationalem Niveau</strong>. Mehrfache Medaillengewinnerin auf IBJJF-Turnieren — ihre Mentalität auf der Tatami spricht für sich: ruhig, präzise, kompromisslos.</p>
+        <p data-i18n="scoutP2">Bei Alcateia leitet sie die <strong>Frauen Klasse</strong> — einen geschützten Raum für Frauen und Mädchen.</p>
 
         <button class="bio-expand-btn" onclick="toggleBio('scout-bio', this)" aria-expanded="false">
           Mehr erfahren
@@ -486,10 +486,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         </button>
 
         <div class="bio-extended" id="scout-bio">
-          <p>Scout kam zum Jiu Jitsu und liess sich nicht mehr davon trennen. Was als Training begann, wurde zu einer Berufung. Ihre Wettkampferfahrung auf <strong>europäischem und weltweitem IBJJF-Niveau</strong> macht sie zu einer der erfahrensten Athletinnen in der Schweizer BJJ-Szene.</p>
-          <p>Mehrfache Medaillengewinnerin bei den <strong>IBJJF European und World Championships</strong> — Ergebnisse, die für sich sprechen. Auf der Matte ist Scout fokussiert, technisch und kaltblütig. Im Unterricht ist sie etwas anderes: geduldig, ermutigend, präsent.</p>
-          <p>Die <strong>Frauen Klasse</strong> bei Alcateia ist ihr persönliches Projekt. Sie weiss, wie es sich anfühlt, als Frau in einem von Männern dominierten Sport anzufangen — und genau deshalb hat sie diesen Raum geschaffen. Hier trainieren Frauen und Mädchen unter sich, in ihrer eigenen Dynamik, mit ihrer eigenen Energie.</p>
-          <p><strong>Geführt von jemandem, die denselben Weg geht — heute noch.</strong></p>
+          <p data-i18n="scoutEP1">Scout kam zum Jiu Jitsu und liess sich nicht mehr davon trennen. Was als Training begann, wurde zu einer Berufung. Ihre Wettkampferfahrung auf <strong>europäischem und weltweitem IBJJF-Niveau</strong> macht sie zu einer der erfahrensten Athletinnen in der Schweizer BJJ-Szene.</p>
+          <p data-i18n="scoutEP2">Mehrfache Medaillengewinnerin bei den <strong>IBJJF European und World Championships</strong> — Ergebnisse, die für sich sprechen. Auf der Matte ist Scout fokussiert, technisch und kaltblütig. Im Unterricht ist sie etwas anderes: geduldig, ermutigend, präsent.</p>
+          <p data-i18n="scoutEP3">Die <strong>Frauen Klasse</strong> bei Alcateia ist ihr persönliches Projekt. Sie weiss, wie es sich anfühlt, als Frau in einem von Männern dominierten Sport anzufangen — und genau deshalb hat sie diesen Raum geschaffen. Hier trainieren Frauen und Mädchen unter sich, in ihrer eigenen Dynamik, mit ihrer eigenen Energie.</p>
+          <p data-i18n="scoutEP4"><strong>Geführt von jemandem, die denselben Weg geht — heute noch.</strong></p>
         </div>
       </div>
     </article>
@@ -500,12 +500,12 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <!-- ALCATEIA NAME ORIGIN -->
 <section class="origin-section">
   <div class="origin-inner">
-    <span class="section-tag reveal-left">Der Name</span>
-    <h2 class="origin-title reveal-strong">Warum <em>Alcateia</em>?</h2>
+    <span class="section-tag reveal-left" data-i18n="originTag">Der Name</span>
+    <h2 class="origin-title reveal-strong" data-i18n="originH2">Warum <em>Alcateia</em>?</h2>
     <div class="origin-text">
-      <p class="reveal">Der Findungsprozess für unseren Teamnamen führte uns zu den Wölfen — Tiere, die uns seit unserer Jugend faszinieren. <em>Kleiner Insider:</em> Wir tragen beide ein Wolfstattoo am Arm, völlig unabhängig voneinander gewählt.</p>
-      <p class="reveal" style="transition-delay:.12s"><strong>Alcateia bedeutet auf Portugiesisch Wolfsrudel.</strong> In der Natur ist ein Wolfsrudel sehr ähnlich aufgebaut wie eine menschliche Familie. Wölfe sind geheimnisvolle, schöne, innerhalb des Rudels liebevolle — gegen aussen aber starke und gefährliche Tiere.</p>
-      <p class="reveal" style="transition-delay:.24s">Die Farbe Blau und ihre verschiedenen Töne stehen für <strong>Objektivität, Neutralität und Klarheit</strong> — sie schaffen Vertrauen und vermitteln ein Gefühl von Sicherheit. Genau diese Ansätze und Merkmale möchten wir in unserem Alcateia Jiu Jitsu Team verkörpern.</p>
+      <p class="reveal" data-i18n="originP1">Der Findungsprozess für unseren Teamnamen führte uns zu den Wölfen — Tiere, die uns seit unserer Jugend faszinieren. <em>Kleiner Insider:</em> Wir tragen beide ein Wolfstattoo am Arm, völlig unabhängig voneinander gewählt.</p>
+      <p class="reveal" style="transition-delay:.12s" data-i18n="originP2"><strong>Alcateia bedeutet auf Portugiesisch Wolfsrudel.</strong> In der Natur ist ein Wolfsrudel sehr ähnlich aufgebaut wie eine menschliche Familie. Wölfe sind geheimnisvolle, schöne, innerhalb des Rudels liebevolle — gegen aussen aber starke und gefährliche Tiere.</p>
+      <p class="reveal" style="transition-delay:.24s" data-i18n="originP3">Die Farbe Blau und ihre verschiedenen Töne stehen für <strong>Objektivität, Neutralität und Klarheit</strong> — sie schaffen Vertrauen und vermitteln ein Gefühl von Sicherheit. Genau diese Ansätze und Merkmale möchten wir in unserem Alcateia Jiu Jitsu Team verkörpern.</p>
     </div>
   </div>
 </section>
@@ -513,7 +513,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <!-- INSTAGRAM FEED -->
 <section class="insta-section">
   <div class="insta-header">
-    <span class="section-tag">Folge dem Rudel</span>
+    <span class="section-tag" data-i18n="instaTag">Folge dem Rudel</span>
   </div>
   <!-- Elfsight Instagram Feed | Alcateia Jiu Jitsu -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
@@ -530,15 +530,15 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 <div class="contact-bar" id="contact-bar">
   <div class="contact-bar-inner">
     <div>
-      <h3>Komm ins Rudel</h3>
-      <p>Probetraining jederzeit möglich — melde dich einfach.</p>
+      <h3 data-i18n="ctaTitle">Komm ins Rudel</h3>
+      <p data-i18n="ctaSub">Probetraining jederzeit möglich — melde dich einfach.</p>
     </div>
     <div class="contact-bar-links">
       <a href="https://wa.me/41772675669" target="_blank" class="btn-wa">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.833L0 24l6.335-1.663A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.575-.498-5.065-1.367l-.363-.214-3.76.986.999-3.659-.236-.374A9.96 9.96 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-        WhatsApp
+        <span data-i18n="ctaWA">WhatsApp</span>
       </a>
-      <a href="mailto:alcateiajiujitsu@protonmail.com" class="btn-white">E-Mail schreiben</a>
+      <a href="mailto:alcateiajiujitsu@protonmail.com" class="btn-white" data-i18n="ctaEmail">E-Mail schreiben</a>
     </div>
   </div>
 </div>
@@ -549,26 +549,26 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     <div class="footer-top">
       <div>
         <a href="/" class="footer-logo"><img src="images/uber-uns-04.png" alt="Alcateia Jiu Jitsu" loading="lazy"></a>
-        <p class="footer-desc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
+        <p class="footer-desc" data-i18n="footerDesc">Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz</p>
         <span class="footer-copy" style="display:block;margin-top:10px">© 2025 Raw Life GmbH.</span>
       </div>
       <div>
-        <p class="footer-ttl">Trainingszeiten</p>
+        <p class="footer-ttl" data-i18n="footerHoursTitle">Trainingszeiten</p>
         <ul class="footer-hours">
           <li><span>Mo / Mi</span><span>06:30 – 20:30</span></li>
           <li><span>Di / Do</span><span>12:00 – 19:30</span></li>
           <li><span>Freitag</span><span>12:00 – 20:30</span></li>
           <li><span>Samstag</span><span>10:00 – 13:00</span></li>
         </ul>
-        <a href="stundenplan.html" class="footer-sch-link">Stundenplan ansehen →</a>
+        <a href="stundenplan.html" class="footer-sch-link" data-i18n="footerScheduleLink">Stundenplan ansehen →</a>
       </div>
       <div>
-        <p class="footer-ttl">Folge uns</p>
+        <p class="footer-ttl" data-i18n="footerFollowTitle">Folge uns</p>
         <a href="https://www.instagram.com/alcateiajiujitsu" target="_blank" rel="noopener" class="footer-insta"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+      <div class="footer-links"><a href="#" data-i18n="footerImpressum">Impressum</a><a href="#" data-i18n="footerDatenschutz">Datenschutz</a></div>
     </div>
   </div>
 </footer>
@@ -601,19 +601,78 @@ const io=new IntersectionObserver((entries)=>{
 },{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-strong').forEach(el=>io.observe(el));
 
-// Language toggle (DE/EN)
 const translations={
-  de:{start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining'},
-  en:{start:'Home',about:'About us',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class'}
+  de:{
+    start:'Start',about:'Über uns',classes:'Klassen',schedule:'Stundenplan',memberships:'Mitgliedschaften',contact:'Kontakt',probetraining:'Probetraining',navFrauen:'Frauen',
+    heroH1:'Mehr als<br>ein <span class="accent">Dojo</span>.',
+    missionTag:'Unsere Mission',missionTitle:'Was uns antreibt',
+    missionP1:'Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu <strong>Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke</strong> zu vermitteln. Wir möchten unseren Schülern helfen, im Leben nicht stehen zu bleiben, sich weiterzuentwickeln und Träume wahr werden zu lassen — sei es auf der Tatami oder ausserhalb.',
+    missionP2:'Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen — und nicht auf andere Dinge wie sozialen Status, Beruf oder Herkunft reduziert. <strong>Bei uns hat jeder dieselben Rechte und jeder hat einen Platz.</strong>',
+    missionP3:'Unser Dojo ist aber nicht einfach nur ein Kampfsportzentrum. Wir sind eine Community aller Altersgruppen, die über das Trainieren von Jiu Jitsu hinausgeht. Bei uns versammeln sich Leute, um zusammen zu trainieren, voneinander zu lernen — und vor allem eines: <strong>zusammenzuhalten.</strong>',
+    lucasP1:'Geboren und aufgewachsen in <strong>Brasilien</strong>, fand Lucas früh seinen Weg auf die Tatami. Seine Reise im Jiu Jitsu führte ihn unter die <strong>Carlson Gracie Linie</strong> — eine der angesehensten Schulen im brasilianischen Jiu Jitsu weltweit.',
+    lucasP2:'Heute lebt Lucas in der Schweiz und tritt aktiv auf <strong>internationaler Wettkampfebene</strong> an.',
+    bioMore:'Mehr erfahren',bioLess:'Weniger anzeigen',
+    lucasEP1:'Lucas begann mit dem Brasilianischen Jiu Jitsu in seiner Heimat Brasilien — einer der Geburtsstätten dieser Kampfkunst. Unter der <strong>Carlson Gracie Linie</strong> erlernte er nicht nur Technik, sondern eine Philosophie: Jiu Jitsu als Weg, nicht als Ziel.',
+    lucasEP2:'Die Entscheidung, in die <strong>Schweiz zu ziehen</strong>, war mutig. Weit weg von der vertrauten Kultur, in einem neuen Land — aber mit einer klaren Vision: eine Akademie aufzubauen, die echtes brasilianisches Jiu Jitsu nach Zürich Oberland bringt.',
+    lucasEP3:'Als aktiver Schwarzgurt-Athlet versteht Lucas, was es bedeutet, unter Druck zu performen. Dieses Wissen fliesst direkt in den Unterricht ein — praxisnah, ehrlich und ohne Umwege. <strong>Was auf der Wettkampfmatte funktioniert, wird hier gelehrt.</strong>',
+    lucasEP4:'Alcateia ist sein Lebensprojekt. Nicht nur eine Akademie, sondern eine Gemeinschaft — ein Rudel — das er gemeinsam mit Scout aufgebaut hat. Schritt für Schritt, Training für Training.',
+    scoutP1:'Scout ist <strong>aktive Athletin auf europäischem und internationalem Niveau</strong>. Mehrfache Medaillengewinnerin auf IBJJF-Turnieren — ihre Mentalität auf der Tatami spricht für sich: ruhig, präzise, kompromisslos.',
+    scoutP2:'Bei Alcateia leitet sie die <strong>Frauen Klasse</strong> — einen geschützten Raum für Frauen und Mädchen.',
+    scoutEP1:'Scout kam zum Jiu Jitsu und liess sich nicht mehr davon trennen. Was als Training begann, wurde zu einer Berufung. Ihre Wettkampferfahrung auf <strong>europäischem und weltweitem IBJJF-Niveau</strong> macht sie zu einer der erfahrensten Athletinnen in der Schweizer BJJ-Szene.',
+    scoutEP2:'Mehrfache Medaillengewinnerin bei den <strong>IBJJF European und World Championships</strong> — Ergebnisse, die für sich sprechen. Auf der Matte ist Scout fokussiert, technisch und kaltblütig. Im Unterricht ist sie etwas anderes: geduldig, ermutigend, präsent.',
+    scoutEP3:'Die <strong>Frauen Klasse</strong> bei Alcateia ist ihr persönliches Projekt. Sie weiss, wie es sich anfühlt, als Frau in einem von Männern dominierten Sport anzufangen — und genau deshalb hat sie diesen Raum geschaffen. Hier trainieren Frauen und Mädchen unter sich, in ihrer eigenen Dynamik, mit ihrer eigenen Energie.',
+    scoutEP4:'<strong>Geführt von jemandem, die denselben Weg geht — heute noch.</strong>',
+    originTag:'Der Name',originH2:'Warum <em>Alcateia</em>?',
+    originP1:'Der Findungsprozess für unseren Teamnamen führte uns zu den Wölfen — Tiere, die uns seit unserer Jugend faszinieren. <em>Kleiner Insider:</em> Wir tragen beide ein Wolfstattoo am Arm, völlig unabhängig voneinander gewählt.',
+    originP2:'<strong>Alcateia bedeutet auf Portugiesisch Wolfsrudel.</strong> In der Natur ist ein Wolfsrudel sehr ähnlich aufgebaut wie eine menschliche Familie. Wölfe sind geheimnisvolle, schöne, innerhalb des Rudels liebevolle — gegen aussen aber starke und gefährliche Tiere.',
+    originP3:'Die Farbe Blau und ihre verschiedenen Töne stehen für <strong>Objektivität, Neutralität und Klarheit</strong> — sie schaffen Vertrauen und vermitteln ein Gefühl von Sicherheit. Genau diese Ansätze und Merkmale möchten wir in unserem Alcateia Jiu Jitsu Team verkörpern.',
+    instaTag:'Folge dem Rudel',
+    ctaTitle:'Komm ins Rudel',ctaSub:'Probetraining jederzeit möglich — melde dich einfach.',
+    ctaWA:'WhatsApp',ctaEmail:'E-Mail schreiben',
+    footerDesc:'Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz',
+    footerHoursTitle:'Trainingszeiten',footerScheduleLink:'Stundenplan ansehen →',
+    footerFollowTitle:'Folge uns',
+    footerImpressum:'Impressum',footerDatenschutz:'Datenschutz'
+  },
+  en:{
+    start:'Home',about:'About',classes:'Classes',schedule:'Schedule',memberships:'Memberships',contact:'Contact',probetraining:'Trial Class',navFrauen:"Women's",
+    heroH1:'More Than<br>a <span class="accent">Dojo</span>.',
+    missionTag:'Our Mission',missionTitle:'What drives us',
+    missionP1:'Our mission is to give people <strong>confidence, resilience, discipline, joy, belonging and strength</strong> through Brazilian Jiu Jitsu. We want to help our students keep moving forward in life — growing, evolving, and making dreams real — whether on the Tatami or beyond.',
+    missionP2:'On our Tatami, barefoot in the Kimono, everyone is seen as a person — not reduced to their status, profession or background. <strong>Everyone has the same rights. Everyone has a place.</strong>',
+    missionP3:"Our dojo is more than a martial arts gym. We are a community across all ages, built around more than just Jiu Jitsu. People come together here to train, to learn from each other — and above all: <strong>to have each other's backs.</strong>",
+    lucasP1:'Born and raised in <strong>Brazil</strong>, Lucas found his way to the Tatami early. His journey in Jiu Jitsu led him under the <strong>Carlson Gracie lineage</strong> — one of the most respected schools in Brazilian Jiu Jitsu worldwide.',
+    lucasP2:'Today Lucas lives in Switzerland, competing actively at the <strong>international level</strong>.',
+    bioMore:'Read more',bioLess:'Show less',
+    lucasEP1:'Lucas began Brazilian Jiu Jitsu in his home country of Brazil — one of the birthplaces of this martial art. Under the <strong>Carlson Gracie lineage</strong>, he learned not only technique, but a philosophy: Jiu Jitsu as a path, not a destination.',
+    lucasEP2:'The decision to move to <strong>Switzerland</strong> took courage. Far from a familiar culture, in a new country — but with a clear vision: to build an academy that brings authentic Brazilian Jiu Jitsu to Zürich Oberland.',
+    lucasEP3:'As an active black belt competitor, Lucas understands what it means to perform under pressure. That knowledge flows directly into his teaching — practical, honest, no shortcuts. <strong>What works on the competition mat is what gets taught here.</strong>',
+    lucasEP4:'Alcateia is his life project. Not just an academy, but a community — a pack — that he built together with Scout. One step at a time, one class at a time.',
+    scoutP1:'Scout is an <strong>active competitor at the European and international level</strong>. Multiple IBJJF medalist — her mentality on the Tatami speaks for itself: calm, precise, relentless.',
+    scoutP2:"At Alcateia, she leads the <strong>Women's Class</strong> — a dedicated space for women and girls.",
+    scoutEP1:'Scout found Jiu Jitsu and never let go. What started as training became a calling. Her competition experience at <strong>European and world IBJJF level</strong> makes her one of the most accomplished competitors in the Swiss BJJ scene.',
+    scoutEP2:'Multiple medalist at the <strong>IBJJF European and World Championships</strong> — results that speak for themselves. On the mat, Scout is focused, technical, and composed. In the classroom, she is something else: patient, encouraging, present.',
+    scoutEP3:"The <strong>Women's Class</strong> at Alcateia is her personal project. She knows how it feels to start as a woman in a male-dominated sport — and that's exactly why she created this space. Women and girls train here together, in their own dynamic, at their own energy.",
+    scoutEP4:'<strong>Led by someone still walking the same path — right now.</strong>',
+    originTag:'The Name',originH2:'Why <em>Alcateia</em>?',
+    originP1:'The search for our team name led us to wolves — animals that have fascinated both of us since childhood. <em>A small detail:</em> we both have a wolf tattoo on our arm, chosen completely independently of each other.',
+    originP2:'<strong>Alcateia means "wolf pack" in Portuguese.</strong> In nature, a wolf pack is built very much like a human family. Wolves are mysterious, beautiful, loving within the pack — but strong and formidable to the outside world.',
+    originP3:'The colour blue and its many shades stand for <strong>objectivity, neutrality and clarity</strong> — they create trust and a sense of security. These are exactly the values and qualities we want to embody in the Alcateia Jiu Jitsu team.',
+    instaTag:'Follow the Pack',
+    ctaTitle:'Join the Pack',ctaSub:'Trial class available anytime — just reach out.',
+    ctaWA:'WhatsApp',ctaEmail:'Send Email',
+    footerDesc:'Brazilian Jiu Jitsu<br>Zürich Oberland, Switzerland',
+    footerHoursTitle:'Training Hours',footerScheduleLink:'View Schedule →',
+    footerFollowTitle:'Follow us',
+    footerImpressum:'Legal Notice',footerDatenschutz:'Privacy Policy'
+  }
 };
 function setLang(lang){
   document.documentElement.lang=lang;
   try{localStorage.setItem('alcateia_lang',lang)}catch(e){}
   document.querySelectorAll('.lang-btn').forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key=el.dataset.i18n;
-    if(translations[lang][key])el.textContent=translations[lang][key];
-  });
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(translations[lang]&&translations[lang][key])el.innerHTML=translations[lang][key];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(translations[lang]&&translations[lang][k])el.placeholder=translations[lang][k];});
 }
 try{const savedLang=localStorage.getItem('alcateia_lang')||'de';if(savedLang!=='de')setLang(savedLang);}catch(e){}
 
@@ -623,11 +682,9 @@ function toggleBio(id, btn) {
   panel.classList.toggle('open', !isOpen);
   btn.classList.toggle('open', !isOpen);
   btn.setAttribute('aria-expanded', String(!isOpen));
-  if (!isOpen) {
-    btn.childNodes[0].textContent = 'Weniger anzeigen ';
-  } else {
-    btn.childNodes[0].textContent = 'Mehr erfahren ';
-  }
+  const lang = document.documentElement.lang || 'de';
+  const t = translations[lang] || translations.de;
+  btn.childNodes[0].textContent = (!isOpen ? t.bioLess : t.bioMore) + ' ';
 }
 </script>
 
