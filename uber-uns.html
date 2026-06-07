@@ -305,8 +305,6 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 @media(max-width:1024px){
   .nav-center{display:none}
   .hamburger{display:flex}
-  .team-grid{grid-template-columns:1fr;gap:3.5rem;max-width:560px}
-
 }
 @media(max-width:768px){
   .uu-hero{min-height:75vh}
@@ -318,7 +316,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .contact-bar-links{justify-content:center}
   .footer-top{grid-template-columns:1fr;gap:2rem}
   .footer-bottom{flex-direction:column;align-items:flex-start}
-
+  /* team: horizontal swipe */
+  .team-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:1.25rem;max-width:none;padding-bottom:.75rem}
+  .team-grid::-webkit-scrollbar{display:none}
+  .team-card{flex-shrink:0;width:78vw;scroll-snap-align:center}
 }
 @media(max-width:480px){
   .navbar{width:calc(100% - 1.5rem);top:.75rem}
