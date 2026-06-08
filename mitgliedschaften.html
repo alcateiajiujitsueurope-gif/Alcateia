@@ -447,7 +447,7 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
 </section>
 
 <div class="manifesto">
-  <div class="manifesto-bg"><img src="images/mitgliedschaften-02.jpg" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="manifesto-bg"><img src="images/mitgliedschaften-02.png" alt="" aria-hidden="true" loading="lazy"></div>
   <div class="manifesto-overlay"></div>
   <div class="manifesto-inner reveal">
     <p class="manifesto-quote" data-i18n="manifestoQuote">Jiu Jitsu ist <em>mehr als Sport</em> — es ist <strong>Familie</strong>, Disziplin und die tägliche Entscheidung, besser zu werden.</p>
@@ -610,11 +610,6 @@ function setLang(lang){
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(translations[lang]&&translations[lang][k])el.placeholder=translations[lang][k];});
 }
 try{const s=localStorage.getItem('alcateia_lang')||'de';if(s!=='de')setLang(s)}catch(e){}
-document.addEventListener("click",e=>{
-  const m=document.getElementById("mobileMenu"),n=document.getElementById("navbar");
-  if(m.classList.contains("open")&&!n.contains(e.target))m.classList.remove("open");
-});
-
 
 const io=new IntersectionObserver(entries=>entries.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}
