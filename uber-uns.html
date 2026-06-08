@@ -167,8 +167,8 @@ a{text-decoration:none;color:inherit}
 }
 .mission-text p:last-child{margin-bottom:0}
 .mission-text strong{color:var(--cream);font-weight:500}
-.mission-photo-break{margin:3.5rem -2.5rem 0;width:calc(100% + 5rem);height:60vh;min-height:360px;overflow:hidden}
-.mission-photo-break img{width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:grayscale(10%) brightness(.72)}
+.mission-video-break{margin:3.5rem -2.5rem 0;width:calc(100% + 5rem);background:#000;display:flex;justify-content:center;align-items:center;padding:40px 0}
+.mission-video-break video{width:360px;max-width:72%;display:block;border-radius:3px}
 
 /* ══ TEAM (Lucas + Scout) — clean, no role tags, no meta ══ */
 .team-section{
@@ -298,7 +298,8 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .uu-hero-content{padding:0 1.25rem 3rem}
   .mission-section,.team-section,.origin-section{padding:3rem 1.25rem}
   .mission-text p,.origin-text p{font-size:0.95rem;line-height:1.75}
-  .mission-photo-break{margin:2.5rem -1.25rem 0;width:calc(100% + 2.5rem);min-height:260px;height:42vh}
+  .mission-video-break{margin:2.5rem -1.25rem 0;width:calc(100% + 2.5rem);padding:0}
+  .mission-video-break video{width:100%;max-width:100%;border-radius:0}
   .contact-bar-inner{flex-direction:column;text-align:center;gap:1.5rem}
   .contact-bar-links{justify-content:center}
   .footer-top{grid-template-columns:1fr;gap:2rem}
@@ -443,8 +444,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     <div class="mission-text">
       <p class="reveal" data-i18n="missionP1">Unsere Mission ist es, Menschen mit Hilfe vom Brasilianischen Jiu Jitsu <strong>Selbstvertrauen, Durchhaltevermögen, Disziplin, Lebensfreude, Zugehörigkeit und Stärke</strong> zu vermitteln. Wir möchten unseren Schülern helfen, im Leben nicht stehen zu bleiben, sich weiterzuentwickeln und Träume wahr werden zu lassen — sei es auf der Tatami oder ausserhalb.</p>
     </div>
-    <div class="mission-photo-break">
-      <img src="images/uber-uns-03.jpg" alt="Alcateia Jiu Jitsu Training" loading="lazy">
+    <div class="mission-video-break">
+      <video autoplay muted loop playsinline poster="images/uber-uns-03.jpg">
+        <source src="videos/uber-uns-abertura.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="mission-text" style="margin-top:3rem">
       <p class="reveal" style="transition-delay:.14s" data-i18n="missionP2">Bei uns auf der Tatami, barfuss und im Kimono, werden alle als Menschen wahrgenommen — und nicht auf andere Dinge wie sozialen Status, Beruf oder Herkunft reduziert. <strong>Bei uns hat jeder dieselben Rechte und jeder hat einen Platz.</strong></p>
