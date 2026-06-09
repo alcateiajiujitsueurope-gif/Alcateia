@@ -177,6 +177,9 @@ a{text-decoration:none}
 
 /* COMMUNITY */
 #community{background:var(--dk3);padding:52px 40px}
+.cLabel{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:40px}
+.cLabel::before,.cLabel::after{content:'';flex:1;max-width:80px;height:1px;background:var(--bl);opacity:.6}
+.cLabel span{font-family:var(--H);font-size:13px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--bl)}
 .cTop{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:20px}
 .rating{display:flex;align-items:center;gap:14px}
 .rNum{font-family:var(--H);font-size:60px;font-weight:900;line-height:1}
@@ -551,6 +554,7 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
 
 <!-- COMMUNITY -->
 <section id="community">
+  <div class="cLabel rev"><span data-i18n="communityLabel">Was unsere Community sagt</span></div>
   <script defer async src='https://cdn.trustindex.io/loader.js?8c20ee2734c68660477669bc584'></script>
   <div data-widget-id="8c20ee2734c68660477669bc584"></div>
   <div class="btn-review-wrap">
