@@ -196,6 +196,10 @@ a{text-decoration:none}
 .cWhen{font-size:12px;color:rgba(255,255,255,.28);display:block;margin-top:2px}
 .cMore{text-align:center;margin-top:40px;font-family:var(--H);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.22)}
 .cMore a{color:inherit;transition:color .2s}.cMore a:hover{color:var(--bl)}
+.btn-review{display:inline-flex;align-items:center;gap:10px;font-family:var(--H);font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--wh);background:var(--bl);padding:14px 32px;border-radius:6px;transition:background .2s,transform .15s;text-decoration:none}
+.btn-review:hover{background:var(--bl2);transform:translateY(-2px)}
+.btn-review .rStar{font-size:18px;color:#f5c14e}
+.btn-review-wrap{text-align:center;padding:32px 0 8px}
 
 /* KOMM */
 #komm{background:var(--bl);padding:64px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
@@ -548,6 +552,11 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
 <section id="community">
   <script defer async src='https://cdn.trustindex.io/loader.js?8c20ee2734c68660477669bc584'></script>
   <div data-widget-id="8c20ee2734c68660477669bc584"></div>
+  <div class="btn-review-wrap">
+    <a href="https://www.google.com/maps/search/Alcateia+Jiu+Jitsu+M%C3%B6nchaltorf" target="_blank" rel="noopener" class="btn-review">
+      <span class="rStar">★</span><span data-i18n="reviewBtn">Bewertung bei Google hinterlassen</span>
+    </a>
+  </div>
 </section>
 
 <!-- KOMM INS RUDEL -->
@@ -644,6 +653,7 @@ const translations={
     dojoLabel:'Galerie',
     communityLabel:'Was unsere Community sagt',communityRatingSrc:'Auf Google',
     commReviewSrc:'Google Bewertung',communityMore:'Alle Bewertungen ansehen →',
+    reviewBtn:'Bewertung bei Google hinterlassen',
     ctaTitle:'Probetraining gratis',ctaSub:'Komm einfach vorbei — dein erstes Training ist auf uns.',
     ctaWA:'Jetzt Probetraining buchen',
     footerDesc:'Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz',
@@ -681,6 +691,7 @@ const translations={
     dojoLabel:'Gallery',
     communityLabel:'What our community says',communityRatingSrc:'On Google',
     commReviewSrc:'Google Review',communityMore:'See all reviews →',
+    reviewBtn:'Leave a Review on Google',
     ctaTitle:'Free Trial Class',ctaSub:'Just come by — your first training is on us.',
     ctaWA:'Book a Trial Class Now',
     footerDesc:'Brazilian Jiu Jitsu<br>Zürich Oberland, Switzerland',
@@ -715,5 +726,9 @@ window.addEventListener('mouseup',()=>{dn=false;go.classList.remove('dragging')}
 window.addEventListener('mousemove',e=>{if(!dn)return;e.preventDefault();go.scrollLeft=sl-(e.pageX-sx)*1.2});
 function scrollGallery(dir){const go=document.getElementById('gOuter');const el=go.querySelector('.gPanel,.gPanelB,.gPanelC,.gPanelD');if(el)go.scrollBy({left:dir*el.offsetWidth,behavior:'smooth'})}
 </script>
+<style>
+#dojo .gPortrait img,#dojo .gBanner img,#dojo .gNorm img,#dojo .gBSq img,#dojo .gCPort img,#dojo .gCSm img,#dojo .gPanelD img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;filter:contrast(1.08) saturate(1.12) brightness(1.02)!important;transition:transform .7s,filter .4s!important}
+#dojo .gPortrait:hover img,#dojo .gBanner:hover img,#dojo .gNorm:hover img,#dojo .gBSq:hover img,#dojo .gCPort:hover img,#dojo .gCSm:hover img,#dojo .gPanelD:hover img{transform:scale(1.05)!important;filter:contrast(1.12) saturate(1.22) brightness(1.05)!important}
+</style>
 </body>
 </html>
