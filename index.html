@@ -175,7 +175,11 @@ a{text-decoration:none}
 .card{background:var(--dk2);padding:36px 32px 40px;border-top:2px solid transparent;transition:border-color .3s,background .3s;display:flex;flex-direction:column}
 .card:hover{border-color:var(--bl);background:var(--dk3)}
 .cStars{color:#f5c14e;font-size:14px;letter-spacing:2px;margin-bottom:18px}
-.cTxt{font-size:15px;line-height:1.8;color:var(--mu);flex:1;margin-bottom:26px}
+.cTxt{font-size:15px;line-height:1.8;color:var(--mu);margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.cTxt.cExp{display:block;overflow:visible}
+.cReadMore{font-family:var(--H);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.32);background:none;border:none;cursor:pointer;padding:0 0 20px;transition:color .2s;display:none}
+.cReadMore.cVis{display:block}
+.cReadMore:hover{color:var(--bl)}
 .cAuth{display:flex;align-items:center;gap:12px}
 .cAv{width:38px;height:38px;border-radius:50%;background:var(--bl);font-family:var(--H);font-size:17px;font-weight:800;color:var(--wh);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .cName{font-family:var(--H);font-size:14px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;display:block}
@@ -442,33 +446,57 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
   <div class="cards">
     <div class="card rev">
       <div class="cStars">★★★★★</div>
-      <p class="cTxt">"Training at Alcateia in Mönchaltorf has been a really great experience. The coaches are incredibly skilled and passionate — you feel that every single class."</p>
-      <div class="cAuth"><div class="cAv">G</div><div><span class="cName">Gonçalo Castro</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
-    </div>
-    <div class="card rev">
-      <div class="cStars">★★★★★</div>
-      <p class="cTxt">"Excelente academia, ótimos professores, didática muito aprofundada. Scout e Lucas ensinam com uma atenção aos detalhes que raramente se encontra."</p>
-      <div class="cAuth"><div class="cAv">V</div><div><span class="cName">Vinícius Reis</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
-    </div>
-    <div class="card rev">
-      <div class="cStars">★★★★★</div>
-      <p class="cTxt">"Both Scout and Lucas never looked at my age as a limit. They have always trained me as any other student, and that gave me so much confidence and motivated me to improve no matter what."</p>
+      <p class="cTxt">"I started practicing BJJ with Scout as my first instructor. I fell in love with this martial art since the first lesson. Scout's passion for BJJ is contagious, and since the beginning she taught me to pay attention to every single detail. She is a very attentive instructor, and she always pays attention to her students' mistakes and weaknesses. After a while, I also started training with Lucas when he was professor at my current dojo. Lucas' lessons have always been very intense but with a nice and motivating atmosphere. He always encourages his students to improve and do more. When I started competing, I always had his support and attention during the lessons. I've started practicing BJJ very late. Both Scout and Lucas never looked at my age as a limit. They have always trained me as any other student, and that gave me so much confidence and motivated me to improve no matter what. Both are very professional, and I really wish them all the best in their new adventure."</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
       <div class="cAuth"><div class="cAv">E</div><div><span class="cName">Elisabetta</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
     <div class="card rev">
       <div class="cStars">★★★★★</div>
-      <p class="cTxt">"Lucas vereint auf einzigartige Weise Professionalität und eine freundliche, angenehme Art. Er schafft eine positive und einladende Atmosphäre im Training, sodass jede Stunde nicht nur lehrreich, sondern auch sehr angenehm ist."</p>
+      <p class="cTxt">"Seit vielen Jahren gehe ich zu Lucas ins Training. Ich lerne enorm viel von ihm, auf und abseits der Tatami. Seine Methoden sind auf dem modernsten Stand der Didaktik und sehr qualitativ. Man fühlt sich unabhängig seiner Ziele oder seines Niveaus gut aufgehoben bei ihm. Er versteht es auch eine gute Atmosphäre für alle zu machen. Seine Arbeit spricht für sich, denn seine Trainings sind immer sehr beliebt. Des Weiteren harmonieren Scout und Lucas nicht nur miteinander, sondern auch als Trainingsleitende mit den Kindern. Ihr Training spricht Kinder vom Anfang bis zum Schluss an. Es ist lehrreich, macht den Kids und allen Zuschauenden Spass."</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
+      <div class="cAuth"><div class="cAv">B</div><div><span class="cName">Brian</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
+    </div>
+    <div class="card rev">
+      <div class="cStars">★★★★★</div>
+      <p class="cTxt">"Lucas is an outstanding teacher and role model, on and off the mats. He is a high-level jiu-jitsu instructor with a joyful, fun spirit that radiates energy and creates an open and inclusive learning environment. His commitment to his art is inspiring, and his passion for the sport shines through his teaching skills, which he adapts to match the level of his students. Working with Lucas has improved my jiu-jitsu, drive, and discipline to keep showing up and doing my best each day, a skill that has benefited my life beyond the dojo, for which I am truly grateful."</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
+      <div class="cAuth"><div class="cAv">A</div><div><span class="cName">Ahmed</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
+    </div>
+    <div class="card rev">
+      <div class="cStars">★★★★★</div>
+      <p class="cTxt">"Ich habe mit Scout im März 2020 während den Lockdowns begonnen Jiu Jitsu zu trainieren. Scout hat einen Trainingspartner benötigt und deshalb fragte sie mich, ob ich mit ihr trainieren möchte. Ich sagte ja, und so kauften wir bei eBay ein paar günstige Matten, leerten einen Raum und richteten ein kleines, aber sehr praktisches „Heim-Dojo" ein. Von Anfang an habe ich begonnen, BJJ zu lieben. Nicht nur, weil BJJ mich in seinen Bann gezogen hat, sondern auch, weil Scout meine Trainerin ist. In so kurzer Zeit habe ich so viel gelernt. Wir trainieren mehrmals pro Woche und Scout ist immer vorbereitet. Sie erstellt immer einen wöchentlichen bis monatlichen Plan mit Übungen und Techniken sowie spezifischen Sparringteilen und Muscle-Memory-Übungen. Mit ihr wird es definitiv nie langweilig. Ich bin ihr sehr dankbar, denn obwohl ich bisher noch nie Teil eines offiziellen BJJ-Teams war, kann ich sagen, dass es mir von Woche zu Woche besser geht. Und das liegt daran, dass ich meiner Meinung nach die beste Trainerin habe, die ich mir wünschen kann! Ich bin aufgeregt nun endlich ein Teil eines offiziellen BJJ-Teams zu sein, und zwar des besten Teams überhaupt: ALCATEIA JIU JITSU!"</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
+      <div class="cAuth"><div class="cAv">D</div><div><span class="cName">Dakota</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
+    </div>
+    <div class="card rev">
+      <div class="cStars">★★★★★</div>
+      <p class="cTxt">"Ich trainiere seit fast zweieinhalb Jahren Brazilian Jiu-Jitsu unter Lucas, und ich kann nicht genug Positives über seinen Unterricht sagen. Lucas vereint auf einzigartige Weise Professionalität und eine freundliche, angenehme Art. Was Lucas besonders auszeichnet, ist sein strukturierter Ansatz zum Training. Seine Stunden sind durchdacht und gut geplant, und sie bieten eine solide Grundlage für Praktizierende auf jedem Niveau. Dank seiner Anleitung habe ich meine Fähigkeiten enorm verbessert und verdanke das seinem engagierten Unterricht. Abgesehen von seinen hervorragenden Lehrfähigkeiten ist Lucas ein äusserst humorvoller und sympathischer Lehrer. Er schafft eine positive und einladende Atmosphäre im Training, sodass jede Stunde nicht nur lehrreich, sondern auch sehr angenehm ist."</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
       <div class="cAuth"><div class="cAv">A</div><div><span class="cName">Avraam</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
     <div class="card rev">
       <div class="cStars">★★★★★</div>
-      <p class="cTxt">"Lucas is like the drum beat that keeps us all marching forward. I always went home feeling like I am that little bit better than I was the day before. He does it with care and compassion."</p>
+      <p class="cTxt">"I started training with Lucas two years ago, when I was a white belt. Lucas is a calm and rooted in the Earth, kind of guy. You have the impression that you are talking with someone much older and more mature when you talk to him. At the same time, he is extremely disciplined and dedicated to the sport of Jiu Jitsu. The competition training with him was both challenging and rewarding. I always went home, feeling like I am that little bit better than I was the day before. That's what I love about Lucas, he knows how to motivate people. He is like the drum beat that keeps us all marching forward. He does it with care and compassion for his students and his students love him for it."</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
       <div class="cAuth"><div class="cAv">R</div><div><span class="cName">Radu</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
     <div class="card rev">
       <div class="cStars">★★★★★</div>
-      <p class="cTxt">"Ich bin aufgeregt nun endlich ein Teil eines offiziellen BJJ-Teams zu sein, und zwar des besten Teams überhaupt: ALCATEIA JIU JITSU!"</p>
-      <div class="cAuth"><div class="cAv">D</div><div><span class="cName">Dakota</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
+      <p class="cTxt">"Mit viel Wissen, Empathie und Geduld führt mich Scout durch die Privattrainings. Sportlich wie auch menschlich bringt sie einem weiter und verbessert so nach und nach das eigene Game und den Mindset. Sie geht sehr gezielt auf meine Wünsche und Bedürfnisse ein und erklärt sehr verständlich. Die Trainings mit ihr geben mir jedes Mal einen unglaublichen Schub an Motivation. Danke!"</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
+      <div class="cAuth"><div class="cAv">L</div><div><span class="cName">Ligaya</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
+    </div>
+    <div class="card rev">
+      <div class="cStars">★★★★★</div>
+      <p class="cTxt">"Ein aussergewöhnlich tolles Dojo mit einer grossartigen Atmosphäre und einem Umfeld in dem man viel lernt und sich super weiterentwickeln kann. Das Training ist so gestaltet, dass jedes Niveau abgeholt werden kann und man weder unterfordert noch überfordert ist. Möchte man an Wettkämpfen teilnehmen wird das von den Trainern - Lucas und Scout - unterstützt und sie begleiten, betreuen und coachen die Athleten dann auch vor Ort am Wettkampf. Ich trainiere seit einem Jahr bei Scout und Lucas und nehme auch regelmässig an Wettkämpfen teil. Alcateia Jiu Jitsu ist das Ergebnis zweier wundervoller Menschen mit unglaublich viel Passion für diese tolle Sportart. Herzlichen Dank Euch beiden und auf viele weitere grossartige Jahre mit Alcateia Jiu Jitsu!"</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
+      <div class="cAuth"><div class="cAv">C</div><div><span class="cName">Caterina Valente</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
+    </div>
+    <div class="card rev">
+      <div class="cStars">★★★★★</div>
+      <p class="cTxt">"Absolut der beste Ort, um BJJ zu trainieren! Das Dojo wird mit viel Herzblut von einem Paar geführt, und die beiden sind wirklich herausragende Trainer. Sie erklären die Techniken super und gehen individuell auf die Schüler ein. Was diesen Ort aber auch so besonders macht, ist die unglaubliche und vor allem respektvolle Atmosphäre auf der Matte. Es ist nicht nur ein fantastisches Training, sondern auch der perfekte Ort, um tolle neue Leute kennenzulernen. Man fühlt sich vom ersten Tag an willkommen. Eine klare 5-Sterne-Empfehlung!"</p>
+      <button class="cReadMore" onclick="toggleReview(this)">Mehr lesen ↓</button>
+      <div class="cAuth"><div class="cAv">M</div><div><span class="cName">Melf Jensen</span><span class="cWhen" data-i18n="commReviewSrc">Google Bewertung</span></div></div>
     </div>
   </div>
   </div>
@@ -639,6 +667,8 @@ go.addEventListener('mousedown',e=>{dn=true;go.classList.add('dragging');sx=e.pa
 window.addEventListener('mouseup',()=>{dn=false;go.classList.remove('dragging')});
 window.addEventListener('mousemove',e=>{if(!dn)return;e.preventDefault();go.scrollLeft=sl-(e.pageX-sx)*1.2});
 function scrollGallery(dir){const go=document.getElementById('gOuter');const el=go.querySelector('.gPanel,.gPanelB,.gPanelC,.gPanelD');if(el)go.scrollBy({left:dir*el.offsetWidth,behavior:'smooth'})}
+function toggleReview(btn){var txt=btn.previousElementSibling;var expanding=!txt.classList.contains('cExp');txt.classList.toggle('cExp',expanding);btn.textContent=expanding?'Weniger ↑':'Mehr lesen ↓'}
+document.addEventListener('DOMContentLoaded',function(){requestAnimationFrame(function(){document.querySelectorAll('.cReadMore').forEach(function(btn){var txt=btn.previousElementSibling;if(txt.scrollHeight>txt.clientHeight+2)btn.classList.add('cVis')})})});
 </script>
 </body>
 </html>
