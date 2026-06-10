@@ -109,13 +109,11 @@ img{max-width:100%;display:block;object-fit:cover}
 .plans-head{max-width:1280px;margin:0 auto 2.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem}
 .plans-eyebrow{
   display:flex;align-items:center;gap:.75rem;
-  font-size:.58rem;font-weight:700;letter-spacing:.28em;
+  font-size:.68rem;font-weight:700;letter-spacing:.28em;
   text-transform:uppercase;color:var(--blue);
   margin-bottom:1rem;
 }
-.plans-eyebrow span{
-  display:block;width:28px;height:1px;background:var(--blue);flex-shrink:0;
-}
+.plans-eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--blue);flex-shrink:0}
 .plans-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);letter-spacing:.04em;color:var(--cream)}
 .plans-sub{font-size:.62rem;font-weight:300;color:var(--cream-muted);letter-spacing:.06em}
 
@@ -371,7 +369,7 @@ footer{background:#070707;padding:4rem 2.5rem 2rem;border-top:1px solid var(--li
 
 <section class="plans-section">
   <div class="plans-head reveal">
-    <p class="plans-eyebrow"><span></span><span data-i18n="mitgEyebrow">Mitgliedschaften</span></p>
+    <p class="plans-eyebrow"><span data-i18n="mitgEyebrow">Mitgliedschaften</span></p>
     <h2 class="plans-title" data-i18n="mitgTitle">Gruppentraining</h2>
     <span class="plans-sub" data-i18n="mitgSub">Alle Preise inkl. MwSt.</span>
   </div>
