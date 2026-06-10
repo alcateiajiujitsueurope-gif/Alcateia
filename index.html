@@ -184,9 +184,9 @@ a{text-decoration:none}
 .rNum{font-family:var(--H);font-size:60px;font-weight:900;line-height:1}
 .rStars{font-size:18px;color:#f5c14e;letter-spacing:3px;display:block}
 .rSrc{font-family:var(--H);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-top:3px}
-.cardsWrap{overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cardsWrap{overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;display:flex;flex-direction:row}
 .cardsWrap::-webkit-scrollbar{display:none}
-.cards{display:flex;flex-direction:row;gap:3px;width:max-content}
+.cards{display:flex;flex-direction:row;gap:3px;width:max-content;flex-shrink:0}
 .card{width:clamp(280px,28vw,400px);flex-shrink:0}
 .card{background:var(--dk2);padding:36px 32px 40px;border-top:2px solid transparent;transition:border-color .3s,background .3s;display:flex;flex-direction:column}
 .card:hover{border-color:var(--bl);background:var(--dk3)}
