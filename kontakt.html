@@ -193,16 +193,13 @@ a{text-decoration:none;color:inherit}
 }
 .standort-map:hover iframe{filter:grayscale(.2) invert(0) hue-rotate(0deg) contrast(1) brightness(.85)}
 
-/* ── CONTACT BAR ── */
-.contact-bar{background:var(--blue);padding:3.5rem 2.5rem}
-.contact-bar-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.contact-bar h3{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:.04em;color:#fff}
-.contact-bar p{font-size:.83rem;color:rgba(255,255,255,.82);margin-top:.2rem}
-.contact-bar-links{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-wa{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.75rem;border:none;color:#0a0a0a;background:#fff;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:6px;transition:background .2s,transform .15s}
-.btn-wa:hover{background:rgba(255,255,255,.88);transform:translateY(-2px)}
-.btn-white{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;background:#fff;color:#1e3a6e;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-radius:6px;transition:background .2s,transform .15s}
-.btn-white:hover{background:#ddeef8;transform:translateY(-2px)}
+/* ─── CTA ─── */
+#komm{background:#3da0d8;padding:64px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.kTitle{font-family:'Bebas Neue',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(32px,5vw,58px);line-height:1;color:#fff}
+.kSub{font-size:15px;color:rgba(255,255,255,.72);margin-top:10px}
+.kBtns{display:flex;gap:12px;flex-wrap:wrap}
+.bKomm{font-family:'Bebas Neue',sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0a;background:#fff;border:none;padding:14px 28px;display:inline-flex;align-items:center;border-radius:6px;transition:background .2s,transform .15s}
+.bKomm:hover{background:rgba(255,255,255,.88);transform:translateY(-2px)}
 
 /* ── FOOTER ── */
 footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--border)}
@@ -242,8 +239,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   .standort-photo{flex:0 0 280px}
   .standort-info{border-right:none;border-bottom:1px solid var(--border)}
   .footer-top{grid-template-columns:1fr;gap:2rem}
-  .contact-bar-inner{flex-direction:column;text-align:center;gap:1.5rem}
-  .contact-bar-links{justify-content:center}
+  #komm{padding:52px 24px;flex-direction:column;align-items:flex-start}
 }
 @media(max-width:768px){
   .k-page{padding:8rem 1.25rem 4rem}
@@ -428,20 +424,17 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   </div><!-- /standort-wrap -->
 </section>
 
-<!-- CONTACT BAR -->
-<div class="contact-bar">
-  <div class="contact-bar-inner">
-    <div>
-      <h3 data-i18n="ctaTitle">Probetraining gratis</h3>
-      <p data-i18n="ctaSub">Komm einfach vorbei — dein erstes Training ist auf uns.</p>
-    </div>
-    <div class="contact-bar-links">
-      <a href="https://wa.me/41772675669?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20Probetraining%20bei%20Alcateia%20Jiu%20Jitsu." target="_blank" class="btn-wa">
-        <span data-i18n="ctaWA">Jetzt Probetraining buchen</span>
-      </a>
-    </div>
+<section id="komm">
+  <div>
+    <h2 class="kTitle" data-i18n="ctaTitle">Werde Teil unseres Rudels</h2>
+    <p class="kSub" data-i18n="ctaSub">Ein Probetraining ist jederzeit möglich – melde dich einfach bei uns.</p>
   </div>
-</div>
+  <div class="kBtns">
+    <a href="https://wa.me/41772675669?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20Probetraining%20bei%20Alcateia%20Jiu%20Jitsu." target="_blank" class="bKomm">
+      <span data-i18n="ctaWA">Jetzt Probetraining buchen</span>
+    </a>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -506,7 +499,7 @@ const translations={
     formSubmitBtn:'Nachricht senden',
     standortEyebrow:'Standort',
     standortBtn:'Auf Google Maps ansehen',
-    ctaTitle:'Probetraining gratis',ctaSub:'Komm einfach vorbei — dein erstes Training ist auf uns.',
+    ctaTitle:'Werde Teil unseres Rudels',ctaSub:'Ein Probetraining ist jederzeit möglich – melde dich einfach bei uns.',
     ctaWA:'Jetzt Probetraining buchen',
     footerDesc:'Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz',
     footerHoursTitle:'Trainingszeiten',footerScheduleLink:'Stundenplan ansehen →',
@@ -522,7 +515,7 @@ const translations={
     formSubmitBtn:'Send message',
     standortEyebrow:'Location',
     standortBtn:'View on Google Maps',
-    ctaTitle:'Free Trial Class',ctaSub:'Just come by — your first training is on us.',
+    ctaTitle:'Join Our Pack',ctaSub:'A trial class is possible at any time – just get in touch.',
     ctaWA:'Book a Trial Class Now',
     footerDesc:'Brazilian Jiu Jitsu<br>Zürich Oberland, Switzerland',
     footerHoursTitle:'Training Hours',footerScheduleLink:'View Schedule →',
