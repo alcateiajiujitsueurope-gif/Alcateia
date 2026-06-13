@@ -177,4 +177,88 @@ Se o deploy não aparecer → verificar GitHub Actions (`promote.yml`) antes de 
 ## Privacidade
 
 - Repositório é **privado** — não compartilhar conteúdo, estrutura ou código com terceiros
+
+---
+
+## Informações de negócio — verificar antes de editar kontakt.html
+
+| Campo | Valor |
+|---|---|
+| Endereço | Mettlenbachstrasse 29, 8617 Mönchaltorf, Zürich Oberland, Schweiz |
+| WhatsApp | +41 77 267 56 69 |
+| WhatsApp URL | `https://wa.me/41772675669` |
+| Email | alcateiajiujitsu@protonmail.com |
+| Google Maps | https://maps.app.goo.gl/n7ZvPL9iY6zQzTp18 |
+
+Qualquer alteração nesses dados deve ser confirmada com Lucas antes de commitar.
+
+---
+
+## Dois sistemas de footer — NÃO misturar
+
+### Footer A — apenas index.html
+Classes próprias, não existem nas outras páginas:
+```
+.fGrid          → grid desktop (3 colunas)
+.fNavTtl        → título de seção do footer
+.fSchLink       → link "Stundenplan ansehen →"
+.fLegal         → linha legal no rodapé
+.fCopy          → texto de copyright
+```
+Background: `var(--dk2)` | Desktop padding: `56px 40px 28px` | Mobile padding: `32px 20px 20px`
+
+### Footer B — stundenplan, klassen, uber-uns, kontakt, impressum, datenschutz, mitgliedschaften
+```
+.footer-inner   → container max-width:1280px
+.footer-top     → grid 3 colunas com border-bottom
+.footer-bottom  → linha de copyright + links legais
+.footer-ttl     → título de seção
+.footer-hours   → lista de horários
+.footer-nav     → links de navegação
+```
+Background: `#080808` | Desktop padding: `4rem 2.5rem 2rem` | Mobile (≤768px): `2.5rem 1.5rem 1.5rem`
+
+**Nunca usar classes do Footer A em páginas do Footer B e vice-versa.**
+
+---
+
+## Variáveis CSS por página — não são iguais em todos os arquivos
+
+### index.html (sistema próprio)
+```css
+--dk:  #0a0a0a      /* fundo principal */
+--dk2: #101010      /* fundo secundário / footer */
+--dk3: #161616      /* fundo cards */
+--bl:  #3da0d8      /* azul CTA (mais vivo) */
+--blue:#4a9fd4      /* azul links/nav */
+--cream: #f0ede6
+--mu:  rgba(255,255,255,.52)
+--H:   'Bebas Neue'
+--B:   'Montserrat'
+```
+
+### Outras 7 páginas (sistema comum)
+```css
+--blue:      #4a9fd4
+--dark:      #0a0a0a
+--dark-3:    #181818
+--dark-4:    #1f1f1f
+--cream:     rgba(255,255,255,.88)
+--cream-dim: rgba(255,255,255,.55)
+--cream-faint:rgba(255,255,255,.25)
+--border:    rgba(255,255,255,.08)
+--border-strong: rgba(255,255,255,.18)
+```
+
+Se for preciso sincronizar alguma cor entre páginas, verificar em qual sistema cada arquivo está antes de copiar variáveis.
+
+---
+
+## Vercel — referência técnica
+
+- **Projeto:** `alcateia-ovel`
+- **URL de produção:** alcateiajiujitsu.com
+- **Dashboard:** vercel.com/alcateiajiujitsueurope-6795s-projects/alcateia-ovel
+- **Deploy trigger:** push para branch `main` via GitHub Actions (`.github/workflows/promote.yml`)
+- Se o deploy não acontecer automaticamente → verificar a aba Actions no GitHub antes de qualquer outra coisa
 - Não mencionar que o site foi feito/editado por Claude em nenhum lugar público
