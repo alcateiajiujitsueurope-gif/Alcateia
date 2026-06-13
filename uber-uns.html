@@ -286,6 +286,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 .reveal-strong{opacity:0;transform:translateY(44px);transition:opacity 1s ease,transform 1s cubic-bezier(0.22,0.61,0.36,1)}
 .reveal-strong.in{opacity:1;transform:translateY(0)}
 
+.team-dots{display:none;justify-content:center;gap:8px;margin-top:1.25rem}
+.team-dot{width:7px;height:7px;border-radius:50%;background:rgba(240,237,230,.18);transition:background .25s,transform .25s}
+.team-dot.active{background:var(--blue);transform:scale(1.15)}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   .nav-center{display:none}
@@ -300,10 +304,11 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   #komm{padding:52px 24px;flex-direction:column;align-items:flex-start}
   .footer-top{grid-template-columns:1fr;gap:2rem}
   .footer-bottom{flex-direction:column;align-items:flex-start}
-  /* team: horizontal swipe */
+  /* team dots indicator */
   .team-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:1.25rem;max-width:none;padding-bottom:.75rem}
   .team-grid::-webkit-scrollbar{display:none}
   .team-card{flex-shrink:0;width:78vw;scroll-snap-align:center}
+  .team-dots{display:flex}
 }
 @media(max-width:480px){
   .navbar{width:calc(100% - 1.5rem);top:.75rem}
@@ -497,6 +502,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     </article>
 
   </div>
+  <div class="team-dots" id="teamDots">
+    <span class="team-dot active"></span>
+    <span class="team-dot"></span>
+  </div>
 </section>
 
 <!-- ALCATEIA NAME ORIGIN -->
@@ -677,6 +686,16 @@ function toggleBio(id, btn) {
   const lang = document.documentElement.lang || 'de';
   const t = translations[lang] || translations.de;
   btn.childNodes[0].textContent = (!isOpen ? t.bioLess : t.bioMore) + ' ';
+}
+
+const teamGrid=document.querySelector('.team-grid');
+const teamDots=document.querySelectorAll('#teamDots .team-dot');
+if(teamGrid&&teamDots.length){
+  teamGrid.addEventListener('scroll',()=>{
+    const pct=teamGrid.scrollLeft/(teamGrid.scrollWidth-teamGrid.clientWidth);
+    const idx=Math.round(pct*(teamDots.length-1));
+    teamDots.forEach((d,i)=>d.classList.toggle('active',i===idx));
+  },{passive:true});
 }
 </script>
 
