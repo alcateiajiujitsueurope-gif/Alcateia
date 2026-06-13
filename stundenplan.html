@@ -265,10 +265,10 @@ section{padding:4rem 2.5rem}
 .sdi{display:flex;align-items:center;gap:0.85rem;padding:0.65rem 0.8rem;border-radius:4px;transition:background 0.2s}
 .sdi:hover{background:rgba(255,255,255,0.025)}
 .sdi-badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:0.59rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#fff;flex-shrink:0;white-space:nowrap}
-.sdi-2row{flex-direction:column;align-items:stretch;gap:0.28rem;padding:0.6rem 0.8rem}
-.sdi-2row:hover{background:rgba(255,255,255,0.025)}
-.sdi-row{display:flex;align-items:center;justify-content:space-between}
-.sdi-members{display:inline-flex;align-items:center;padding:2px 9px;border-radius:20px;font-size:0.5rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:rgba(100,110,118,0.5);color:rgba(255,255,255,0.78);border:1px solid rgba(255,255,255,0.15);white-space:nowrap}
+.sdi-2row{flex-direction:column;align-items:stretch;gap:0.18rem;padding:0.6rem 0.8rem}
+.sdi-row{display:flex;align-items:center;gap:0.85rem}
+.sdi-time{display:flex;justify-content:flex-end}
+.sdi-members{display:inline-flex;align-items:center;padding:2px 9px;border-radius:20px;font-size:0.5rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:rgba(100,110,118,0.5);color:rgba(255,255,255,0.78);border:1px solid rgba(255,255,255,0.15);white-space:nowrap;flex-shrink:0}
 .sc-members{position:absolute;top:4px;right:4px;padding:1px 6px;border-radius:10px;font-size:0.42rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:rgba(100,110,118,0.55);color:rgba(255,255,255,0.78);border:1px solid rgba(255,255,255,0.15)}
 .sdi-gi{flex:1;font-size:0.56rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream-dim);padding-left:0.65rem;align-self:center}
 .sdi-info{font-family:'Bebas Neue',sans-serif;font-size:0.94rem;letter-spacing:0.04em;color:var(--blue);flex-shrink:0}
@@ -425,7 +425,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 
         <div class="st">11:00</div>
         <div class="se"></div><div class="se"></div><div class="se"></div><div class="se"></div><div class="se"></div>
-        <div class="sc sc-tall" style="background:var(--c-sparring)"><span class="sn">Sparring</span><span class="sk">Gi / NoGi</span><span class="ss">11:00 – 13:00</span></div>
+        <div class="sc sc-tall" style="background:var(--c-sparring)"><span class="sn">Sparring</span><span class="sc-members" data-i18n="membersOnly">Nur Mitglieder</span><span class="sk">Gi / NoGi</span><span class="ss">11:00 – 13:00</span></div>
 
         <div class="st">12:00</div>
         <div class="se"></div>
@@ -511,8 +511,8 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
           <div class="sdi"><span class="sdi-badge" style="background:var(--c-women)">Frauen Klasse</span><span class="sdi-gi">Gi</span><span class="sdi-info">17:00 – 18:00</span></div>
           <div class="sdi"><span class="sdi-badge" style="background:var(--c-drills)">Drills</span><span class="sdi-gi">Gi</span><span class="sdi-info">18:00 – 19:00</span></div>
           <div class="sdi sdi-2row">
-            <div class="sdi-row"><span class="sdi-badge" style="background:var(--c-sparring)">Sparring</span><span class="sdi-members" data-i18n="membersOnly">Nur Mitglieder</span></div>
-            <div class="sdi-row"><span class="sdi-gi" style="padding-left:0">Gi / NoGi</span><span class="sdi-info">19:00 – 20:00</span></div>
+            <div class="sdi-row"><span class="sdi-badge" style="background:var(--c-sparring)">Sparring</span><span class="sdi-gi" style="padding-left:0">Gi / NoGi</span><span class="sdi-members" data-i18n="membersOnly">Nur Mitglieder</span></div>
+            <div class="sdi-time"><span class="sdi-info">19:00 – 20:00</span></div>
           </div>
         </div>
       </div>
@@ -520,7 +520,10 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <div class="sday-h"><span>Samstag</span><span class="sday-h-count">2 Sessions</span></div>
         <div class="sday-body">
           <div class="sdi"><span class="sdi-badge" style="background:var(--c-kids1)">Kids I + II</span><span class="sdi-gi">Gi</span><span class="sdi-info">10:00 – 11:00</span></div>
-          <div class="sdi"><span class="sdi-badge" style="background:var(--c-sparring)">Sparring</span><span class="sdi-gi">Gi / NoGi</span><span class="sdi-info">11:00 – 13:00</span></div>
+          <div class="sdi sdi-2row">
+            <div class="sdi-row"><span class="sdi-badge" style="background:var(--c-sparring)">Sparring</span><span class="sdi-gi" style="padding-left:0">Gi / NoGi</span><span class="sdi-members" data-i18n="membersOnly">Nur Mitglieder</span></div>
+            <div class="sdi-time"><span class="sdi-info">11:00 – 13:00</span></div>
+          </div>
         </div>
       </div>
 
