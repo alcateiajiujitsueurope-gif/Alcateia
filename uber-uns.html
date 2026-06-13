@@ -298,17 +298,20 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 @media(max-width:768px){
   .uu-hero{min-height:75vh}
   .uu-hero-content{padding:0 1.25rem 3rem}
-  .mission-section,.team-section,.origin-section{padding:3rem 1.25rem}
+  .mission-section,.origin-section{padding:3rem 1.25rem}
   .mission-text p,.origin-text p{font-size:0.95rem;line-height:1.75}
   .mission-photo-break{margin:2.5rem -1.25rem 0;width:calc(100% + 2.5rem);min-height:260px;height:42vh}
   #komm{padding:52px 24px;flex-direction:column;align-items:flex-start}
   .footer-top{grid-template-columns:1fr;gap:2rem}
   .footer-bottom{flex-direction:column;align-items:flex-start}
-  /* team dots indicator */
-  .team-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:1.25rem;max-width:none;padding-bottom:.75rem}
+  /* team: scroll-driven horizontal pan */
+  .team-scroll-outer{height:220vh}
+  .team-section{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;padding:4.5rem 0 0;display:flex;flex-direction:column}
+  .team-grid{flex:1;display:flex;overflow:hidden;scroll-snap-type:none;gap:0;max-width:none;padding-bottom:0;will-change:transform}
   .team-grid::-webkit-scrollbar{display:none}
-  .team-card{flex-shrink:0;width:78vw;scroll-snap-align:center}
-  .team-dots{display:flex}
+  .team-card{flex-shrink:0;width:100vw;scroll-snap-align:none;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 1.25rem 1rem}
+  .team-photo{aspect-ratio:auto;height:38vh;min-height:170px;margin-bottom:1rem}
+  .team-dots{display:flex;margin-top:auto;padding:.5rem 0 1rem}
 }
 @media(max-width:480px){
   .navbar{width:calc(100% - 1.5rem);top:.75rem}
@@ -456,8 +459,9 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 </section>
 
 <!-- TEAM — clean: just photo + name + bio -->
+<div class="team-scroll-outer" id="teamScrollOuter">
 <section class="team-section">
-  <div class="team-grid">
+  <div class="team-grid" id="teamGrid">
 
     <article class="team-card reveal">
       <div class="team-photo"><img src="images/team/lucas-card-v2.webp" alt="Lucas Feitosa" loading="lazy"></div>
@@ -507,6 +511,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
     <span class="team-dot"></span>
   </div>
 </section>
+</div>
 
 <!-- ALCATEIA NAME ORIGIN -->
 <section class="origin-section">
@@ -688,15 +693,22 @@ function toggleBio(id, btn) {
   btn.childNodes[0].textContent = (!isOpen ? t.bioLess : t.bioMore) + ' ';
 }
 
-const teamGrid=document.querySelector('.team-grid');
+const teamGrid=document.getElementById('teamGrid');
 const teamDots=document.querySelectorAll('#teamDots .team-dot');
-if(teamGrid&&teamDots.length){
-  teamGrid.addEventListener('scroll',()=>{
-    const pct=teamGrid.scrollLeft/(teamGrid.scrollWidth-teamGrid.clientWidth);
-    const idx=Math.round(pct*(teamDots.length-1));
-    teamDots.forEach((d,i)=>d.classList.toggle('active',i===idx));
-  },{passive:true});
+function updateTeamScroll(){
+  const outer=document.getElementById('teamScrollOuter');
+  if(!outer||!teamGrid||!teamDots.length) return;
+  if(window.innerWidth>768){teamGrid.style.transform='';return;}
+  const scrollable=outer.offsetHeight-window.innerHeight;
+  if(scrollable<=0) return;
+  const progress=Math.max(0,Math.min(1,-outer.getBoundingClientRect().top/scrollable));
+  teamGrid.style.transform=`translateX(-${progress*window.innerWidth*(teamDots.length-1)}px)`;
+  const idx=Math.round(progress*(teamDots.length-1));
+  teamDots.forEach((d,i)=>d.classList.toggle('active',i===idx));
 }
+window.addEventListener('scroll',updateTeamScroll,{passive:true});
+window.addEventListener('resize',()=>{if(teamGrid)teamGrid.style.transform='';updateTeamScroll();},{passive:true});
+updateTeamScroll();
 </script>
 
 </body>
