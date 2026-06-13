@@ -265,6 +265,8 @@ section{padding:4rem 2.5rem}
 .sdi{display:flex;align-items:center;gap:0.85rem;padding:0.65rem 0.8rem;border-radius:4px;transition:background 0.2s}
 .sdi:hover{background:rgba(255,255,255,0.025)}
 .sdi-badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:0.59rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#fff;flex-shrink:0;white-space:nowrap}
+.sdi-members{background:transparent;border:1px solid rgba(255,255,255,.32);color:rgba(255,255,255,.58);padding:2px 8px}
+.sc-members{display:inline-block;margin-top:3px;padding:1px 5px;border-radius:10px;font-size:0.44rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border:1px solid rgba(255,255,255,.32);color:rgba(255,255,255,.58)}
 .sdi-gi{flex:1;font-size:0.56rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream-dim);padding-left:0.65rem;align-self:center}
 .sdi-info{font-family:'Bebas Neue',sans-serif;font-size:0.94rem;letter-spacing:0.04em;color:var(--blue);flex-shrink:0}
 
@@ -458,7 +460,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
         <div class="se"></div>
         <div class="sc" style="background:var(--c-all)"><span class="sn">All Levels</span><span class="sk">Gi</span><span class="ss">19:00 – 20:30</span></div>
         <div class="se"></div>
-        <div class="sc" style="background:var(--c-all)"><span class="sn">All Levels</span><span class="sk">Gi</span><span class="ss">19:00 – 20:30</span></div>
+        <div class="sc" style="background:var(--c-sparring)"><span class="sn">Sparring</span><span class="sc-members" data-i18n="membersOnly">Nur Mitglieder</span><span class="sk">Gi / NoGi</span><span class="ss">19:00 – 20:00</span></div>
         <div class="se"></div>
       </div>
     </div>
@@ -505,7 +507,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
           <div class="sdi"><span class="sdi-badge" style="background:var(--c-nogi)">All Levels</span><span class="sdi-gi">NoGi</span><span class="sdi-info">12:00 – 13:00</span></div>
           <div class="sdi"><span class="sdi-badge" style="background:var(--c-women)">Frauen Klasse</span><span class="sdi-gi">Gi</span><span class="sdi-info">17:00 – 18:00</span></div>
           <div class="sdi"><span class="sdi-badge" style="background:var(--c-drills)">Drills</span><span class="sdi-gi">Gi</span><span class="sdi-info">18:00 – 19:00</span></div>
-          <div class="sdi"><span class="sdi-badge" style="background:var(--c-all)">All Levels</span><span class="sdi-gi">Gi</span><span class="sdi-info">19:00 – 20:30</span></div>
+          <div class="sdi"><span class="sdi-badge" style="background:var(--c-sparring)">Sparring</span><span class="sdi-badge sdi-members" data-i18n="membersOnly">Nur Mitglieder</span><span class="sdi-gi">Gi / NoGi</span><span class="sdi-info">19:00 – 20:00</span></div>
         </div>
       </div>
       <div class="sday">
@@ -586,6 +588,7 @@ const translations={
     stundenSub:'Alle Klassen auf einen Blick. Komm einfach vorbei — oder buch dein erstes Training direkt.',
     schTimeHeader:'Zeit',
     schFrauenClass:'Frauen Klasse',
+    membersOnly:'Nur Mitglieder',
     ctaTitle:'Werde Teil unseres Rudels',ctaSub:'Ein Probetraining ist jederzeit möglich – melde dich einfach bei uns.',
     ctaWA:'Jetzt Probetraining buchen',
     footerDesc:'Brasilianisches Jiu Jitsu<br>Zürich Oberland, Schweiz',
@@ -599,6 +602,7 @@ const translations={
     stundenSub:'Every class in one view. Just drop by — or book your first session right now.',
     schTimeHeader:'Time',
     schFrauenClass:"Women's Class",
+    membersOnly:'Members only',
     ctaTitle:'Join Our Pack',ctaSub:'A trial class is possible at any time – just get in touch.',
     ctaWA:'Book a Trial Class Now',
     footerDesc:'Brazilian Jiu Jitsu<br>Zürich Oberland, Switzerland',
