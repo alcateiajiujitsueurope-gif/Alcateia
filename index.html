@@ -238,8 +238,8 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
 .fLegal{display:flex;gap:20px}
 .fLegal a{font-family:var(--H);font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.18);transition:color .2s}
 .fLegal a:hover{color:rgba(255,255,255,.5)}
-#sTop{position:fixed;bottom:24px;right:24px;z-index:500;width:44px;height:44px;border-radius:50%;background:var(--bl);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
-#sTop.on{opacity:1;pointer-events:all}
+#backTop{position:fixed;bottom:24px;right:24px;z-index:500;width:44px;height:44px;border-radius:50%;background:var(--bl);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+#backTop.visible{opacity:1;pointer-events:all}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -270,6 +270,8 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
   .nav-cta{padding:.5rem .75rem}
   .gArrow{display:flex;width:38px;height:38px;font-size:.9rem}
   .gArrowL{left:8px}.gArrowR{right:8px}
+  .hBtns{flex-wrap:nowrap;gap:8px}
+  .bSolid,.bGhost{flex:1;min-width:0;text-align:center;padding:13px 10px;font-size:11px}
 }
 </style>
 <script type="application/ld+json">
@@ -671,7 +673,7 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
   </div>
 </footer>
 
-<button id="sTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
@@ -679,10 +681,10 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.06);padding:
 if('scrollRestoration' in history)history.scrollRestoration='manual';
 window.scrollTo(0,0);
 const navbar=document.getElementById('navbar');
-const sTopBtn=document.getElementById('sTop');
+const sTopBtn=document.getElementById('backTop');
 window.addEventListener('scroll',()=>{
   navbar.classList.toggle('scrolled',window.scrollY>80);
-  sTopBtn.classList.toggle('on',scrollY>500);
+  sTopBtn.classList.toggle('visible',scrollY>500);
 },{passive:true});
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
 function toggleMobPrograms(btn){btn.classList.toggle('open');btn.parentElement.nextElementSibling.classList.toggle('open')}

@@ -330,9 +330,9 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 }
 
 /* ══ BACK TOP ══ */
-.fab-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;border:none;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .2s;z-index:900;display:flex;align-items:center;justify-content:center}
-.fab-top.visible{opacity:1;pointer-events:auto}
-.fab-top:hover{transform:translateY(-2px)}
+.back-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;border:none;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .2s;z-index:900;display:flex;align-items:center;justify-content:center}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-2px)}
 </style>
 </head>
 <body>
@@ -557,7 +557,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
   </div>
 </footer>
 
-<button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Nach oben">
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Nach oben">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
@@ -565,7 +565,7 @@ footer{background:#080808;padding:4rem 2.5rem 2rem;border-top:1px solid var(--bo
 if('scrollRestoration' in history)history.scrollRestoration='manual';
 window.scrollTo(0,0);
 const navbar=document.getElementById('navbar');
-const backTop=document.getElementById('fabTop');
+const backTop=document.getElementById('backTop');
 window.addEventListener('scroll',()=>{
   const s=window.scrollY;
   navbar.classList.toggle('scrolled',s>80);
